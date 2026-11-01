@@ -3,22 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 影片創作與生成式影音工具應用 · 呂聰賢老師線上教學講義與成果旗艦網</title>
-<meta name="description" content="1151101 呂聰賢老師 AI 影片創作與生成式影音工具應用線上教學講義、全流程心智圖、84頁雙風格簡報線上觀看器、實戰提示詞庫與4部完整動畫成果。">
+<title>AI 影片創作與生成式影音工具應用 · 呂聰賢老師研習旗艦網</title>
+<meta name="description" content="1151101 呂聰賢老師 AI 影片創作與生成式影音工具應用：核心教學大圖、線上教學講義、84頁精選簡報觀看器、AI平台真實對話示範與4部實戰成果短片。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg-main: #090d16;
     --bg-card: rgba(18, 26, 43, 0.75);
-    --bg-card-hover: rgba(28, 40, 65, 0.85);
+    --bg-card-hover: rgba(28, 40, 65, 0.9);
     --border-color: rgba(56, 189, 248, 0.15);
-    --border-hover: rgba(56, 189, 248, 0.4);
+    --border-hover: rgba(56, 189, 248, 0.45);
     --primary: #38bdf8;
     --primary-glow: rgba(56, 189, 248, 0.35);
     --secondary: #818cf8;
     --accent: #34d399;
+    --accent-amber: #fbbf24;
     --accent-rose: #fb7185;
     --text-main: #f1f5f9;
     --text-muted: #94a3b8;
@@ -39,26 +40,25 @@
     background-attachment: fixed;
   }
 
-  /* Custom Scrollbar */
   ::-webkit-scrollbar { width: 8px; height: 8px; }
   ::-webkit-scrollbar-track { background: #0b1120; }
   ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
   ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
 
-  /* Navigation Bar */
+  /* Sticky Navigation */
   header.navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: rgba(9, 13, 22, 0.85);
+    background: rgba(9, 13, 22, 0.88);
     border-bottom: 1px solid var(--border-color);
   }
   .nav-container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 14px 24px;
+    padding: 12px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,8 +72,8 @@
     color: var(--text-main);
   }
   .brand-logo {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
     background: linear-gradient(135deg, #38bdf8, #818cf8);
     display: flex;
@@ -85,7 +85,6 @@
   .brand-title {
     font-size: 16px;
     font-weight: 800;
-    letter-spacing: -0.3px;
     background: linear-gradient(90deg, #38bdf8, #818cf8, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -100,16 +99,16 @@
   }
   .nav-links {
     display: flex;
-    gap: 6px;
+    gap: 4px;
     align-items: center;
     list-style: none;
   }
   .nav-links a {
     color: var(--text-muted);
     text-decoration: none;
-    padding: 8px 14px;
+    padding: 6px 12px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     transition: all 0.2s;
   }
@@ -120,8 +119,8 @@
   .btn-gh {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
+    gap: 6px;
+    padding: 7px 14px;
     border-radius: 8px;
     background: #1e293b;
     color: #f8fafc;
@@ -134,73 +133,54 @@
   .btn-gh:hover {
     background: #334155;
     border-color: #38bdf8;
-    box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
-  }
-
-  /* Mobile menu button */
-  .mobile-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #f1f5f9;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  @media (max-width: 992px) {
-    .nav-links { display: none; }
-    .mobile-toggle { display: block; }
   }
 
   /* Hero Section */
   .hero-section {
-    padding: 64px 24px 48px;
+    padding: 56px 24px 36px;
     max-width: 1320px;
     margin: 0 auto;
     text-align: center;
-    position: relative;
   }
   .hero-pill {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 16px;
+    padding: 6px 18px;
     border-radius: 999px;
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(56, 189, 248, 0.12);
     border: 1px solid rgba(56, 189, 248, 0.3);
     color: #38bdf8;
     font-size: 13px;
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
   .hero-title {
-    font-size: clamp(32px, 5vw, 56px);
+    font-size: clamp(30px, 4.5vw, 54px);
     font-weight: 900;
     line-height: 1.18;
     letter-spacing: -1px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     background: linear-gradient(135deg, #ffffff 40%, #bae6fd 80%, #818cf8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .hero-desc {
-    font-size: clamp(16px, 2vw, 19px);
+    font-size: clamp(15px, 1.8vw, 18px);
     color: var(--text-muted);
-    max-width: 860px;
-    margin: 0 auto 32px;
+    max-width: 880px;
+    margin: 0 auto 28px;
     line-height: 1.7;
   }
   .instructor-credits {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 36px;
+    gap: 16px;
+    margin-bottom: 28px;
     font-size: 14px;
   }
   .instructor-chip {
-    display: flex;
-    align-items: center;
-    gap: 8px;
     background: rgba(30, 41, 59, 0.6);
     padding: 6px 16px;
     border-radius: 999px;
@@ -210,32 +190,32 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 14px;
-    margin-bottom: 48px;
+    gap: 12px;
+    margin-bottom: 40px;
   }
   .btn-primary {
     background: linear-gradient(135deg, #0284c7, #38bdf8);
     color: #04121d;
     font-weight: 700;
-    padding: 12px 28px;
+    padding: 11px 24px;
     border-radius: 10px;
     text-decoration: none;
-    font-size: 15px;
-    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+    font-size: 14px;
+    box-shadow: 0 4px 18px rgba(56, 189, 248, 0.4);
     transition: all 0.2s;
   }
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(56, 189, 248, 0.6);
+    box-shadow: 0 6px 22px rgba(56, 189, 248, 0.6);
   }
   .btn-secondary {
     background: rgba(30, 41, 59, 0.8);
     color: #f1f5f9;
     font-weight: 600;
-    padding: 12px 26px;
+    padding: 11px 22px;
     border-radius: 10px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     border: 1px solid rgba(255,255,255,0.12);
     transition: all 0.2s;
   }
@@ -245,49 +225,15 @@
     transform: translateY(-2px);
   }
 
-  /* Stats Grid */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    max-width: 1100px;
-    margin: 0 auto 60px;
-  }
-  .stat-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 14px;
-    padding: 20px 16px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    transition: all 0.2s;
-  }
-  .stat-card:hover {
-    border-color: var(--border-hover);
-    transform: translateY(-3px);
-  }
-  .stat-val {
-    font-size: 32px;
-    font-weight: 800;
-    color: #38bdf8;
-    line-height: 1.1;
-    margin-bottom: 6px;
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .stat-lbl {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-
   /* Section Containers */
   section.module-section {
-    max-width: 1380px;
-    margin: 0 auto 80px;
+    max-width: 1400px;
+    margin: 0 auto 72px;
     padding: 0 24px;
   }
   .section-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
   .section-tag {
     display: inline-block;
@@ -299,105 +245,488 @@
     background: rgba(56, 189, 248, 0.1);
     padding: 4px 14px;
     border-radius: 999px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     border: 1px solid rgba(56, 189, 248, 0.2);
   }
   .section-title {
-    font-size: clamp(26px, 3.5vw, 36px);
+    font-size: clamp(24px, 3.2vw, 34px);
     font-weight: 800;
     letter-spacing: -0.5px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .section-desc {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--text-muted);
     max-width: 720px;
     margin: 0 auto;
   }
 
-  /* Cards & Glassmorphism */
-  .card {
-    background: var(--bg-card);
+  /* TOP VISUAL TEACHING CHARTS (#4 Focus) */
+  .teaching-charts-container {
+    background: rgba(15, 23, 42, 0.85);
     border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 28px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: all 0.25s;
-  }
-  .card:hover {
-    background: var(--bg-card-hover);
-    border-color: var(--border-hover);
-  }
-
-  /* 5-Stage Workflow */
-  .workflow-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-  }
-  .workflow-card {
-    background: rgba(18, 26, 43, 0.7);
-    border: 1px solid rgba(56, 189, 248, 0.15);
-    border-radius: 16px;
+    border-radius: 20px;
     padding: 24px;
-    position: relative;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  }
+  .chart-nav-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 14px;
+  }
+  .btn-chart-tab {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-chart-tab:hover {
+    color: #f1f5f9;
+    border-color: #38bdf8;
+  }
+  .btn-chart-tab.active {
+    background: #0284c7;
+    color: #ffffff;
+    border-color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+  }
+  .chart-display-card {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  @media (max-width: 992px) {
+    .chart-display-card { grid-template-columns: 1fr; }
+  }
+  .chart-img-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
     overflow: hidden;
+    position: relative;
+    cursor: zoom-in;
+    border: 1px solid rgba(255,255,255,0.1);
   }
-  .workflow-step {
+  .chart-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .chart-img-frame:hover img {
+    transform: scale(1.02);
+  }
+  .chart-badge-zoom {
     position: absolute;
-    top: -8px;
-    right: -8px;
-    font-size: 64px;
-    font-weight: 900;
-    color: rgba(56, 189, 248, 0.05);
-    font-family: 'JetBrains Mono', monospace;
-    user-select: none;
-  }
-  .workflow-badge {
-    display: inline-block;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0,0,0,0.7);
+    color: #38bdf8;
+    font-size: 11px;
+    font-weight: 600;
     padding: 4px 10px;
     border-radius: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    margin-bottom: 12px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    backdrop-filter: blur(4px);
   }
-  .badge-p1 { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
-  .badge-p2 { background: rgba(129, 140, 248, 0.15); color: #818cf8; border: 1px solid rgba(129, 140, 248, 0.3); }
-  .badge-p3 { background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); }
-  .badge-p4 { background: rgba(251, 113, 133, 0.15); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.3); }
-  .badge-p5 { background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3); }
-
-  .workflow-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
+  .chart-text-box h3 {
+    font-size: 22px;
+    font-weight: 800;
     color: #f8fafc;
+    margin-bottom: 8px;
   }
-  .workflow-list {
+  .chart-text-box p.lead {
+    font-size: 14px;
+    color: #38bdf8;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .chart-steps-list {
     list-style: none;
     font-size: 13px;
     color: var(--text-muted);
   }
-  .workflow-list li {
-    margin-bottom: 6px;
+  .chart-steps-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
     position: relative;
-    padding-left: 18px;
+    line-height: 1.6;
   }
-  .workflow-list li::before {
-    content: "▹";
+  .chart-steps-list li::before {
+    content: "✓";
     position: absolute;
     left: 0;
+    color: #34d399;
+    font-weight: 700;
+  }
+
+  /* NEW SLIDE PRESENTATION VIEWER (#2 Focus) */
+  .viewer-wrapper {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+  .viewer-topbar {
+    background: #111827;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .deck-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .btn-deck {
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #374151;
+    cursor: pointer;
+    background: #1f2937;
+    color: #9ca3af;
+    transition: all 0.2s;
+  }
+  .btn-deck:hover {
+    color: #f1f5f9;
+    border-color: #38bdf8;
+  }
+  .btn-deck.active {
+    background: #0284c7;
+    color: #ffffff;
+    border-color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+  }
+  .viewer-screen {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .viewer-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    user-select: none;
+    transition: opacity 0.2s;
+  }
+  .screen-overlay-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+    z-index: 10;
+  }
+  .screen-overlay-btn:hover {
+    background: rgba(56, 189, 248, 0.85);
+    color: #0f172a;
+    border-color: #38bdf8;
+  }
+  .btn-prev { left: 18px; }
+  .btn-next { right: 18px; }
+
+  .viewer-info-panel {
+    padding: 16px 24px;
+    background: #111827;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .slide-counter {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .btn-icon {
+    padding: 7px 14px;
+    border-radius: 8px;
+    background: #1f2937;
+    color: #e5e7eb;
+    border: 1px solid #374151;
+    cursor: pointer;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+  }
+  .btn-icon:hover {
+    background: #374151;
     color: #38bdf8;
+    border-color: #38bdf8;
+  }
+
+  /* Filmstrip Thumbnails */
+  .filmstrip-container {
+    display: flex;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #090e17;
+    overflow-x: auto;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .thumb-item {
+    flex: 0 0 110px;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 0.6;
+    transition: all 0.2s;
+    background: #000;
+  }
+  .thumb-item:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  .thumb-item.active {
+    border-color: #38bdf8;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  }
+  .thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* AI DIALOGUE SIMULATOR (#3 Focus) */
+  .dialogue-box {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  }
+  .dialogue-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 16px 24px;
+    background: #111827;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    flex-wrap: wrap;
+  }
+  .btn-chat-tab {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-chat-tab:hover {
+    color: #f1f5f9;
+    border-color: #38bdf8;
+  }
+  .btn-chat-tab.active {
+    background: #0284c7;
+    color: #ffffff;
+    border-color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+  }
+  .chat-stream-window {
+    padding: 24px;
+    max-height: 650px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #090e17;
+  }
+  .chat-turn-group {
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+    padding-bottom: 20px;
+  }
+  .chat-turn-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-dim);
+    background: #1e293b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  .chat-bubble {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .chat-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .avatar-user { background: #3b82f6; color: #fff; }
+  .avatar-gemini { background: linear-gradient(135deg, #38bdf8, #818cf8); color: #fff; }
+  .avatar-chatgpt { background: #10b981; color: #fff; }
+  .bubble-content {
+    flex: 1;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 14px;
+    line-height: 1.65;
+    position: relative;
+  }
+  .bubble-content.user-bubble {
+    background: rgba(37, 99, 235, 0.12);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+  .bubble-content.ai-bubble {
+    background: rgba(18, 26, 43, 0.85);
+    border-color: rgba(56, 189, 248, 0.25);
+  }
+  .bubble-author {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bubble-text {
+    white-space: pre-wrap;
+    font-family: inherit;
+    color: #e2e8f0;
+  }
+
+  /* ONLINE LECTURE NOTES (#1 Focus) */
+  .lecture-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .btn-lec-tab {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-lec-tab:hover {
+    color: #f1f5f9;
+    border-color: #38bdf8;
+  }
+  .btn-lec-tab.active {
+    background: #0284c7;
+    color: #ffffff;
+    border-color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+  }
+  .lecture-pane {
+    display: none;
+  }
+  .lecture-pane.active {
+    display: block;
+  }
+  .lecture-card {
+    background: rgba(18, 26, 43, 0.75);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  .lecture-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #38bdf8;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  }
+  .lecture-content p {
+    font-size: 14px;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+  .lecture-table-wrap {
+    overflow-x: auto;
+    margin: 16px 0;
+  }
+  table.lecture-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    color: #e2e8f0;
+  }
+  table.lecture-table th, table.lecture-table td {
+    border: 1px solid #334155;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  table.lecture-table th {
+    background: #1e293b;
+    color: #38bdf8;
+    font-weight: 700;
+  }
+  table.lecture-table tr:nth-child(even) {
+    background: rgba(15, 23, 42, 0.5);
   }
 
   /* Interactive Checklist */
   .checklist-box {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(56, 189, 248, 0.25);
     border-radius: 16px;
-    padding: 28px;
+    padding: 24px;
     margin-top: 24px;
   }
   .checklist-header {
@@ -405,9 +734,9 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 20px;
-    padding-bottom: 16px;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
   }
   .progress-bar-bg {
@@ -416,7 +745,7 @@
     background: #1e293b;
     border-radius: 999px;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 8px;
   }
   .progress-bar-fill {
     height: 100%;
@@ -453,240 +782,11 @@
     color: var(--text-dim);
   }
 
-  /* Slide Presentation Viewer */
-  .viewer-wrapper {
-    background: rgba(15, 23, 42, 0.85);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  }
-  .viewer-topbar {
-    background: #111827;
-    padding: 16px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  .deck-tabs {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .btn-deck {
-    padding: 7px 14px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 600;
-    border: 1px solid transparent;
-    cursor: pointer;
-    background: #1f2937;
-    color: #9ca3af;
-    transition: all 0.2s;
-  }
-  .btn-deck.active {
-    background: #0284c7;
-    color: #ffffff;
-    border-color: #38bdf8;
-    box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
-  }
-  .viewer-screen {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .viewer-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    user-select: none;
-    transition: opacity 0.2s;
-  }
-  .screen-overlay-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 20px;
-    backdrop-filter: blur(4px);
-    transition: all 0.2s;
-    z-index: 10;
-  }
-  .screen-overlay-btn:hover {
-    background: rgba(56, 189, 248, 0.8);
-    color: #0f172a;
-    border-color: #38bdf8;
-  }
-  .btn-prev { left: 20px; }
-  .btn-next { right: 20px; }
-
-  .viewer-info-panel {
-    padding: 20px 28px;
-    background: #111827;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .slide-info-left h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #f8fafc;
-    margin-bottom: 4px;
-  }
-  .slide-points-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  .point-tag {
-    font-size: 12px;
-    background: rgba(56, 189, 248, 0.12);
-    color: #bae6fd;
-    padding: 3px 10px;
-    border-radius: 6px;
-    border: 1px solid rgba(56, 189, 248, 0.2);
-  }
-  .viewer-controls {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .slide-counter {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    color: var(--text-muted);
-  }
-  .btn-icon {
-    padding: 8px 14px;
-    border-radius: 8px;
-    background: #1f2937;
-    color: #e5e7eb;
-    border: 1px solid #374151;
-    cursor: pointer;
-    font-size: 13px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.2s;
-  }
-  .btn-icon:hover {
-    background: #374151;
-    color: #38bdf8;
-    border-color: #38bdf8;
-  }
-
-  /* Filmstrip Thumbnails */
-  .filmstrip-container {
-    display: flex;
-    gap: 8px;
-    padding: 14px 20px;
-    background: #090e17;
-    overflow-x: auto;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .thumb-item {
-    flex: 0 0 110px;
-    aspect-ratio: 16 / 9;
-    border-radius: 6px;
-    overflow: hidden;
-    cursor: pointer;
-    border: 2px solid transparent;
-    opacity: 0.6;
-    transition: all 0.2s;
-    background: #000;
-  }
-  .thumb-item:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-  }
-  .thumb-item.active {
-    border-color: #38bdf8;
-    opacity: 1;
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-  }
-  .thumb-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  /* Mindmap Section */
-  .mindmap-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 24px;
-  }
-  @media (max-width: 768px) {
-    .mindmap-grid { grid-template-columns: 1fr; }
-  }
-  .mindmap-box {
-    background: rgba(18, 26, 43, 0.7);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 28px;
-  }
-  .mindmap-tree {
-    list-style: none;
-    margin-top: 16px;
-  }
-  .tree-node {
-    margin-bottom: 14px;
-  }
-  .tree-title {
-    font-size: 15px;
-    font-weight: 700;
-    color: #38bdf8;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 6px;
-  }
-  .tree-sub {
-    list-style: none;
-    padding-left: 20px;
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-  .tree-sub li {
-    margin-bottom: 4px;
-    position: relative;
-    padding-left: 14px;
-  }
-  .tree-sub li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #818cf8;
-  }
-
   /* Video Showcase Theater */
   .videos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
   }
   .video-card {
     background: rgba(18, 26, 43, 0.75);
@@ -707,7 +807,7 @@
     width: 100%;
     aspect-ratio: 9 / 16;
     background: #000;
-    max-height: 520px;
+    max-height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -719,7 +819,7 @@
     background: #000;
   }
   .video-info {
-    padding: 20px;
+    padding: 18px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -727,7 +827,7 @@
   }
   .video-meta {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     margin-bottom: 8px;
     flex-wrap: wrap;
   }
@@ -741,16 +841,16 @@
   .badge-spec { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
   .badge-voice { background: rgba(129, 140, 248, 0.15); color: #818cf8; border: 1px solid rgba(129, 140, 248, 0.3); }
   .video-title {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 800;
     color: #f8fafc;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
   .video-tagline {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text-muted);
     font-style: italic;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .video-features {
     font-size: 12px;
@@ -758,68 +858,20 @@
     line-height: 1.5;
   }
 
-  /* Prompts Box */
-  .prompt-card {
-    background: #0f172a;
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    border-radius: 12px;
-    padding: 18px;
-    margin-bottom: 16px;
-    position: relative;
-  }
-  .prompt-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .prompt-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #38bdf8;
-  }
-  .btn-copy {
-    background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    transition: all 0.2s;
-  }
-  .btn-copy:hover {
-    background: #38bdf8;
-    color: #0f172a;
-  }
-  .prompt-content {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: #cbd5e1;
-    background: #090e17;
-    padding: 12px;
-    border-radius: 8px;
-    white-space: pre-wrap;
-    line-height: 1.5;
-  }
-
   /* Downloads Grid */
   .downloads-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 16px;
   }
   .download-card {
     background: rgba(18, 26, 43, 0.7);
     border: 1px solid var(--border-color);
     border-radius: 14px;
-    padding: 20px;
+    padding: 18px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
     transition: all 0.2s;
     text-decoration: none;
     color: inherit;
@@ -830,18 +882,18 @@
     transform: translateY(-2px);
   }
   .dl-icon {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 20px;
     flex-shrink: 0;
   }
-  .dl-pptx { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
   .dl-pdf { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
   .dl-docx { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+  .dl-png { background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); }
   .dl-info h4 {
     font-size: 14px;
     font-weight: 700;
@@ -851,6 +903,32 @@
   .dl-info p {
     font-size: 12px;
     color: var(--text-dim);
+  }
+
+  /* Lightbox Modal */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: zoom-out;
+  }
+  .modal-overlay.active {
+    display: flex;
+  }
+  .modal-img {
+    max-width: 95vw;
+    max-height: 95vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    object-fit: contain;
   }
 
   /* Toast Notification */
@@ -917,16 +995,15 @@
     <a href="#" class="brand">
       <div class="brand-logo">🎬</div>
       <div>
-        <div class="brand-title">AI 影片創作全流程旗艦講義</div>
+        <div class="brand-title">AI 影片創作全流程旗艦網</div>
         <div class="brand-badge">呂聰賢老師 · 1151101研習</div>
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#workflow">五大實作階段</a></li>
-      <li><a href="#slides">雙風格簡報</a></li>
-      <li><a href="#mindmap">全景心智圖</a></li>
-      <li><a href="#lectures">教學講義</a></li>
-      <li><a href="#prompts">提示詞寶箱</a></li>
+      <li><a href="#focus-charts">核心教學大圖</a></li>
+      <li><a href="#slides">研習精選簡報</a></li>
+      <li><a href="#lectures">線上教學講義</a></li>
+      <li><a href="#ai-dialogues">AI平台對話示範</a></li>
       <li><a href="#theater">實戰作品劇院</a></li>
       <li><a href="#downloads">教材下載</a></li>
     </ul>
@@ -941,10 +1018,10 @@
 
 <!-- Hero Section -->
 <section class="hero-section">
-  <div class="hero-pill">✨ 1151101 教師專業成長研習 · 生成式影音完整實戰</div>
+  <div class="hero-pill">✨ 1151101 教師專業成長研習 · 生成式影音全流程實戰</div>
   <h1 class="hero-title">AI 影片創作與<br>生成式影音工具應用</h1>
   <p class="hero-desc">
-    從故事構思、角色一致性設定、分鏡繪製、Google Flow 動畫生成，到剪映 (CapCut) 語音合成、智慧字幕與背景音樂混音——打造專業級 AI 短影音全流程教學門戶。
+    整合研習核心教學圖解、數位線上講義、4 大精選簡報觀看器、Gemini / ChatGPT 實戰對話示範與 4 部高畫質完整動畫作品——打造最強生成式影音教學入口。
   </p>
   
   <div class="instructor-credits">
@@ -954,147 +1031,62 @@
   </div>
 
   <div class="hero-actions">
-    <a href="#slides" class="btn-primary">📊 觀看 84 頁雙風格簡報</a>
-    <a href="#theater" class="btn-secondary">🎬 觀賞 4 部實戰完整影片</a>
-    <a href="#prompts" class="btn-secondary">🧰 複製實戰提示詞</a>
-  </div>
-
-  <!-- Stats Grid -->
-  <div class="stats-grid">
-    <div class="stat-card">
-      <div class="stat-val">4 部</div>
-      <div class="stat-lbl">9:16 高畫質完整實戰短片</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-val">84 頁</div>
-      <div class="stat-lbl">雙主題 (科技/手繪) 投影片</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-val">2 大</div>
-      <div class="stat-lbl">全景課程架構心智圖</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-val">100%</div>
-      <div class="stat-lbl">免下載工具 · 雲端實戰工作流</div>
-    </div>
+    <a href="#focus-charts" class="btn-primary">📌 查看核心教學大圖</a>
+    <a href="#slides" class="btn-secondary">📊 觀看 84 頁精選簡報</a>
+    <a href="#ai-dialogues" class="btn-secondary">🤖 探索 AI 平台實戰對話</a>
   </div>
 </section>
 
-<!-- Module 1: 5-Stage Core Workflow -->
-<section id="workflow" class="module-section">
+<!-- #4 FOCUS: TEACHING CHARTS (Placed Prominently at the Top) -->
+<section id="focus-charts" class="module-section">
   <div class="section-header">
-    <span class="section-tag">Methodology</span>
-    <h2 class="section-title">五大實作核心階段與避坑法則</h2>
-    <p class="section-desc">掌握 AI 動畫影片製作的標準化作業程序 (SOP)，步步推進，徹底解決角色走樣與生成卡關。</p>
+    <span class="section-tag">Key Knowledge Visualized</span>
+    <h2 class="section-title">核心教學圖解 · 重點流程全覽</h2>
+    <p class="section-desc">研習最精華的 4 大教學核心架構圖，以圖解方式梳理 AI 短影音、動畫三步驟與剪輯後製標準程序。（點擊圖片可放大檢視）</p>
   </div>
 
-  <div class="workflow-grid">
-    <div class="workflow-card">
-      <div class="workflow-step">01</div>
-      <span class="workflow-badge badge-p1">第一階段</span>
-      <h3 class="workflow-title">腳本與角色設定</h3>
-      <ul class="workflow-list">
-        <li>同一 Gemini 對話框鎖定上下文記憶</li>
-        <li>指定主題、角色年齡、服裝與特徵</li>
-        <li>生成正面、側面、背部三視圖定裝照</li>
-        <li>統一畫風（如 3D 皮克斯或日系手繪）</li>
-      </ul>
+  <div class="teaching-charts-container">
+    <div class="chart-nav-tabs">
+      <button class="btn-chart-tab active" onclick="switchChart(1)">1️⃣ AI 短影音創作全流程圖解</button>
+      <button class="btn-chart-tab" onclick="switchChart(2)">2️⃣ AI 動畫影片創作三步驟</button>
+      <button class="btn-chart-tab" onclick="switchChart(3)">3️⃣ AI 動畫影片創作全攻略</button>
+      <button class="btn-chart-tab" onclick="switchChart(4)">4️⃣ AI 影片創作剪輯流程</button>
     </div>
 
-    <div class="workflow-card">
-      <div class="workflow-step">02</div>
-      <span class="workflow-badge badge-p2">第二階段</span>
-      <h3 class="workflow-title">分鏡提示詞與生圖</h3>
-      <ul class="workflow-list">
-        <li>規劃 6～10 段分鏡（初學可先做 4 段）</li>
-        <li>預先決定畫面比例（直式 9:16 / 橫式 16:9）</li>
-        <li>中文文案創作者審閱，英文提示詞供 AI 繪製</li>
-        <li>每幕嚴格依序下載命名 P1、P2 等序號</li>
-      </ul>
-    </div>
-
-    <div class="workflow-card">
-      <div class="workflow-step">03</div>
-      <span class="workflow-badge badge-p3">第三階段</span>
-      <h3 class="workflow-title">Google Flow 動畫生成</h3>
-      <ul class="workflow-list">
-        <li>建立獨立專案並統一命名</li>
-        <li>上傳分鏡圖片並配置 Image-to-Video 運鏡詞</li>
-        <li>掌握每日點數額度分配（每段約 6~10 秒）</li>
-        <li>可並行提交多段任務，無需等待單段完成</li>
-      </ul>
-    </div>
-
-    <div class="workflow-card">
-      <div class="workflow-step">04</div>
-      <span class="workflow-badge badge-p4">第四階段</span>
-      <h3 class="workflow-title">剪映電腦版剪輯整合</h3>
-      <ul class="workflow-list">
-        <li>匯入封面 (縮短至 2-3 秒) 與各片段視頻</li>
-        <li>依分鏡順序精準排列於時間軸</li>
-        <li>相鄰片段配置 0.5 秒平滑交叉淡入淡出</li>
-        <li>利用文字朗讀 (TTS) 產生全片一致聲線</li>
-      </ul>
-    </div>
-
-    <div class="workflow-card">
-      <div class="workflow-step">05</div>
-      <span class="workflow-badge badge-p5">第五階段</span>
-      <h3 class="workflow-title">字幕翻譯與混音發布</h3>
-      <ul class="workflow-list">
-        <li>文稿匹配自動對齊語音生成精準字幕</li>
-        <li>加文字描邊提升各背景色辨識度</li>
-        <li>BGM 音量調低 (-15dB) 避免掩蓋人聲旁白</li>
-        <li>設定片頭漸入、片尾 3 秒自然淡出並匯出 MP4</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Interactive Checklist -->
-  <div class="checklist-box">
-    <div class="checklist-header">
-      <div>
-        <h3 style="font-size:18px; font-weight:700; color:#f8fafc;">📋 課後實作檢核表 (自我進度追蹤)</h3>
-        <p style="font-size:13px; color:var(--text-muted); margin-top:4px;">勾選已完成的實作步驟，系統會自動在瀏覽器儲存您的進度。</p>
+    <div class="chart-display-card">
+      <div class="chart-img-frame" onclick="openLightbox(document.getElementById('chartImg').src)">
+        <img id="chartImg" src="assets/charts/chart1_short_video_workflow.png" alt="AI 短影音創作全流程圖解">
+        <span class="chart-badge-zoom">🔍 點擊查看超高畫質大圖</span>
       </div>
-      <div style="text-align:right;">
-        <span id="checkPercent" style="font-family:'JetBrains Mono'; font-weight:700; color:#38bdf8; font-size:18px;">0%</span>
-        <div class="progress-bar-bg" style="width:160px;">
-          <div id="checkFill" class="progress-bar-fill"></div>
-        </div>
+      <div class="chart-text-box">
+        <h3 id="chartTitle">AI 短影音創作全流程圖解</h3>
+        <p class="lead" id="chartLead">從概念、圖像、動態到後製的一體化生產管線</p>
+        <ul class="chart-steps-list" id="chartSteps">
+          <li><strong>故事與腳本架構：</strong> 在單一 Gemini 對話中鎖定人物設定與情節綱要，確保上下文記憶不丟失。</li>
+          <li><strong>視覺一致性錨定：</strong> 預先產出三視圖定裝照，固定髮型、服飾、年齡與毛色特徵。</li>
+          <li><strong>分鏡提示詞工程：</strong> 中文供創作者構思檢驗，英文提示詞供模型生成高精度圖像與動態。</li>
+          <li><strong>剪映後製整合：</strong> 時間軸順序編排、TTS 統一旁白聲線、文稿匹配字幕與 BGM 自然淡出。</li>
+        </ul>
       </div>
-    </div>
-
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:10px;" id="checklistItems">
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已開啟 Google Drive 資料夾取得講義與範例</span></label>
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">在同一 Gemini 對話中完成主角與寵物設定稿</span></label>
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">確認全片畫面比例（橫式 16:9 或直式 9:16）</span></label>
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已依序生成並下載分鏡圖（命名 P1～P10）</span></label>
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已登入 Google Flow 並建立獨立影片專案</span></label>
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已完成分鏡影片生成並依序下載至本機</span></label>
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已將封面縮短為 2～3 秒置於時間軸開頭</span></label>
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已使用剪映文字朗讀產生全片統一旁白聲線</span></label>
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已透過文稿匹配生成字幕並加上清晰描邊</span></label>
-      <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已設定背景音樂音量適中且結尾自然淡出</span></label>
     </div>
   </div>
 </section>
 
-<!-- Module 2: 84-Slide Presentation Viewer -->
+<!-- #2 FOCUS: PRESENTATION SLIDES VIEWER (from downloads/簡報) -->
 <section id="slides" class="module-section">
   <div class="section-header">
-    <span class="section-tag">Interactive Presentation</span>
-    <h2 class="section-title">雙版本 84 頁研習簡報線上觀看器</h2>
-    <p class="section-desc">包含 Part 1（動畫影片製作）與 Part 2（Flow 影片生成與剪映後製），提供「深色科技風」與「手繪筆記風」雙視覺版本，支援縮圖切換與全螢幕觀看。</p>
+    <span class="section-tag">Slide Presentation Decks</span>
+    <h2 class="section-title">研習精選簡報 · 84 頁線上觀看器</h2>
+    <p class="section-desc">精選四大主題投影片（Google AI 動畫實戰、動畫導演大師班、AI 影音創作全攻略雙版本），支援全螢幕、鍵盤左右鍵切換與縮圖導覽。</p>
   </div>
 
   <div class="viewer-wrapper">
     <div class="viewer-topbar">
       <div class="deck-tabs">
-        <button class="btn-deck active" onclick="switchDeck('p1_style1')">📘 Part 1 · 深色科技風 (21頁)</button>
-        <button class="btn-deck" onclick="switchDeck('p1_style2')">📝 Part 1 · 手繪筆記風 (21頁)</button>
-        <button class="btn-deck" onclick="switchDeck('p2_style1')">📗 Part 2 · 深色科技風 (21頁)</button>
-        <button class="btn-deck" onclick="switchDeck('p2_style2')">📋 Part 2 · 手繪筆記風 (21頁)</button>
+        <button class="btn-deck active" onclick="switchDeck('deck1_google_ai', 'Google AI 動畫實戰指南')">📕 Google AI 動畫實戰指南 (21頁)</button>
+        <button class="btn-deck" onclick="switchDeck('deck2_director', 'AI 動畫導演實戰大師班')">🎬 AI 動畫導演實戰大師班 (21頁)</button>
+        <button class="btn-deck" onclick="switchDeck('deck3_guide_a', 'AI 影音創作全攻略 A')">📘 AI 影音創作全攻略 A (21頁)</button>
+        <button class="btn-deck" onclick="switchDeck('deck4_guide_b', 'AI 影音創作全攻略 B')">📙 AI 影音創作全攻略 B (21頁)</button>
       </div>
       <div class="viewer-controls">
         <span class="slide-counter" id="slideNumDisplay">投影片 1 / 21</span>
@@ -1105,16 +1097,15 @@
     <!-- Viewer Screen -->
     <div class="viewer-screen" id="viewerScreen">
       <button class="screen-overlay-btn btn-prev" onclick="prevSlide()" title="上一頁 (←)">‹</button>
-      <img id="currentSlideImg" src="slides/p1_style1/slide_1.jpg" alt="Slide presentation">
+      <img id="currentSlideImg" src="slides/deck1_google_ai/slide_1.jpg" alt="Slide presentation">
       <button class="screen-overlay-btn btn-next" onclick="nextSlide()" title="下一頁 (→)">›</button>
     </div>
 
     <!-- Slide Details Panel -->
     <div class="viewer-info-panel">
-      <div class="slide-info-left">
-        <h3 id="slideTitle">AI影片創作與動畫生成實戰</h3>
-        <p id="slideSubtitle" style="font-size:13px; color:#38bdf8; font-weight:600;">掌握Flow動畫製作流</p>
-        <div class="slide-points-list" id="slidePoints"></div>
+      <div>
+        <h3 id="deckTitleDisplay" style="font-size:16px; font-weight:700; color:#f8fafc;">Google AI 動畫實戰指南</h3>
+        <p style="font-size:13px; color:#38bdf8;">16:9 寬螢幕超高畫質投影片簡報</p>
       </div>
       <div style="font-size:12px; color:var(--text-dim); text-align:right;">
         鍵盤快捷鍵：<kbd style="background:#1f2937; padding:2px 6px; border-radius:4px; border:1px solid #374151;">←</kbd> 上一頁 ｜ <kbd style="background:#1f2937; padding:2px 6px; border-radius:4px; border:1px solid #374151;">→</kbd> 下一頁
@@ -1126,199 +1117,128 @@
   </div>
 </section>
 
-<!-- Module 3: Interactive Mindmaps -->
-<section id="mindmap" class="module-section">
-  <div class="section-header">
-    <span class="section-tag">Structure & Architecture</span>
-    <h2 class="section-title">研習全景心智圖架構</h2>
-    <p class="section-desc">兩大單元核心思維導圖，完整梳理從概念、工具分工到實作細節的知識脈絡。</p>
-  </div>
-
-  <div class="mindmap-grid">
-    <!-- Mindmap 1 -->
-    <div class="mindmap-box">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-        <h3 style="font-size:18px; font-weight:800; color:#38bdf8;">🧠 Part 1 · Google Flow AI 動畫影片製作</h3>
-        <span class="workflow-badge badge-p1">研習單元一</span>
-      </div>
-      <ul class="mindmap-tree">
-        <li class="tree-node">
-          <div class="tree-title">📌 課程資源與學習方式</div>
-          <ul class="tree-sub">
-            <li>雲端硬碟存放講義、範例與成果檔</li>
-            <li>全程錄影與分段錄影，課後無限期複習</li>
-            <li>課堂專注操作跟做，免抄筆記負擔</li>
-          </ul>
-        </li>
-        <li class="tree-node">
-          <div class="tree-title">💡 生成式影音核心概念</div>
-          <ul class="tree-sub">
-            <li>AI涵蓋腳本、圖像、影片與音樂四位一體</li>
-            <li>短片段分段生成，再行主題剪輯串接</li>
-            <li>視覺一致性策略：預先錨定角色三視圖與定裝照</li>
-          </ul>
-        </li>
-        <li class="tree-node">
-          <div class="tree-title">⚙️ 工具分工與協同作業</div>
-          <ul class="tree-sub">
-            <li><strong>Gemini / ChatGPT：</strong> 撰寫腳本故事、分鏡文案與中英文提示詞</li>
-            <li><strong>Google Flow / Kling：</strong> 依分鏡圖生成動態影片片段</li>
-            <li><strong>剪映 (CapCut)：</strong> 影音串接、TTS 配音、智慧字幕與混音</li>
-          </ul>
-        </li>
-        <li class="tree-node">
-          <div class="tree-title">⚡ Google Flow 實戰特性</div>
-          <ul class="tree-sub">
-            <li>單段最長約 10 秒；每日點數重置不累積</li>
-            <li>免費版 720p 下載；可並行提交多個生成任務</li>
-            <li>中文口型尚有限制，以旁白敘事最為自然</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Mindmap 2 -->
-    <div class="mindmap-box">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-        <h3 style="font-size:18px; font-weight:800; color:#34d399;">🧠 Part 2 · 影片生成與剪映後製實作</h3>
-        <span class="workflow-badge badge-p3">研習單元二</span>
-      </div>
-      <ul class="mindmap-tree">
-        <li class="tree-node">
-          <div class="tree-title">🎞️ 剪映時間軸基本佈局</div>
-          <ul class="tree-sub">
-            <li>封面縮短至約 2～3 秒，吸引停留目光</li>
-            <li>分鏡片段依序拖曳，相鄰片段加交叉溶解</li>
-            <li>專案妥善命名，統一匯出 1080p MP4</li>
-          </ul>
-        </li>
-        <li class="tree-node">
-          <div class="tree-title">🎙️ 旁白語音與文字朗讀 (TTS)</div>
-          <ul class="tree-sub">
-            <li>旁白文案字數必須短於對應影片畫面時長</li>
-            <li>全片鎖定單一音色，保持故事連貫性</li>
-            <li>文字轉語音與語音轉字幕分步進行</li>
-          </ul>
-        </li>
-        <li class="tree-node">
-          <div class="tree-title">📝 智慧字幕與多語系翻譯</div>
-          <ul class="tree-sub">
-            <li>文稿匹配功能自動對齊旁白時間點</li>
-            <li>添加深色描邊，適應各種亮暗背景變化</li>
-            <li>可匯出 SRT 字幕檔，支援 AI 翻譯多語系</li>
-          </ul>
-        </li>
-        <li class="tree-node">
-          <div class="tree-title">🎵 背景音樂與混音法則</div>
-          <ul class="tree-sub">
-            <li>BGM 置於獨立音軌，音量調降至 -15dB ~ -18dB</li>
-            <li>片頭 1 秒微幅淡入，片尾 3 秒自然淡出收尾</li>
-            <li>檢查人聲旁白與原聲軌道，杜絕雜音衝突</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Module 4: Online Lecture Notes -->
+<!-- #1 FOCUS: ONLINE COURSE LECTURE NOTES (from downloads/講義) -->
 <section id="lectures" class="module-section">
   <div class="section-header">
     <span class="section-tag">Curriculum Handbook</span>
-    <h2 class="section-title">數位線上講義精要</h2>
-    <p class="section-desc">彙整自研習教學講義與課堂實錄精華，涵蓋關鍵技術規範與實戰技巧。</p>
+    <h2 class="section-title">數位線上講義 · 實作教學專題</h2>
+    <p class="section-desc">整合研習兩大官方講義文件精華，涵蓋完整備課指南、實作步驟、避坑檢核表與學生專題教案。</p>
   </div>
 
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:20px;">
-    <div class="card">
-      <h3 style="color:#38bdf8; font-size:18px; margin-bottom:12px;">📐 1. 畫面比例與應用情境</h3>
-      <p style="font-size:14px; color:var(--text-muted); margin-bottom:10px;">
-        製作前務必先確認發布平台，避免後製裁切破壞構圖：
-      </p>
-      <ul style="font-size:13px; color:var(--text-main); padding-left:18px; line-height:1.7;">
-        <li><strong>直式 9:16 (1080×1920)：</strong> 適合 YouTube Shorts、TikTok、Instagram Reels、LINE VOOM 等手機短影音平台。</li>
-        <li><strong>橫式 16:9 (1920×1080)：</strong> 適合一般電腦螢幕、教學投影機、智慧電視及標準 YouTube 橫向影片。</li>
-      </ul>
+  <div class="lecture-tabs">
+    <button class="btn-lec-tab active" onclick="switchLectureTab('teaching')">📖 AI 影音創作教學實作講義（9大教學模組）</button>
+    <button class="btn-lec-tab" onclick="switchLectureTab('review')">📋 課後複習講義與實作檢核表（SOP & 百寶箱）</button>
+  </div>
+
+  <!-- Pane 1: Teaching Guide -->
+  <div id="pane-teaching" class="lecture-pane active">
+    <div class="lecture-card">
+      <h3>一、AI 影音創作工具與工作分工矩陣</h3>
+      <div class="lecture-content">
+        <p>AI 影片創作並非單一工具完成，而是跨工具的協同管線：</p>
+        <div class="lecture-table-wrap">
+          <table class="lecture-table">
+            <thead>
+              <tr><th>階段</th><th>主要工具</th><th>任務產出</th><th>操作關鍵提示</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. 企劃與劇本</td><td>ChatGPT / Gemini</td><td>分鏡大綱、人物設定、提示詞</td><td>同一個對話中完成，保留上下文記憶</td></tr>
+              <tr><td>2. 圖像生成</td><td>Gemini / Flux / Midjourney</td><td>角色定妝照、分鏡關鍵影格</td><td>決定比例（9:16 或 16:9），固定特徵</td></tr>
+              <tr><td>3. 影片生成</td><td>Google Flow / Kling / Runway</td><td>動態影片短片段（6~10 秒）</td><td>選擇適當模型，多段並行提交</td></tr>
+              <tr><td>4. 音樂音效</td><td>Gemini 音樂 / Suno / 剪映庫</td><td>純配樂、環境音、動作音效</td><td>音量調降 -15dB，片頭片尾淡入淡出</td></tr>
+              <tr><td>5. 剪輯整合</td><td>剪映電腦版 (CapCut)</td><td>完整輸出 1080p MP4</td><td>封面 2~3 秒、文稿匹配字幕、語音 TTS</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h3 style="color:#818cf8; font-size:18px; margin-bottom:12px;">🎨 2. 角色三視圖錨定法則</h3>
-      <p style="font-size:14px; color:var(--text-muted); margin-bottom:10px;">
-        解決 AI 生成不同鏡頭時「主角換人」的最有效對策：
-      </p>
-      <ul style="font-size:13px; color:var(--text-main); padding-left:18px; line-height:1.7;">
-        <li>在同一對話中生成「正面、側面、背面」三視圖設定表。</li>
-        <li>指定固定外觀特徵（如：粉色洋裝、紅色小髮夾、黑白相間毛色）。</li>
-        <li>每段分鏡提示詞中，均重複關鍵特徵描述作為強約束。</li>
-      </ul>
+    <div class="lecture-card">
+      <h3>二、AI 角色設計與定妝三視圖法則</h3>
+      <div class="lecture-content">
+        <p><strong>防跑角核心思維：</strong> 單段生成屬於獨立隨機任務，若未建立強約束，AI 會隨機更換主角外貌與服裝。必須預先在乾淨背景下產出「正面、45度側面、側面、背面」的全身設定圖，並於後續提示詞中鎖定關鍵特徵（如：粉色洋裝、紅色蝴蝶結、黑白相間邊牧）。</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h3 style="color:#34d399; font-size:18px; margin-bottom:12px;">🎬 3. 鏡頭語言與運鏡提示詞</h3>
-      <p style="font-size:14px; color:var(--text-muted); margin-bottom:10px;">
-        將靜態繪畫轉為靈動電影感鏡頭的關鍵指令：
-      </p>
-      <ul style="font-size:13px; color:var(--text-main); padding-left:18px; line-height:1.7;">
-        <li><strong>Push-in / Zoom in：</strong> 鏡頭緩慢向前推進，營造情感凝聚與專注。</li>
-        <li><strong>Pull-back / Zoom out：</strong> 緩慢向後拉遠，展現廣闊環境與落寞餘韻。</li>
-        <li><strong>Tracking / Pan：</strong> 側面平移跟拍，呈現伴行或奔跑的動態流暢感。</li>
-        <li><strong>Macro Close-up：</strong> 微距特寫（如爪印、小球、眼神），強化細節感動。</li>
-      </ul>
+    <div class="lecture-card">
+      <h3>三、劇本、分鏡與 9:16 vs 16:9 畫面比例選擇</h3>
+      <div class="lecture-content">
+        <p><strong>直式 9:16 (1080×1920)：</strong> 手機直向瀏覽（YouTube Shorts, TikTok, Reels, LINE VOOM），構圖需注意上下視覺重心。</p>
+        <p><strong>橫式 16:9 (1920×1080)：</strong> 教室投影、電腦螢幕、標準 YouTube，適合大景深與廣闊風景敘事。</p>
+      </div>
+    </div>
+
+    <div class="lecture-card">
+      <h3>四、剪映電腦版後製：TTS 旁白對齊與多語字幕</h3>
+      <div class="lecture-content">
+        <p><strong>口白長度原則：</strong> 旁白文案朗讀時長必須短於對應鏡頭（例如 6 秒畫面，口白約 2.5～3.5 秒），留白給觀眾感受情緒。</p>
+        <p><strong>文稿匹配字幕：</strong> 避免語音辨識錯字，直接輸入純淨中文文稿進行自動對齊，字體加上黑白對比描邊，確保全片清晰辨讀。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pane 2: Review Guide & Checklist -->
+  <div id="pane-review" class="lecture-pane">
+    <div class="checklist-box">
+      <div class="checklist-header">
+        <div>
+          <h3 style="font-size:18px; font-weight:700; color:#f8fafc;">📋 課後實作避坑檢核表 (自我進度追蹤)</h3>
+          <p style="font-size:13px; color:var(--text-muted); margin-top:4px;">勾選已完成的實作步驟，系統會自動在瀏覽器儲存您的進度。</p>
+        </div>
+        <div style="text-align:right;">
+          <span id="checkPercent" style="font-family:'JetBrains Mono'; font-weight:700; color:#38bdf8; font-size:18px;">0%</span>
+          <div class="progress-bar-bg" style="width:160px;">
+            <div id="checkFill" class="progress-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:10px;" id="checklistItems">
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已開啟 Google Drive 資料夾取得研習講義與範例</span></label>
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">在同一 Gemini 對話中完成主角與寵物設定稿</span></label>
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">確認全片畫面比例（橫式 16:9 或直式 9:16）</span></label>
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已依序生成並下載分鏡圖（命名 P1～P10）</span></label>
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已登入 Google Flow 並建立獨立影片專案</span></label>
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已完成分鏡影片生成並依序下載至本機</span></label>
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已將封面縮短為 2～3 秒置於時間軸開頭</span></label>
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已使用剪映文字朗讀產生全片統一旁白聲線</span></label>
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已透過文稿匹配生成字幕並加上清晰描邊</span></label>
+        <label class="check-item"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">已設定背景音樂音量適中且結尾自然淡出</span></label>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Module 5: Prompts Library -->
-<section id="prompts" class="module-section">
+<!-- #3 FOCUS: AI DIALOGUE SIMULATOR (from downloads/AI平台對話) -->
+<section id="ai-dialogues" class="module-section">
   <div class="section-header">
-    <span class="section-tag">Prompt Toolbox</span>
-    <h2 class="section-title">實戰提示詞百寶箱</h2>
-    <p class="section-desc">精選課堂修正版提示詞模板，點擊「一鍵複製」即可直接套用至 Gemini、ChatGPT 或 Flow 中實作。</p>
+    <span class="section-tag">Prompt Engineering In Action</span>
+    <h2 class="section-title">AI 平台對話示範 · 實錄重現</h2>
+    <p class="section-desc">研習現場與 Gemini 及 ChatGPT 的真實多輪對話紀錄，展示如何從最初一句構想到輸出完整 10 段分鏡與圖像、影片雙提示詞。</p>
   </div>
 
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(420px, 1fr)); gap:20px;">
-    <!-- Prompt 1 -->
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-title">🌟 3D 皮克斯風格角色四視圖提示詞（呂聰賢老師版）</span>
-        <button class="btn-copy" onclick="copyPrompt('p1')">📋 一鍵複製</button>
-      </div>
-      <div class="prompt-content" id="p1">請以 3D 皮克斯精緻動畫風格，為我設計一個角色設定表：
-角色：10 歲小女孩，綁著雙馬尾，佩戴紅色蝴蝶結髮夾，身穿淡粉色休閒連身洋裝，白色短襪與棕色皮鞋。
-夥伴：一隻黑白相間、毛髮蓬鬆靈巧的邊境牧羊犬，眼神溫暖，嘴邊帶有些微灰白毛髮。
-畫面規格：白色純淨背景，同張畫面包含正面、側面、背面三視圖及表情特寫。柔和攝影棚打光，高細節角色建模，不要文字、不要字幕。</div>
+  <div class="dialogue-box">
+    <div class="dialogue-tabs">
+      <button class="btn-chat-tab active" onclick="switchChat('gemini_husky')">🐕 Google Gemini 示範：哈士奇動畫企劃 (20輪)</button>
+      <button class="btn-chat-tab" onclick="switchChat('chatgpt_shepherd')">💬 ChatGPT 示範：邊境牧羊犬企劃 (5輪)</button>
+      <button class="btn-chat-tab" onclick="switchChat('gemini_shepherd')">🌧️ Google Gemini 示範：雨中的牧羊人 (19輪)</button>
     </div>
 
-    <!-- Prompt 2 -->
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-title">🌅 新海誠日系手繪動漫光影風格提示詞</span>
-        <button class="btn-copy" onclick="copyPrompt('p2')">📋 一鍵複製</button>
+    <!-- Active Chat Title & Info -->
+    <div style="padding:14px 24px; background:#1e293b; border-bottom:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span id="chatModelBadge" class="brand-badge">Google Gemini</span>
+        <strong id="chatTitleDisplay" style="color:#f8fafc; font-size:15px;">哈士奇動畫企劃方案建議</strong>
       </div>
-      <div class="prompt-content" id="p2">Vertical 9:16, Makoto Shinkai anime aesthetic, breathtaking golden hour sunset, cinematic lighting, ethereal atmospheric perspective. An elderly black-and-white Border Collie and a young girl standing side by side overlooking the ocean town, wind blowing softly, dramatic lens flare, watercolor textures, 8k resolution, highly detailed background art. No text, no watermark.</div>
+      <span style="font-size:12px; color:var(--text-muted);">完整還原真實提示詞指令與模型反饋</span>
     </div>
 
-    <!-- Prompt 3 -->
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-title">🎥 AI 影片運鏡指令模板（Image-to-Video）</span>
-        <button class="btn-copy" onclick="copyPrompt('p3')">📋 一鍵複製</button>
-      </div>
-      <div class="prompt-content" id="p3">9:16 vertical video, 6 seconds. Smooth cinematic camera motion. The camera slowly pushes forward (dolly in) while tilting slightly down toward the subject. Cherry blossom petals flutter gently in the soft spring breeze. Golden afternoon sunlight creates natural shimmering lens flare. Subtle, realistic character breathing movements. Maintain consistent character appearance and clothing, no sudden jumps, fluid motion.</div>
-    </div>
-
-    <!-- Prompt 4 -->
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-title">🍃 吉卜力清新治癒草坡手繪風格提示詞</span>
-        <button class="btn-copy" onclick="copyPrompt('p4')">📋 一鍵複製</button>
-      </div>
-      <div class="prompt-content" id="p4">吉卜力手繪水彩風格，9:16 豎屏構圖。夏日遼闊山丘頂端佇立著巨大古老橡樹，青翠草地隨風起伏如浪，遠處俯瞰蔚藍海灣與日式寧靜港口小鎮。陽光穿透薄雲灑下柔和光斑，微風拂動，清新自然，極致細膩的動漫背景美術，充滿希望與治癒氛圍。</div>
-    </div>
+    <!-- Chat Messages Window -->
+    <div class="chat-stream-window" id="chatStream"></div>
   </div>
 </section>
 
-<!-- Module 6: Video Showcase Theater -->
+<!-- SHOWCASE THEATER -->
 <section id="theater" class="module-section">
   <div class="section-header">
     <span class="section-tag">Masterpieces Showcase</span>
@@ -1332,7 +1252,6 @@
       <div class="video-player-wrap">
         <video controls preload="metadata" poster="gemini-邊際牧羊犬/P00.jpg">
           <source src="assets/videos/shepherd_in_rain.mp4" type="video/mp4">
-          您的瀏覽器不支援播放此影片。
         </video>
       </div>
       <div class="video-info">
@@ -1340,13 +1259,11 @@
           <div class="video-meta">
             <span class="video-badge badge-dur">⏱️ 63秒</span>
             <span class="video-badge badge-spec">📱 1080×1920 (9:16)</span>
-            <span class="video-badge badge-voice">🎙️ 台灣女聲旁白</span>
+            <span class="video-badge badge-voice">🎙️ 台灣女聲配音</span>
           </div>
           <h3 class="video-title">《雨中的牧羊人》</h3>
           <p class="video-tagline">「大雨會停，而我會一直在這裡。」</p>
-          <p class="video-features">
-            以黃色雨衣與紅色雨靴小女孩為主角，黑白邊境牧羊犬在大雨滂沱中守護歸途。包含建立雨景、揉皺畫紙、打傘並行、玄關擦拭等 10 段分鏡。
-          </p>
+          <p class="video-features">黃色雨衣小女孩與黑白邊境牧羊犬在大雨中的溫暖歸途，全片 10 段分鏡與柔和交叉淡出。</p>
         </div>
       </div>
     </div>
@@ -1356,7 +1273,6 @@
       <div class="video-player-wrap">
         <video controls preload="metadata" poster="chatGPT-明天，也要一起散步/PP00夕陽下的櫻花散步.png">
           <source src="assets/videos/walk_together_tomorrow.mp4" type="video/mp4">
-          您的瀏覽器不支援播放此影片。
         </video>
       </div>
       <div class="video-info">
@@ -1364,13 +1280,11 @@
           <div class="video-meta">
             <span class="video-badge badge-dur">⏱️ 63秒</span>
             <span class="video-badge badge-spec">📱 1080×1920 (9:16)</span>
-            <span class="video-badge badge-voice">🎙️ 台灣女聲旁白</span>
+            <span class="video-badge badge-voice">🎙️ 台灣女聲配音</span>
           </div>
           <h3 class="video-title">《明天，也要一起散步》</h3>
           <p class="video-tagline">「你走慢了，我就陪你慢慢走。」</p>
-          <p class="video-features">
-            櫻花小徑上，老牧羊犬步履漸緩，女孩停下等待並拾起童年磨損的紅色網球。傳遞出愛不是催促，而是願意為彼此放慢腳步的動人深情。
-          </p>
+          <p class="video-features">櫻花樹下老牧羊犬步履漸緩，女孩停下等待並重溫紅色小球童年回憶，深刻詮釋陪伴的意義。</p>
         </div>
       </div>
     </div>
@@ -1380,7 +1294,6 @@
       <div class="video-player-wrap">
         <video controls preload="metadata" poster="gemin-哈士奇/P00.jpg">
           <source src="assets/videos/always_by_my_side.mp4" type="video/mp4">
-          您的瀏覽器不支援播放此影片。
         </video>
       </div>
       <div class="video-info">
@@ -1388,13 +1301,11 @@
           <div class="video-meta">
             <span class="video-badge badge-dur">⏱️ 63秒</span>
             <span class="video-badge badge-spec">📱 1080×1920 (9:16)</span>
-            <span class="video-badge badge-voice">🎙️ 台灣女聲旁白</span>
+            <span class="video-badge badge-voice">🎙️ 台灣女聲配音</span>
           </div>
           <h3 class="video-title">《未來的路，有你同在》</h3>
           <p class="video-tagline">「你看見我所有的夢，溫熱了孤獨的長夜。」</p>
-          <p class="video-features">
-            插畫女孩與幼犬哈士奇相遇，從誤踩藍色爪印的驚慌、失意停筆的長夜依偎，到共同完成夕陽繪本，於天橋晚霞下邁向未來的成長歷程。
-          </p>
+          <p class="video-features">幼犬哈士奇踩翻藍色顏料留下爪印，撫平作畫女孩的挫折，在雪窗與夕陽下共同完成繪本。</p>
         </div>
       </div>
     </div>
@@ -1404,7 +1315,6 @@
       <div class="video-player-wrap">
         <video controls preload="metadata" poster="antigravity-山丘上的祕密基地/1151101-PP1.png">
           <source src="assets/videos/whispering_hill.mp4" type="video/mp4">
-          您的瀏覽器不支援播放此影片。
         </video>
       </div>
       <div class="video-info">
@@ -1412,109 +1322,127 @@
           <div class="video-meta">
             <span class="video-badge badge-dur">⏱️ 60秒</span>
             <span class="video-badge badge-spec">📱 1080×1920 (9:16)</span>
-            <span class="video-badge badge-voice">🎙️ 台灣女聲旁白</span>
+            <span class="video-badge badge-voice">🎙️ 台灣女聲配音</span>
           </div>
           <h3 class="video-title">《風吹過的山丘》</h3>
           <p class="video-tagline">「語言到不了的地方，有你無聲的守候。」</p>
-          <p class="video-features">
-            吉卜力手繪畫風。老橡樹綠草坡上，大狗叼來彩繪手作紙風車，清風吹動五彩光芒拂散心中煩憂，重拾純真笑容，並肩遠眺金燦港灣。
-          </p>
+          <p class="video-features">吉卜力手繪畫風。老橡樹下大狗叼來彩繪紙風車，清風拂去心中的煩憂，於晚霞海灣並肩遠眺。</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Module 7: Download Center -->
+<!-- DOWNLOAD CENTER -->
 <section id="downloads" class="module-section">
   <div class="section-header">
     <span class="section-tag">Resource Pack</span>
-    <h2 class="section-title">研習講義與簡報教材下載</h2>
-    <p class="section-desc">提供本次研習所有完整簡報檔 (PPTX)、全攻略電子書 (PDF) 與課後複習檢核講義 (DOCX)。</p>
+    <h2 class="section-title">研習教材與檔案下載</h2>
+    <p class="section-desc">完整收錄本次研習的 4 大簡報 PDF、2 份講義 DOCX、3 份 AI 平台對話紀錄與 4 張高畫質教學大圖。</p>
   </div>
 
   <div class="downloads-grid">
-    <a href="downloads/1151101呂聰賢1-AI_影片創作與生成式影音工具應用 1.pptx" class="download-card" download>
-      <div class="dl-icon dl-pptx">📊</div>
-      <div class="dl-info">
-        <h4>Part 1 · 深色科技風簡報 (PPTX)</h4>
-        <p>完整 21 頁投影片檔 · 4.1 MB</p>
-      </div>
-    </a>
-
-    <a href="downloads/1151101呂聰賢1-AI_影片創作與生成式影音工具應用 2.pptx" class="download-card" download>
-      <div class="dl-icon dl-pptx">📊</div>
-      <div class="dl-info">
-        <h4>Part 1 · 手繪筆記風簡報 (PPTX)</h4>
-        <p>完整 21 頁投影片檔 · 3.6 MB</p>
-      </div>
-    </a>
-
-    <a href="downloads/1151101呂聰賢2-AI_影片創作與生成式影音工具應用 1.pptx" class="download-card" download>
-      <div class="dl-icon dl-pptx">📊</div>
-      <div class="dl-info">
-        <h4>Part 2 · 深色科技風簡報 (PPTX)</h4>
-        <p>完整 21 頁投影片檔 · 4.2 MB</p>
-      </div>
-    </a>
-
-    <a href="downloads/1151101呂聰賢2-AI_影片創作與生成式影音工具應用 2.pptx" class="download-card" download>
-      <div class="dl-icon dl-pptx">📊</div>
-      <div class="dl-info">
-        <h4>Part 2 · 手繪筆記風簡報 (PPTX)</h4>
-        <p>完整 21 頁投影片檔 · 3.6 MB</p>
-      </div>
-    </a>
-
-    <a href="downloads/Google_AI_動畫實戰指南.pdf" class="download-card" download>
+    <a href="downloads/簡報/Google_AI_動畫實戰指南.pdf" class="download-card" download>
       <div class="dl-icon dl-pdf">📕</div>
       <div class="dl-info">
-        <h4>Google AI 動畫實戰指南 (PDF)</h4>
-        <p>高畫質全攻略電子書 · 25.8 MB</p>
+        <h4>Google AI 動畫實戰指南</h4>
+        <p>21 頁高畫質簡報檔 · PDF (25.8 MB)</p>
       </div>
     </a>
 
-    <a href="downloads/AI動畫導演實戰大師班.pdf" class="download-card" download>
-      <div class="dl-icon dl-pdf">📕</div>
+    <a href="downloads/簡報/AI動畫導演實戰大師班.pdf" class="download-card" download>
+      <div class="dl-icon dl-pdf">🎬</div>
       <div class="dl-info">
-        <h4>AI 動畫導演實戰大師班 (PDF)</h4>
-        <p>高畫質全攻略電子書 · 20.3 MB</p>
+        <h4>AI 動畫導演實戰大師班</h4>
+        <p>21 頁高畫質簡報檔 · PDF (20.3 MB)</p>
       </div>
     </a>
 
-    <a href="downloads/1151101-呂聰賢-AI 短影音創作全流程：課後複習講義與實作檢核表.docx" class="download-card" download>
+    <a href="downloads/簡報/AI_影音創作全攻略.pdf" class="download-card" download>
+      <div class="dl-icon dl-pdf">📘</div>
+      <div class="dl-info">
+        <h4>AI 影音創作全攻略 (版A)</h4>
+        <p>21 頁高畫質簡報檔 · PDF (21.9 MB)</p>
+      </div>
+    </a>
+
+    <a href="downloads/簡報/AI影音創作全攻略.pdf" class="download-card" download>
+      <div class="dl-icon dl-pdf">📙</div>
+      <div class="dl-info">
+        <h4>AI 影音創作全攻略 (版B)</h4>
+        <p>21 頁高畫質簡報檔 · PDF (18.3 MB)</p>
+      </div>
+    </a>
+
+    <a href="downloads/講義/1151101-呂聰賢-AI影音創作教學講義.docx" class="download-card" download>
       <div class="dl-icon dl-docx">📄</div>
       <div class="dl-info">
-        <h4>課後複習講義與實作檢核表 (DOCX)</h4>
-        <p>包含提示詞百寶箱 · 8.2 MB</p>
+        <h4>AI 影音創作教學實作講義</h4>
+        <p>備課指南與教學模組 · DOCX (46 KB)</p>
       </div>
     </a>
 
-    <a href="downloads/1151101-呂聰賢-AI影音創作教學講義.docx" class="download-card" download>
+    <a href="downloads/講義/1151101-呂聰賢-AI 短影音創作全流程：課後複習講義與實作檢核表.docx" class="download-card" download>
       <div class="dl-icon dl-docx">📄</div>
       <div class="dl-info">
-        <h4>AI 影音創作教學實作講義 (DOCX)</h4>
-        <p>備課指南與學生專題教案 · 46 KB</p>
+        <h4>課後複習講義與實作檢核表</h4>
+        <p>含提示詞百寶箱 · DOCX (8.2 MB)</p>
+      </div>
+    </a>
+
+    <a href="downloads/AI平台對話/哈士奇動畫企劃方案建議 - Gemini-劇本-照片-影片提示詞.pdf" class="download-card" download>
+      <div class="dl-icon dl-pdf">🤖</div>
+      <div class="dl-info">
+        <h4>Gemini 實戰對話紀錄 (哈士奇)</h4>
+        <p>20 輪完整提示詞日誌 · PDF (4.2 MB)</p>
+      </div>
+    </a>
+
+    <a href="downloads/AI平台對話/邊際牧羊犬動畫企劃方案建議 - ChatGPT-劇本-照片-影片提示詞.pdf" class="download-card" download>
+      <div class="dl-icon dl-pdf">💬</div>
+      <div class="dl-info">
+        <h4>ChatGPT 實戰對話紀錄 (邊境牧羊犬)</h4>
+        <p>完整分鏡與生圖提示詞 · PDF (8.7 MB)</p>
+      </div>
+    </a>
+
+    <a href="downloads/教學圖/AI_短影音創作全流程圖解.png" class="download-card" download>
+      <div class="dl-icon dl-png">🖼️</div>
+      <div class="dl-info">
+        <h4>AI 短影音創作全流程圖解</h4>
+        <p>2752×1536 高解析教學大圖 · PNG</p>
+      </div>
+    </a>
+
+    <a href="downloads/教學圖/AI動畫影片創作三步驟.png" class="download-card" download>
+      <div class="dl-icon dl-png">🖼️</div>
+      <div class="dl-info">
+        <h4>AI 動畫影片創作三步驟</h4>
+        <p>2752×1536 高解析教學大圖 · PNG</p>
       </div>
     </a>
   </div>
 </section>
 
+<!-- Lightbox Modal -->
+<div id="lightbox" class="modal-overlay" onclick="closeLightbox()">
+  <img id="lightboxImg" class="modal-img" src="" alt="Enlarged chart">
+</div>
+
 <!-- Toast -->
 <div id="toast" class="toast">
   <span>✓</span>
-  <span id="toastMsg">提示詞已成功複製到剪貼簿！</span>
+  <span id="toastMsg">已複製到剪貼簿！</span>
 </div>
 
 <!-- Footer -->
 <footer>
   <div class="footer-content">
     <div class="footer-links">
-      <a href="#workflow">五大實作階段</a>
-      <a href="#slides">84頁雙風格簡報</a>
-      <a href="#mindmap">全景心智圖</a>
-      <a href="#lectures">教學講義</a>
-      <a href="#prompts">提示詞寶箱</a>
+      <a href="#focus-charts">核心教學大圖</a>
+      <a href="#slides">精選簡報觀看器</a>
+      <a href="#lectures">線上講義</a>
+      <a href="#ai-dialogues">AI平台對話</a>
       <a href="#theater">實戰作品劇院</a>
       <a href="#downloads">教材下載</a>
     </div>
@@ -1529,21 +1457,86 @@
 
 <!-- Interactive Scripts -->
 <script>
-  const SLIDES_DATA = {"part1": [{"slide_num": 1, "category": "研習專題", "title": "AI影片創作與動畫生成實戰", "subtitle": "掌握Flow動畫製作流", "sticker_id": 0, "points": []}, {"slide_num": 2, "category": "課程全貌", "title": "AI影音創作全流程心智圖", "subtitle": "四大核心與實戰流程", "sticker_id": 7, "points": []}, {"slide_num": 3, "topic_idx": 1, "category": "課程學習", "title": "課程資源與學習方式", "sticker_id": 15, "points": ["提供全程與分段錄影", "雲端講義可免費下載", "課堂專心跟做免抄題"]}, {"slide_num": 4, "topic_idx": 2, "category": "核心概念", "title": "生成式影音核心概念", "sticker_id": 1, "points": ["AI涵蓋腳本圖文音樂", "短片段生成再行剪輯", "充分描述需求定細節"]}, {"slide_num": 5, "topic_idx": 3, "category": "視覺控制", "title": "視覺一致性關鍵策略", "sticker_id": 4, "points": ["單段生成易產生差異", "需先建立主角定裝照", "同對話維持角色風格"]}, {"slide_num": 6, "topic_idx": 4, "category": "工具分工", "title": "AI三大工具專業分工", "sticker_id": 6, "points": ["AI寫腳本分鏡提示詞", "Flow將圖片轉成影片", "剪映整合影音與字幕"]}, {"slide_num": 7, "topic_idx": 5, "category": "平臺特性", "title": "Google Flow平臺特性", "sticker_id": 2, "points": ["單段時長上限為十秒", "免費帳號每日五十點", "每日點數隔日不累積"]}, {"slide_num": 8, "topic_idx": 6, "category": "算力規劃", "title": "算力消耗與點數規劃", "sticker_id": 9, "points": ["八秒影片約需十二點", "每日點數可產四片段", "時長畫質影響點數用"]}, {"slide_num": 9, "topic_idx": 7, "category": "語音策略", "title": "語音限制與旁白解方", "sticker_id": 10, "points": ["中文發音易有外國腔", "嘴型中文同步有限制", "建議採用純中文旁白"]}, {"slide_num": 10, "topic_idx": 8, "category": "實戰流程 01", "title": "流程一：構思故事腳本", "sticker_id": 7, "points": ["同對話框保留上下文", "指定風格提三個方案", "完整作品建議至少六幕"]}, {"slide_num": 11, "topic_idx": 9, "category": "實戰流程 02", "title": "流程二：建立角色定裝", "sticker_id": 11, "points": ["產主角寵物白底定裝", "含正側面與表情參考", "確立畫風作分鏡基準"]}, {"slide_num": 12, "topic_idx": 10, "category": "實戰流程 03", "title": "流程三：撰寫分鏡提示詞", "sticker_id": 1, "points": ["依故事逐幕產提示詞", "中文檢視英文給AI用", "確認選圖片生成功能"]}, {"slide_num": 13, "topic_idx": 11, "category": "規格設定", "title": "畫面比例與規格設定", "sticker_id": 8, "points": ["電腦橫16比9手機直9比16", "製作前決定統一比例", "平臺設定優先提示詞"]}, {"slide_num": 14, "topic_idx": 12, "category": "實戰流程 04", "title": "流程四：素材依序命名", "sticker_id": 2, "points": ["分鏡依序命名P1至P4", "檔名清楚避免上傳錯", "同專案切勿更換帳號"]}, {"slide_num": 15, "topic_idx": 13, "category": "實戰流程 05", "title": "流程五：封面與標題設計", "sticker_id": 11, "points": ["AI生成吸引人主題封面", "封面融合多場景同比例", "請AI推薦高點閱標題"]}, {"slide_num": 16, "topic_idx": 14, "category": "實戰流程 06", "title": "流程六：生成AI背景音樂", "sticker_id": 14, "points": ["AI產氛圍契合背景樂", "三十秒音樂可重播循環", "留意外部工具下載限制"]}, {"slide_num": 17, "topic_idx": 15, "category": "實戰流程 07", "title": "流程七：精準撰寫旁白文案", "sticker_id": 5, "points": ["旁白長度短於影片秒數", "純中文文案利後製配音", "內容隨機不滿意可重寫"]}, {"slide_num": 18, "topic_idx": 16, "category": "實戰流程 08", "title": "流程八：Flow生成影片", "sticker_id": 6, "points": ["獨立專案上傳分鏡圖片", "加入參考圖與提示詞", "可連續提交不必等前段"]}, {"slide_num": 19, "topic_idx": 17, "category": "後製整合", "title": "後製剪輯與音畫整合", "sticker_id": 2, "points": ["剪輯工具整合所有片段", "加入旁白配音與字幕", "調整轉場節奏完成作品"]}, {"slide_num": 20, "topic_idx": 18, "category": "操作心法", "title": "對話管理與操作要訣", "sticker_id": 7, "points": ["重要對話重新命名置頂", "Shift加Enter換行修改", "可分享對話保留歷程"]}, {"slide_num": 21, "topic_idx": 19, "category": "成本認知", "title": "模型成本與版權認知", "sticker_id": 14, "points": ["大模型訓練成本極高", "課程免費工具降成本", "商用需評估版權與條款"]}], "part2": [{"slide_num": 1, "category": "研習專題二", "title": "Google Flow與剪映後製實作", "subtitle": "Flow影片生成與剪映全實作", "sticker_id": 0, "points": []}, {"slide_num": 2, "category": "課程全貌", "title": "影音生成與後製全流程心智圖", "subtitle": "四大核心階段與十九項重點", "sticker_id": 7, "points": []}, {"slide_num": 3, "topic_idx": 1, "category": "影片生成", "title": "Flow專案與平行生成", "sticker_id": 6, "points": ["建立專案並明確命名", "可並行提交多段任務", "完成依序下載重新命名"]}, {"slide_num": 4, "topic_idx": 2, "category": "算力規格", "title": "算力額度與解析度", "sticker_id": 9, "points": ["免費點數每日重置不累", "免費下載720p已堪用", "紅色提示代表點數耗盡"]}, {"slide_num": 5, "topic_idx": 3, "category": "畫面控制", "title": "角色一致性關鍵控制", "sticker_id": 4, "points": ["切換深入推論模型重試", "每張分鏡提示重申風格", "善用同帳號延續角色特徵"]}, {"slide_num": 6, "topic_idx": 4, "category": "角色設定", "title": "建立專屬角色與聲音", "sticker_id": 1, "points": ["內建功能指定服飾語音", "跨場景可重複呼叫角色", "單場景最多參考三角色"]}, {"slide_num": 7, "topic_idx": 5, "category": "操作環境", "title": "網頁操作與設備建議", "sticker_id": 2, "points": ["免安裝網頁服務隨處開", "電腦鍵鼠操作效率勝手機", "Ctrl加滾輪縮放便於比對"]}, {"slide_num": 8, "topic_idx": 6, "category": "環境限制", "title": "帳號與校園環境限制", "sticker_id": 8, "points": ["教育版與未成年功能受限", "建議使用個人Google帳號", "網路延遲可換聲音重試"]}, {"slide_num": 9, "topic_idx": 7, "category": "剪輯準備", "title": "剪映準備與版本選擇", "sticker_id": 11, "points": ["使用講師提供6.01版", "切勿升級避免輸出付費", "桌面解壓縮後直接啟動"]}, {"slide_num": 10, "topic_idx": 8, "category": "時間軸剪輯", "title": "時間軸串接與素材整理", "sticker_id": 2, "points": ["匯入封面影片與音樂素材", "依序拖入V1至V4片段", "剪映自動存檔安全便利"]}, {"slide_num": 11, "topic_idx": 9, "category": "節奏掌握", "title": "封面時長精準控制", "sticker_id": 9, "points": ["封面片段縮短至兩三秒", "開門見山吸引觀眾目光", "避免過長篇幅拖慢節奏"]}, {"slide_num": 12, "topic_idx": 10, "category": "旁白規劃", "title": "旁白長度與節奏匹配", "sticker_id": 5, "points": ["旁白秒數必須短於畫面", "保留適當留白節奏自然", "全片統一單一旁白聲線"]}, {"slide_num": 13, "topic_idx": 11, "category": "語音生成", "title": "逐段文字轉語音TTS", "sticker_id": 7, "points": ["按畫面片段分段貼文案", "剪映多種中文聲線可選", "逐段轉換精準對齊畫面"]}, {"slide_num": 14, "topic_idx": 12, "category": "字幕校對", "title": "文稿匹配自動對齊字幕", "sticker_id": 1, "points": ["語音轉字幕易有錯別字", "用已校文稿匹配自動對齊", "文字轉語音字幕分步完成"]}, {"slide_num": 15, "topic_idx": 13, "category": "視覺美化", "title": "字幕排版與描邊美化", "sticker_id": 2, "points": ["預先分段換行避免超長", "加上描邊提升文字可讀性", "可暫加底框輔助精準定位"]}, {"slide_num": 16, "topic_idx": 14, "category": "動態特效", "title": "標題設計與文字動畫", "sticker_id": 14, "points": ["加入作品名稱與作者姓名", "設定入場及循環文字動畫", "調整動畫時長避免過急促"]}, {"slide_num": 17, "topic_idx": 15, "category": "配樂處理", "title": "多軌音訊與背景音樂", "sticker_id": 15, "points": ["背景音樂置於獨立音軌", "依成片長度裁切結尾", "音畫段落互相烘托契合"]}, {"slide_num": 18, "topic_idx": 16, "category": "聲音平衡", "title": "混音音量與自然淡出", "sticker_id": 5, "points": ["大幅調低配樂避免蓋旁白", "結尾設定秒數自然淡出", "檢查原音與旁白音量平衡"]}, {"slide_num": 19, "topic_idx": 17, "category": "多語發布", "title": "字幕匯出與多語翻譯", "sticker_id": 6, "points": ["輸出含時間碼之SRT檔", "AI翻譯字幕匯回多語言", "YouTube支援多語切換"]}, {"slide_num": 20, "topic_idx": 18, "category": "社群傳播", "title": "作品輸出與社群分享", "sticker_id": 14, "points": ["專案命名輸出高畫質MP4", "發布FB與YouTube分享", "建立個人AI影音作品集"]}, {"slide_num": 21, "topic_idx": 19, "category": "實踐心法", "title": "研習學習法與實作複習", "sticker_id": 15, "points": ["親自動手做勝過只聽講解", "先走通流程再雕琢細節", "雲端錄影講義反覆複習"]}]};
+  // 1. TEACHING CHARTS DATA & SWITCHER (#4)
+  const CHARTS_DATA = {
+    1: {
+      title: "AI 短影音創作全流程圖解",
+      lead: "從概念、圖像、動態到後製的一體化生產管線",
+      img: "assets/charts/chart1_short_video_workflow.png",
+      steps: [
+        "<strong>故事與腳本架構：</strong> 在單一 Gemini 對話中鎖定人物設定與情節綱要，確保上下文記憶不丟失。",
+        "<strong>視覺一致性錨定：</strong> 預先產出三視圖定裝照，固定髮型、服飾、年齡與毛色特徵。",
+        "<strong>分鏡提示詞工程：</strong> 中文供創作者構思檢驗，英文提示詞供模型生成高精度圖像與動態。",
+        "<strong>剪映後製整合：</strong> 時間軸順序編排、TTS 統一旁白聲線、文稿匹配字幕與 BGM 自然淡出。"
+      ]
+    },
+    2: {
+      title: "AI 動畫影片創作三步驟",
+      lead: "精準把控「生圖 ➔ 動畫 ➔ 剪輯」黃金鐵三角",
+      img: "assets/charts/chart2_animation_three_steps.png",
+      steps: [
+        "<strong>步驟一（靜態生成）：</strong> 運用 Gemini / ChatGPT 設計分鏡，產出高解析度 9:16 靜態關鍵幀圖片。",
+        "<strong>步驟二（動態轉化）：</strong> 匯入 Google Flow / Kling 進行 Image-to-Video，加入運鏡提示詞推拉平移。",
+        "<strong>步驟三（後製剪輯）：</strong> 在剪映中編排時間軸、縮短封面、配置交叉溶解、添加智慧字幕與音樂。"
+      ]
+    },
+    3: {
+      title: "AI 動畫影片創作全攻略",
+      lead: "全方位的角色設計、提示詞語法與後製細節指南",
+      img: "assets/charts/chart3_animation_guide.png",
+      steps: [
+        "<strong>角色外觀強約束：</strong> 設定白背景全身三視圖，描述明確顏色、服飾、飾品以避免角色跑板。",
+        "<strong>相機鏡頭語言：</strong> 靈活運用 Dolly in (推近)、Pan (平移)、Tracking (跟拍) 與 Macro (微距) 強化氛圍。",
+        "<strong>音訊分軌混音：</strong> 旁白置於主聲軌，背景音樂調降至 -15dB 襯底，片尾預留 3 秒平滑淡出收尾。"
+      ]
+    },
+    4: {
+      title: "AI 影片創作剪輯流程",
+      lead: "專業剪輯剪映 (CapCut) 電腦版標準時間軸配置 SOP",
+      img: "assets/charts/chart4_editing_workflow.png",
+      steps: [
+        "<strong>專案規格化：</strong> 設定 1080×1920 (9:16) 垂直影格，匯入分鏡圖與分段生成的影片素材。",
+        "<strong>封面停留控制：</strong> 封面片段縮短至約 2～3 秒，吸引停留目光並迅速銜接正片劇情。",
+        "<strong>音畫同步：</strong> 嚴格遵守「口白時長小於鏡頭畫面」原則，留出 2～3 秒純情緒留白鏡頭。"
+      ]
+    }
+  };
 
-  let currentDeck = 'p1_style1';
+  function switchChart(chartId) {
+    const data = CHARTS_DATA[chartId];
+    if (!data) return;
+
+    document.querySelectorAll('.btn-chart-tab').forEach((btn, idx) => {
+      btn.classList.toggle('active', (idx + 1) === chartId);
+    });
+
+    document.getElementById('chartImg').src = data.img;
+    document.getElementById('chartTitle').textContent = data.title;
+    document.getElementById('chartLead').textContent = data.lead;
+
+    const list = document.getElementById('chartSteps');
+    list.innerHTML = '';
+    data.steps.forEach(st => {
+      const li = document.createElement('li');
+      li.innerHTML = st;
+      list.appendChild(li);
+    });
+  }
+
+  // 2. SLIDE PRESENTATION VIEWER (#2)
+  let currentDeck = 'deck1_google_ai';
   let currentSlideIndex = 1;
   const totalSlides = 21;
 
-  function switchDeck(deckId) {
+  function switchDeck(deckId, deckTitle) {
     currentDeck = deckId;
     currentSlideIndex = 1;
-    
-    // Update button states
+
     document.querySelectorAll('.btn-deck').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('onclick').includes(deckId));
     });
 
+    document.getElementById('deckTitleDisplay').textContent = deckTitle;
     renderFilmstrip();
     updateSlideDisplay();
   }
@@ -1563,10 +1556,8 @@
   function updateSlideDisplay() {
     const img = document.getElementById('currentSlideImg');
     img.src = `slides/${currentDeck}/slide_${currentSlideIndex}.jpg`;
-    
     document.getElementById('slideNumDisplay').textContent = `投影片 ${currentSlideIndex} / ${totalSlides}`;
 
-    // Update active thumb
     const thumbs = document.querySelectorAll('.thumb-item');
     thumbs.forEach((t, idx) => {
       t.classList.toggle('active', (idx + 1) === currentSlideIndex);
@@ -1574,41 +1565,17 @@
         t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       }
     });
-
-    // Extract slide metadata from JSON
-    const partKey = currentDeck.startsWith('p1') ? 'part1' : 'part2';
-    const slideInfo = SLIDES_DATA[partKey][currentSlideIndex - 1] || {};
-
-    document.getElementById('slideTitle').textContent = slideInfo.title || `第 ${currentSlideIndex} 頁主題重點`;
-    document.getElementById('slideSubtitle').textContent = slideInfo.subtitle || (slideInfo.category ? `分類：${slideInfo.category}` : '');
-
-    const pointsList = document.getElementById('slidePoints');
-    pointsList.innerHTML = '';
-    if (slideInfo.points && slideInfo.points.length > 0) {
-      slideInfo.points.forEach(pt => {
-        const span = document.createElement('span');
-        span.className = 'point-tag';
-        span.textContent = pt;
-        pointsList.appendChild(span);
-      });
-    }
   }
 
   function prevSlide() {
-    if (currentSlideIndex > 1) {
-      currentSlideIndex--;
-    } else {
-      currentSlideIndex = totalSlides;
-    }
+    if (currentSlideIndex > 1) currentSlideIndex--;
+    else currentSlideIndex = totalSlides;
     updateSlideDisplay();
   }
 
   function nextSlide() {
-    if (currentSlideIndex < totalSlides) {
-      currentSlideIndex++;
-    } else {
-      currentSlideIndex = 1;
-    }
+    if (currentSlideIndex < totalSlides) currentSlideIndex++;
+    else currentSlideIndex = 1;
     updateSlideDisplay();
   }
 
@@ -1617,13 +1584,11 @@
     updateSlideDisplay();
   }
 
-  // Keyboard navigation
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') prevSlide();
     if (e.key === 'ArrowRight') nextSlide();
   });
 
-  // Fullscreen
   function toggleFullscreen() {
     const elem = document.getElementById('viewerScreen');
     if (!document.fullscreenElement) {
@@ -1633,30 +1598,97 @@
     }
   }
 
-  // Toast
-  function showToast(msg) {
-    const toast = document.getElementById('toast');
-    document.getElementById('toastMsg').textContent = msg;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2500);
-  }
+  // 3. AI DIALOGUES SIMULATOR (#3)
+  const DIALOGUES = {"gemini_husky": {"title": "Google Gemini 實戰對話：哈士奇動畫企劃《四季的足跡》", "model": "Google Gemini", "badge": "Gemini 2.0 / Advanced", "color": "#38bdf8", "turns": [{"turn": 1, "user": "我正在構思一段60秒左右的【日式溫馨感人動畫片】，\r\n請以下面的框架為我建議三個動畫影片方案內容，不需有腳本，謝謝。\r\n1.角色：女主角；哈士奇狗狗\r\n2.劇情大綱：請您建議。\r\n3.劇情要點：請您建議。\r\n4.場景：請您建議。\r\n5.風格：請您建議", "assistant": "【提示詞優化】\r\n[角色任務] 擔任資深日式動畫企劃與編劇顧問，負責 60 秒感人短片概念提案。 [背\r\n景資訊] 針對「女主角與哈士奇」設定，打造能引發強烈情感共鳴的日式溫馨短篇。\r\n[具體指令] 依據指定框架（角色、劇情大綱、劇情要點、場景、風格），產出三個切\r\n入點各異的精練企劃方案。 [約束條件] 保持結構清晰、條列分明，專注於視覺意象\r\n與情緒曲線，不需撰寫具體台詞腳本。\r\n方案一：時光流轉的陪伴《四季的足跡》\r\n角色：初入職場的插畫家女孩 × 從幼犬長成沉穩大犬的哈士奇\r\n劇情大綱：透過四季光影更迭，描繪女孩在追夢受挫與迷茫的歲月裡，哈士奇始終用溫暖且\r\n純粹的目光守護在她身旁，成為她重新拾起畫筆的動力。\r\n劇情要點：\r\n春季：幼犬哈士奇打翻顏料在稿紙上印下爪印，女孩破涕為笑。\r\n秋季：女孩深夜伏案落淚，成年哈士奇將下巴輕輕靠在女孩膝蓋上靜靜陪伴。\r\n冬季：女孩完成個人繪本，封面上正是兩人並肩看夕陽的背影。\r\n場景：陽光灑落的日式單身公寓工作室、櫻花飄落的河堤步道、橘紅晚霞的黃昏天橋。\r\n風格：新海誠式精緻光影風格（高透光感、細膩逆光、溫暖柔和的空氣感色彩）。\r\n方案二：笨拙的溫柔《雨後的暖桌》\r\n角色：獨自在大城市打拼的疲憊白領 × 表面傲嬌搞怪、內心細膩的哈士奇\r\n 哈士奇動畫企劃方案建議 - Gemini\r\n \n劇情大綱：女孩在經歷職場挫折的雨夜狼狽返家，平時愛搗蛋拆家的哈士奇收起調皮本性，\r\n用笨拙且專屬的動作打破寂靜，融化女孩心中的孤單防線。\r\n劇情要點：\r\n女孩渾身濕透、神情低落推開玄關大門。\r\n哈士奇沒有撲跳吠叫，而是小心翼翼咬來女孩最常穿的厚毛毯與毛線球玩具放在她腳\r\n邊。\r\n客廳暖桌旁，一人一狗緊挨著入睡，窗外雨過天晴露出微光。\r\n場景：昏暗的公寓玄關、鋪著木地板與擺設暖桌的溫馨客廳。\r\n風格：京都動畫（Kyoto Animation）生活手繪風（柔和飽和度、強調細微的情感肢體動\r\n作、溫潤治癒）。\r\n方案三：初雪的引路人《銀白色的約定》\r\n角色：思念遠方親人的高中女孩 × 靈動且充滿活力的銀灰色哈士奇\r\n劇情大綱：寒冬初雪之夜，女孩不慎在返家途中遺失了重要的紀念物，哈士奇化身最堅定勇\r\n敢的引路者，在漫天大雪中帶領女孩找回回憶與溫暖。\r\n劇情要點：\r\n女孩在大雪街道上焦急翻找口袋與背包，神情慌張無助。\r\n哈士奇在雪地中敏銳停步，回頭輕吠並在前方向女孩示意引路。\r\n路燈微光下，哈士奇用鼻子輕輕推開積雪，露出掉落的護身符，隨後轉身給予女孩一\r\n個溫暖的蹭頭擁抱。\r\n場景：大雪紛飛的日式老街巷弄、亮著暖黃路燈的轉角公園。\r\n風格：細田守式清新自然畫風（乾淨俐落的線條、冷冽雪景與暖色燈光的強烈情感對比）。\r\n 哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 2, "user": "根據您上面建議的劇情內容與風格,為我分段為N段鏡頭。我需要您提供以下內容:\r\n1.中、英文標題\r\n2.場景設計與分段描述文案:分鏡編號與類型(例如:01遠景)、畫面內容描述(中、英文)、影片字幕\r\n(中、英文)、時長。\r\n3.所有N段分鏡的AI圖像9:16生成中、英文的提示詞。\r\n4.所有N段鏡頭的AI影片9:16生成中、英文的提示詞。\r\n請根據您上面建議的【方案一：時光流轉的陪伴《四季的足跡》】的劇情內容\r\n與風格,為我分段為10段鏡頭。\r\n我需要您提供以下內容:\r\n1.中文與英文大標題(精簡);中文與英文副標題(金句)\r\n2.場景設計與分段描述文案:鏡頭編號與類型(例如:01遠景)、畫面內容描述(4-5個字的小標題與描\r\n述,中文與英文)、影片字幕(Video Caption,中文與英文)、時長。\r\n3.上面的中文與英文的大標題、副標題、字幕等內容再進行語法結構的核實,並進行文字的優化,要\r\n更具感人與詩意,並符合您提到的風格。字幕需要精簡為「極簡詩意」風格,每段控制在6-10 個中\r\n文字以內,英文則採短句結構,確保觀眾能在一瞬之間捕捉到深刻的情緒。\r\n4.所有10個鏡頭的AI圖像9:16生成“中文與英文對照的提示詞”。\r\n5.所有10個鏡頭的AI影片9:16生成“中文與英文對照的提示詞”。", "assistant": "【提示詞優化】\r\n[角色任務] 擔任資深動畫導演與 AI 生成提示詞工程師。 [背景資訊] 依據《四季的足\r\n跡》（新海誠式光影風格：女插畫家與哈士奇），規劃 60 秒 10 段 9:16 直式感人動畫\r\n分鏡企劃。 [具體指令]\r\n1. 提供精煉的中英文大標題與詩意副標題（金句）。\r\n2. 規劃 10 段鏡頭的場景設計、畫面描述（含 4–5 字小標）、極簡詩意字幕（中文\r\n字幕 6–10 字，英文採短句結構）與秒數分配（總計 60 秒）。\r\n3. 提供 10 段鏡頭的 9:16 AI 靜態圖像生成提示詞（中英對照）。\r\n4. 提供 10 段鏡頭的 9:16 AI 動態影片生成提示詞（中英對照，含運鏡與動態指\r\n令）。 [約束條件] 嚴格遵守格式與字數規範，文字維持日系唯美詩意感，提示\r\n詞使用標準 Midjourney / Sora / Runway 常用標籤結構。\r\n標題企劃 (Title & Subtitle)\r\n 哈士奇動畫企劃方案建議 - Gemini\r\n \n大標題 (Main Title)：\r\n中文：四季的足跡\r\n英文：Footprints of Seasons\r\n副標題金句 (Subtitle)：\r\n中文：歲月流轉，唯你的目光始終溫暖如初。\r\n英文：Time fades, yet your gaze stays warm.\r\n場景設計與 10 段分鏡規劃 (Storyboard Breakdown)\r\n鏡號與景別 畫面內容描述 (4-5字小標 + 描述)\r\n極簡詩意字幕\r\n(Video Caption)\r\n時\r\n長\r\n01 遠景 (Wide\r\nShot)\r\n【春光初綻】\r\n春日清晨，陽光透進日式單身公寓，散落畫紙的木\r\n地板上，女孩正在沉睡。\r\nMorning sunlight pours into a cozy Japanese studio\r\nwhere a girl sleeps amidst scattered sketches.\r\n中文：晨光初醒的春\r\n日\r\nEnglish: Morning\r\nlight stirs spring.\r\n5\r\n秒\r\n02 特寫 (Close￾up)\r\n【幼爪踏印】\r\n幼犬哈士奇打翻天藍色水彩，在空白畫稿上印下一\r\n記稚嫩的爪印。\r\nA tiny husky puppy knocks over sky-blue paint,\r\nleaving a soft paw print on blank paper.\r\n中文：落下一記稚嫩\r\n足跡\r\nEnglish: A tiny print\r\nlands.\r\n5\r\n秒\r\n03 中景\r\n(Medium Shot)\r\n【相視破涕】\r\n被驚醒的女孩看著沾滿顏料的幼犬，先是一愣，隨\r\n後露出釋懷的溫柔微笑。\r\nThe surprised girl looks at the puppy covered in\r\npaint and breaks into a gentle smile.\r\n中文：抹去眼角的迷\r\n茫\r\nEnglish: Tears turn\r\ninto smiles.\r\n6\r\n秒\r\n 哈士奇動畫企劃方案建議 - Gemini\r\n \n鏡號與景別 畫面內容描述 (4-5字小標 + 描述)\r\n極簡詩意字幕\r\n(Video Caption)\r\n時\r\n長\r\n04 全景 (Full\r\nShot)\r\n【櫻道奔跑】\r\n初夏河堤步道上，櫻花雨飄落，女孩牽著半大的哈\r\n士奇迎著微風向前奔跑。\r\nCherry blossoms drift as the girl runs with her\r\ngrowing husky along a breezy riverbank.\r\n中文：乘著微風並肩\r\n奔跑\r\nEnglish: Running in\r\nthe breeze.\r\n6\r\n秒\r\n05 特寫 (Close￾up)\r\n【筆尖停滯】\r\n入秋黃昏，桌上揉成團的廢稿散落，女孩手握畫筆\r\n懸在半空，神情迷茫低落。\r\nAt autumn dusk, crumpled sketches scatter as the\r\ngirl holds her pen in hesitant silence.\r\n中文：畫筆停在迷惘\r\n暮色\r\nEnglish: Brushes\r\npause in dusk.\r\n6\r\n秒\r\n06 中景\r\n(Medium Shot)\r\n【無聲依偎】\r\n夜色漸深，長大成熟的哈士奇輕步走近，將下巴溫\r\n柔沉靜地靠在女孩膝蓋上。\r\nIn the quiet night, the grown husky gently rests its\r\nchin upon the girl's lap.\r\n中文：溫熱了孤獨的\r\n長夜\r\nEnglish: Warming\r\nlonely nights.\r\n7\r\n秒\r\n07 特寫 (Close￾up)\r\n【澄澈凝望】\r\n女孩含淚低頭，哈士奇那雙冰藍色又無比純粹的眼\r\n眸中，倒映著女孩的臉龐。\r\nTears welling, the girl looks down into the husky’s\r\ncrystal-blue eyes, reflecting her face.\r\n中文：你看見我所有\r\n的夢\r\nEnglish: You see my\r\ndreams.\r\n6\r\n秒\r\n08 特寫 (Close￾up)\r\n【重拾光芒】 中文：為你繪下漫天\r\n晨光\r\n6\r\n秒\r\n 哈士奇動畫企劃方案建議 - Gemini\r\n \n鏡號與景別 畫面內容描述 (4-5字小標 + 描述)\r\n極簡詩意字幕\r\n(Video Caption)\r\n時\r\n長\r\n晨光破曉，女孩指尖再次流暢運筆，筆尖劃出斑斕\r\n溫暖的光暈線條。\r\nDawn breaks as the girl's hand moves smoothly\r\nacross the canvas, sketching vibrant light.\r\nEnglish: Painting\r\nmorning light.\r\n09 特寫 (Close￾up)\r\n【歲月成冊】\r\n冬日初雪窗邊，翻開的繪本封面上畫著一人一狗看\r\n夕陽，右下角印著當年爪印。\r\nBy a snowy window, an open picture book displays\r\ntheir sunset silhouette and that tiny paw print.\r\n中文：時光凝成一紙\r\n溫柔\r\nEnglish: Time turns\r\nto warmth.\r\n6\r\n秒\r\n10 遠景 (Wide\r\nShot)\r\n【落日餘暉】\r\n冬日橘紅黃昏的天橋上，女孩與挺拔的哈士奇並肩\r\n站立，逆光中留下一雙背影。\r\nOn a winter sunset overpass, the girl and her\r\nmajestic husky stand side by side against the\r\ngolden glow.\r\n中文：未來的路，有\r\n你同在\r\nEnglish: Always by\r\nmy side.\r\n7\r\n秒\r\nAI 圖像生成提示詞 (9:16 Aspect Ratio)\r\n全組基礎風格設定：Makoto Shinkai anime style, ethereal lighting, cinematic lens flare, detailed\r\nbackground, emotional atmosphere, 8k resolution, vertical 9:16.\r\nShot 01\r\n中文：9:16 豎版，新海誠風格日式動畫，春日清晨，溫暖陽光透過白色窗簾灑入房\r\n間，木質地板上散落著插畫手稿，年輕黑髮日本女孩趴在矮桌上熟睡，極致的光影層\r\n次，唯美空氣感。\r\nEnglish: 9:16 vertical, Makoto Shinkai anime style, a cozy Japanese room in\r\nspring morning, warm golden sunlight streaming through sheer white curtains,\r\nsketches scattered on wooden floor, young Japanese girl with dark hair\r\n 哈士奇動畫企劃方案建議 - Gemini\r\n \nsoftly sleeping at low table, ethereal lighting, cinematic atmospheric\r\nperspective, 8k resolution --ar 9:16\r\nShot 02\r\n中文：9:16 豎版，新海誠風格日式動畫，特寫鏡頭，毛茸茸的哈士奇幼犬爪子踩翻了\r\n天藍色水彩顏料盒，在白色畫紙上留下一枚清晰可愛的淡藍色小爪印，陽光粒子，細\r\n膩水彩質感。\r\nEnglish: 9:16 vertical, Makoto Shinkai anime style, extreme close-up, a\r\nfluffy baby husky puppy playfully stepping into spilled sky-blue watercolor\r\npaint, leaving a soft pastel paw print on white paper, floating light\r\nparticles, delicate textures, vibrant colors, 8k resolution --ar 9:16\r\nShot 03\r\n中文：9:16 豎版，新海誠風格日式動畫，中景，女孩坐在地板上，看著鼻尖沾著藍色\r\n顏料的哈士奇幼犬，女孩臉上帶著溫柔釋懷的微笑，暖陽微塵，溫馨治癒氛圍。\r\nEnglish: 9:16 vertical, Makoto Shinkai anime style, medium shot, young\r\nJapanese girl sitting on wooden floor smiling warmly at a cute husky puppy\r\nwith blue paint on its nose, soft morning light, emotional bonding,\r\nheartwarming atmosphere, studio interior, 8k resolution --ar 9:16\r\nShot 04\r\n中文：9:16 豎版，新海誠風格日式動畫，全景，初夏藍天與粉色櫻花飄落的河堤步\r\n道，微風吹拂，年輕女孩與半大的哈士奇開心地奔跑，遠處波光粼粼的河流與日本市\r\n景。\r\nEnglish: 9:16 vertical, Makoto Shinkai anime style, full shot, a riverbank\r\npathway in early summer, pink cherry blossom petals fluttering in wind,\r\nyoung girl running happily beside a medium-sized husky dog, sparkling river\r\nin background, vivid blue sky, dynamic composition --ar 9:16\r\nShot 05\r\n中文：9:16 豎版，新海誠風格日式動畫，特寫鏡頭，深秋橘紅色黃昏，書桌上堆滿揉\r\n皺的廢畫紙，女孩握著數位繪圖筆的手懸在半空，光影昏暗交錯，帶著迷茫與挫折\r\n感。\r\nEnglish: 9:16 vertical, Makoto Shinkai anime style, close-up shot, autumn\r\ntwilight dusk, messy desk with crumpled concept sketches, girl's hand\r\nholding a drawing stylus frozen in hesitation, dramatic sunset shadows,\r\nmelancholic mood, deep emotional storytelling --ar 9:16\r\nShot 06\r\n中文：9:16 豎版，新海誠風格日式動畫，中景，深夜昏暗房間僅有一盞檯燈微光，挺\r\n拔成年的哈士奇將溫暖的下巴輕輕枕在低頭落淚的女孩膝蓋上，寂靜且深情的陪伴。\r\n 哈士奇動畫企劃方案建議 - Gemini\r\n \nEnglish: 9:16 vertical, Makoto Shinkai anime style, medium shot, dark quiet\r\nroom illuminated by a single warm desk lamp, majestic adult husky gently\r\nresting its chin on the girl's lap, comforting her sadness, poignant and\r\ntouching moment, soft shadows --ar 9:16\r\nShot 07\r\n中文：9:16 豎版，新海誠風格日式動畫，特寫，哈士奇那雙晶瑩剔透的冰藍色眼眸，\r\n眼中倒映著女孩微泛淚光的臉龐與室內燈光，極致細膩的情感眼神。\r\nEnglish: 9:16 vertical, Makoto Shinkai anime style, extreme close-up of\r\nhusky dog's crystal blue eyes, reflecting the tearful yet smiling face of\r\nthe girl and warm light, incredibly detailed iris, deep emotional\r\nconnection, masterpiece --ar 9:16\r\nShot 08\r\n中文：9:16 豎版，新海誠風格日式動畫，特寫，清晨破曉淡紫金色天光灑在畫布上，\r\n女孩自信堅定地揮灑畫筆，筆尖劃出溫暖發光的色彩軌跡，充滿希望與生命力。\r\nEnglish: 9:16 vertical, Makoto Shinkai anime style, close-up shot, dawn\r\ntwilight with golden morning rays, girl's hand swiftly painting on a digital\r\ncanvas, vibrant glowing brushstrokes, luminous particles of light, hopeful\r\nand inspiring atmosphere --ar 9:16\r\nShot 09\r\n中文：9:16 豎版，新海誠風格日式動畫，特寫俯拍，飄著初雪的窗邊，一本裝訂精緻\r\n的繪本翻開，封面上畫著一人一犬看日落的插圖，封面角落有著一枚淡藍色的小爪\r\n印。\r\nEnglish: 9:16 vertical, Makoto Shinkai anime style, top-down close-up, open\r\nfinished picture book on a wooden windowsill beside falling snow, cover art\r\ndepicting girl and husky watching sunset with a tiny blue paw print in the\r\ncorner, warm and nostalgic --ar 9:16\r\nShot 10\r\n中文：9:16 豎版，新海誠風格日式動畫，遠景仰拍，冬日漫天橘紅晚霞的天橋上，成\r\n熟的女孩與高大威風的哈士奇並肩站立遠眺城市天際線，強烈的金色逆光剪影與長長\r\n影子。\r\nEnglish: 9:16 vertical, Makoto Shinkai anime style, wide angle shot, girl\r\nand majestic adult husky standing side by side on a pedestrian overpass\r\nduring breathtaking golden hour sunset, dramatic backlighting, silhouette\r\nagainst glowing orange sky, footprints extending forward --ar 9:16\r\nAI 影片生成提示詞 (9:16 Aspect Ratio)\r\n 哈士奇動畫企劃方案建議 - Gemini\r\n \nShot 01\r\n中文：9:16 豎版，新海誠風格日式動畫。鏡頭緩慢向前平移推進。晨光穿透白色薄紗\r\n窗簾，光斑在散落畫稿的地板上微微晃動，沉睡女孩的髮絲隨微風輕撫。\r\nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow cinematic\r\ncamera push-in. Morning sunlight filtering through sheer curtains, soft\r\nlight rays shifting across scattered sketches on wooden floor, gentle breeze\r\nmoving the sleeping girl's hair.\r\nShot 02\r\n中文：9:16 豎版，新海誠風格日式動畫。微距平視鏡頭。毛茸茸的哈士奇幼犬笨拙地\r\n踏上一盒天藍色水彩，隨後小爪子輕輕踩在白色畫紙上，印下一道淡藍色爪印，顏料\r\n微微濺起光點。\r\nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Macro focus shot. A\r\nfluffy husky puppy clumsily steps into blue watercolor, stamping a cute blue\r\npaw print onto blank paper, shimmering paint droplets.\r\nShot 03\r\n中文：9:16 豎版，新海誠風格日式動畫。鏡頭由下往上緩慢搖鏡。女孩從驚訝睜眼轉\r\n為眼眶微紅、展顏微笑，伸手溫柔撫摸幼犬頭頂，幼犬吐舌搖尾。\r\nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow tilt-up camera\r\nmovement. Girl transitions from surprise to a heartwarming smile, gently\r\npetting the puppy's head as it wags its tail, warm sunlight blooming.\r\nShot 04\r\n中文：9:16 豎版，新海誠風格日式動畫。跟隨橫移鏡頭。櫻花花瓣在空中漫天飛舞，\r\n女孩牽著充滿活力的半大哈士奇在河堤步道向前奔跑，陽光在鏡頭前形成美麗的光\r\n暈。\r\nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Smooth tracking\r\nside-shot. Pink cherry blossom petals swirling in the air, girl and running\r\nhusky moving dynamically along riverbank pathway, vibrant lens flare.\r\nShot 05\r\n中文：9:16 豎版，新海誠風格日式動畫。微焦特寫固定鏡頭。窗外天色迅速由黃昏轉\r\n為暗沉，握著畫筆的手微微顫抖後停滯，筆尖的一滴墨水滴落在草稿上散開。\r\nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Static macro shot.\r\nDusk sky darkening outside the window, hand holding a pen trembling slightly\r\nin hesitation, a single ink droplet spreading on the sketch.\r\nShot 06\r\n中文：9:16 豎版，新海誠風格日式動畫。緩慢環繞低角度鏡頭。成熟沉穩的哈士奇安\r\n靜走入畫面，緩緩將下巴靠在女孩膝上，女孩的手輕輕顫抖著撫上狗狗厚實的背毛。\r\n 哈士奇動畫企劃方案建議 - Gemini\r\n \nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow low-angle\r\npanning shot. Majestic adult husky steps quietly into the lamp light,\r\nresting its head on the girl’s knees, she softly caresses its thick fur.\r\nShot 07\r\n中文：9:16 豎版，新海誠風格日式動畫。極致特寫推進。哈士奇晶瑩的冰藍色瞳孔中\r\n倒映著女孩的面龐，狗狗緩慢眨眼，眼神溫柔無比，光點在瞳孔中流轉。\r\nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Extreme zoom-in\r\nshot into the husky's brilliant blue eyes, reflecting the tearful smiling\r\nface of the girl, subtle eye blink, soft light reflection glowing inside the\r\niris.\r\nShot 08\r\n中文：9:16 豎版，新海誠風格日式動畫。快節奏特寫滑軌鏡頭。晨曦破曉金光灑入，\r\n畫筆在畫面上流暢自如地揮灑，繪出充滿朝氣的色彩與線條，光芒四射。\r\nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Fast-paced tracking\r\nclose-up. Radiant dawn light breaking through, hand drawing smooth confident\r\ncolorful lines across the canvas, vibrant dynamic art creation.\r\nShot 09\r\n中文：9:16 豎版，新海誠風格日式動畫。緩慢向下俯仰推進。窗外緩緩飄落初雪，微\r\n風輕輕翻動繪本頁面，停留在封面兩人看夕陽的插畫與爪印上。\r\nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow top-down tilt\r\nand push. Snowflakes falling outside the glass window, gentle breeze turning\r\nthe illustrated book pages to reveal the sunset cover and blue paw print.\r\nShot 10\r\n中文：9:16 豎版，新海誠風格日式動畫。緩慢拉遠廣角鏡頭。天橋上女孩與哈士奇並\r\n肩迎著壯麗的橘紅落日與晚霞，風吹動衣角與毛髮，鏡頭緩緩升空拉遠，留下一雙背\r\n影與無盡天空。\r\nEnglish: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow crane shot\r\npulling back into a wide view. Girl and husky standing together against an\r\nepic glowing orange sunset on an overpass, wind blowing their clothes and\r\nfur, fading into golden horizon.\r\n 哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 3, "user": "1.請根據您建議的內容,生成符合日本新海誠動畫風格的\"女孩\"的動畫角色設定表(Character\r\nSheet)。\r\n2.包含上述角色的四個全身視角:正面、45度側面、側面,以及背面。\r\n3.保持原角色面部特徵,五官不變。\r\n4.白色背景,均勻光線,16:9。", "assistant": ""}, {"turn": 4, "user": "1.請根據您建議的內容,生成符合日本新海誠動畫風格的\"哈士奇 \"的動畫設定表(Character\r\nSheet)。\r\n2.包含上述角色的四個全身視角:正面、45度側面、側面,以及背面。\r\n3.保持原角色面部特徵,五官不變。\r\n4.白色背景,均勻光線,16:9。", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 5, "user": "9:16 vertical, Makoto Shinkai anime style, a cozy Japanese room in spring morning, warm\r\ngolden sunlight streaming through sheer white curtains, sketches scattered on wooden floor,\r\nyoung Japanese girl with dark hair softly sleeping at low table, ethereal lighting, cinematic\r\natmospheric perspective, 8k resolution --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 6, "user": "9:16 vertical, Makoto Shinkai anime style, extreme close-up, a fluffy baby husky puppy playfully\r\nstepping into spilled sky-blue watercolor paint, leaving a soft pastel paw print on white paper,\r\nfloating light particles, delicate textures, vibrant colors, 8k resolution --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 7, "user": "9:16 vertical, Makoto Shinkai anime style, medium shot, young Japanese girl sitting on wooden\r\nfloor smiling warmly at a cute husky puppy with blue paint on its nose, soft morning light,\r\nemotional bonding, heartwarming atmosphere, studio interior, 8k resolution --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 8, "user": "9:16 vertical, Makoto Shinkai anime style, full shot, a riverbank pathway in early summer, pink\r\ncherry blossom petals fluttering in wind, young girl running happily beside a medium-sized\r\nhusky dog, sparkling river in background, vivid blue sky, dynamic composition --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 9, "user": "9:16 vertical, Makoto Shinkai anime style, close-up shot, autumn twilight dusk, messy desk with\r\ncrumpled concept sketches, girl's hand holding a drawing stylus frozen in hesitation, dramatic\r\nsunset shadows, melancholic mood, deep emotional storytelling --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 10, "user": "9:16 vertical, Makoto Shinkai anime style, medium shot, dark quiet room illuminated by a single\r\nwarm desk lamp, majestic adult husky gently resting its chin on the girl's lap, comforting her\r\nsadness, poignant and touching moment, soft shadows --ar 9:16", "assistant": "Sorry, something went wrong. Please try your request again.\r\n 哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 11, "user": "9:16 vertical, Makoto Shinkai anime style, medium shot, dark quiet room illuminated by a single\r\nwarm desk lamp, majestic adult husky gently resting its chin on the girl's lap, comforting her\r\nsadness, poignant and touching moment, soft shadows --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 12, "user": "9:16 vertical, Makoto Shinkai anime style, close-up shot, dawn twilight with golden morning\r\nrays, girl's hand swiftly painting on a digital canvas, vibrant glowing brushstrokes, luminous\r\nparticles of light, hopeful and inspiring atmosphere --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 13, "user": "9:16 vertical, Makoto Shinkai anime style, top-down close-up, open finished picture book on a\r\nwooden windowsill beside falling snow, cover art depicting girl and husky watching sunset with\r\na tiny blue paw print in the corner, warm and nostalgic --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 14, "user": "9:16 vertical, Makoto Shinkai anime style, wide angle shot, girl and majestic adult husky\r\nstanding side by side on a pedestrian overpass during breathtaking golden hour sunset, dramatic\r\nbacklighting, silhouette against glowing orange sky, footprints extending forward", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 15, "user": "9:16 vertical, Makoto Shinkai anime style, close-up shot, dawn twilight with golden morning\r\nrays, girl's hand swiftly painting on a digital canvas, vibrant glowing brushstrokes, luminous\r\nparticles of light, hopeful and inspiring atmosphere --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 16, "user": "9:16 vertical, Makoto Shinkai anime style, extreme close-up of husky dog's crystal blue eyes,\r\nreflecting the tearful yet smiling face of the girl and warm light, incredibly detailed iris, deep\r\nemotional connection, masterpiece --ar 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 17, "user": "針對這個主題，幫我寫 20 個創意標題名稱", "assistant": "【提示詞優化】\r\n[角色任務] 擔任資深影視動畫企劃與文案總監。 [背景資訊] 針對「女插畫家與哈士\r\n奇橫跨四季、治癒追夢」的日系新海誠風溫馨感人動畫。 [具體指令] 產出 20 個兼具\r\n詩意、情緒張力與傳播力的創意片名／標題（含中英文對照）。 [約束條件] 依情感風\r\n格分類條列，語氣溫潤細膩，文字凝練有力。\r\n一、 詩意唯美風（注重光影與四季意象）\r\n《落進畫布的藍》 / The Blue on Canvas\r\n《盛夏河堤，初雪之息》 / Riverbank Summer, First Snow\r\n《在你的瞳孔裡追光》 / Chasing Light in Your Eyes\r\n《四季寫給風的詩》 / Seasons Written in the Wind\r\n《晴空下的四個腳印》 / Four Paws Under Clear Skies\r\n二、 情感治癒風（強調陪伴、守護與撫平孤獨）\r\n《溫熱長夜的呼吸》 / Breathing Through the Cold Night\r\n《謝謝你，做我唯一的光》 / Thank You for Being My Light\r\n《笨拙的溫柔》 / Clumsy Kind of Love\r\n《膝上的無聲告白》 / A Silent Promise on My Lap\r\n《有你，歲月不曾孤單》 / Never Alone with You\r\n三、 成長與夢想風（強調追夢、繪畫與彼此支撐）\r\n《畫筆停頓的黃昏》 / When the Brush Pauses at Dusk\r\n《未完繪本的最後一頁》 / The Last Page of Our Story\r\n《踩碎迷茫的藍爪印》 / Paw Prints Through the Mist\r\n《破曉時分，為你落筆》 / Painting for You at Dawn\r\n《逆光同行的背影》 / Side by Side Against the Sunset\r\n四、 簡約金句風（短小精煉、留白意境）\r\n《藍瞳與晚霞》 / Blue Eyes, Golden Sunset\r\n《歲月的足跡》 / Footprints of Time\r\n《伴你成畫》 / Painted Together\r\n 哈士奇動畫企劃方案建議 - Gemini\r\n \n《目光所及，皆是溫暖》 / Warmth in Your Gaze\r\n《下一個春天見》 / See You Next Spring"}, {"turn": 18, "user": "生成故事”封面劇照”圖片標題:膝上的無聲告白\r\n右下角顯示:作者:呂聰賢\" 圖形比例 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 19, "user": "生成故事”封面劇照”\r\n圖片標題:\"膝上的無聲告白\"\r\n右下角顯示: 作者:呂聰賢\"\r\n圖形比例 9:16", "assistant": "哈士奇動畫企劃方案建議 - Gemini"}, {"turn": 20, "user": "生成故事”封底劇照”圖片標題:請你想一個創意標題 右下角顯示:作者:呂聰賢\" 圖形比例 9:16", "assistant": "Exported from Voyager (https://github.com/voyager-crew/voyager) • 20 conversation turns\r\nGenerated on November 1, 2026 at 05:22 PM\r\n 哈士奇動畫企劃方案建議 - Gemini"}]}, "chatgpt_shepherd": {"title": "ChatGPT 實戰對話：邊境牧羊犬企劃《明天，也要一起散步》", "model": "OpenAI ChatGPT-4o", "badge": "ChatGPT Plus / 4o", "color": "#10b981", "turns": [{"turn": 1, "user": "我正在構思一段60秒左右的【日式溫馨感人動畫片】，\r\n請以下面的框架為我建議三個動畫影片方案內容，不需有腳本，謝謝。\r\n1.角色：10歲女主角；邊際牧羊犬\r\n2.劇情大綱：請您建議。\r\n3.劇情要點：請您建議。\r\n4.場景：請您建議。\r\n5.風格：請您建議\r\n根據您上面建議的劇情內容與風格,為我分段為N段鏡頭。我需要您提供以下內容:\r\n1.中、英文標題\r\n2.場景設計與分段描述文案:分鏡編號與類型(例如:01遠景)、畫面內容描述(中、英文)、影片字幕 (中、英\r\n文)、時長。\r\n3.所有N段分鏡的AI圖像9:16生成中、英文的提示詞。\r\n4.所有N段鏡頭的AI影片9:16生成中、英文的提示詞。\r\n請根據您上面建議的【方案三《明天，也要一起散步》】的劇情內容\r\n與風格,為我分段為10段鏡頭。\r\n我需要您提供以下內容:\r\n1.中文與英文大標題(精簡);中文與英文副標題(金句)\r\n2.場景設計與分段描述文案:鏡頭編號與類型(例如:01遠景)、畫面內容描述(4-5個字的小標題與描述,中文\r\n與英文)、影片字幕(Video Caption,中文與英文)、時長。\r\n3.上面的中文與英文的大標題、副標題、字幕等內容再進行語法結構的核實,並進行文字的優化,要更具感\r\n人與詩意,並符合您提到的風格。字幕需要精簡為「極簡詩意」風格,每段控制在6-10 個中文字以內,英文\r\n 動畫方案建議", "assistant": "則採短句結構,確保觀眾能在一瞬之間捕捉到深刻的情緒。\r\n4.所有10個鏡頭的AI圖像9:16生成“中文與英文對照的提示詞”。\r\n5.所有10個鏡頭的AI影片9:16生成“中文與英文對照的提示詞”。\r\n1.請根據您建議的內容和上傳的照片,生成符合日本新海誠動畫風格的\"女孩\"的動畫角色設定表\r\n(Character Sheet)。\r\n2.包含上述角色的四個全身視角:正面、45度側面、側面,以及背面。\r\n3.保持原角色面部特徵,五官不變。\r\n4.白色背景,均勻光線,16:9。\r\n1.請根據您建議的內容,生成符合日本新海誠動畫風格的\"邊際牧羊犬 \"的動畫設定表(Character Sheet)。\r\n2.包含上述角色的四個全身視角:正面、45度側面、側面,以及背面。\r\n3.保持原角色面部特徵,五官不變。\r\n4.白色背景,均勻光線,16:9。\r\n 動畫方案建議"}, {"turn": 2, "user": "On a peaceful spring afternoon, cherry blossoms drift gently through the air. An elderly black￾and-white Border Collie rests quietly beneath a tree beside a traditional Japanese wooden house.\r\nGolden sunlight filters through the branches as a little girl approaches. 製作圖像\r\n重新生圖,圖片比例16:9\r\nThe little girl walks beside her dog along a quiet country path. The Border Collie, once full of\r\nenergy, now moves slowly. She notices, stops, and gently waits for her beloved companion.\r\n圖片比例16:9\r\nThe girl gently reaches out her hand. The Border Collie looks up at her with loving eyes. Together,\r\nthey walk along the familiar path where they once ran countless times, as cherry blossoms settle\r\n 動畫方案建議", "assistant": "on its back.\r\n圖片比例16:9\r\nThe girl takes an old red tennis ball from her pocket. Its surface is worn from years of play, with\r\ntiny blades of grass clinging to it. She gently places it before the dog, who recognizes the familiar\r\ntoy.\r\n圖片比例16:9\r\n\r\n\r\nVertical 9:16 composition, Japanese hand-painted animated film aesthetic. A peaceful Japanese\r\ncountryside wooden house beside a blooming cherry blossom tree, soft pink petals drifting in the\r\nbreeze. An elderly black-and-white Border Collie rests peacefully beneath the tree, black back,\r\nwhite chest, warm brown eyes, slightly graying muzzle. Golden afternoon sunlight filters through\r\nthe branches, illuminating the grass. A quiet country path is visible in the distance. Poetic,\r\nnostalgic, heartwarming atmosphere, delicate watercolor backgrounds, soft cinematic lighting,\r\nbeautiful film composition, highly detailed animation environment. No text, no subtitles, no\r\nwatermark. Copy English\r\n 動畫方案建議"}, {"turn": 3, "user": "Vertical 9:16, heartwarming Japanese hand-painted animated film aesthetic. A 10-year-old girl\r\nwearing a soft pink dress, with long black hair and a small red hair clip, walks along a countryside\r\npath lined with blooming cherry trees. She turns gently and reaches out her hand toward her\r\nelderly black-and-white Border Collie. The dog looks up at her with warm brown eyes full of trust\r\nand affection. Cherry blossom petals rest on its black-and-white fur. Eye-level medium shot,\r\ndelicate facial expressions, warm golden sunlight, shallow depth of field, Japanese watercolor\r\nbackground, a deeply emotional sense of lifelong companionship. No text, no subtitles.Copy\r\nEnglish\r\nVertical 9:16, a nostalgic childhood flashback in a Japanese animated film. A younger version of\r\nthe girl, with long black hair and a pink dress, plays with a young energetic black-and-white\r\nBorder Collie on a lush green meadow. They chase a red tennis ball together. The girl runs joyfully\r\nwhile the dog leaps after the ball. Blooming cherry trees and warm sunlight fill the background.\r\nSoft focus, delicate golden glow, dreamy atmosphere, nostalgic cinematic color grading, precious\r\nchildhood memories. No text, no subtitles.Copy English\r\nVertical 9:16, Japanese hand-painted animated film aesthetic, cinematic macro close-up. A worn,\r\nfaded red tennis ball rests quietly on lush green grass, showing the marks of many years of play.\r\n 動畫方案建議", "assistant": "非常抱歉，但提示詞可能違反了我們的內容政策。如果你認為此判定有誤，請重試或編輯你的提示詞。\r\nVertical 9:16, beautiful Japanese hand-painted animated film aesthetic. A 10-year-old girl with\r\nlong straight black hair, a small red hair clip, a soft pink dress, white ankle socks and brown shoes\r\nwalks along a cherry blossom country path in Japan. Beside her is an elderly black-and-white\r\nBorder Collie with long fur, a white chest and a slightly graying muzzle. The dog walks slowly as\r\nthe girl pauses and turns back to wait for it with a gentle expression. Side medium-long shot,\r\ngolden afternoon backlighting, drifting cherry blossoms, delicate watercolor texture, expressive\r\ncharacter design, cinematic composition. No text, no subtitles, no watermark.Copy English\r\nEnglish Prompt\r\nVertical 9:16, heartwarming Japanese hand-painted animated film aesthetic. A 10-year-old girl\r\nwearing a soft pink dress, with long black hair and a small red hair clip, walks along a countryside\r\npath lined with blooming cherry trees. She turns gently and reaches out her hand toward her\r\nelderly black-and-white Border Collie. The dog looks up at her with warm brown eyes full of trust\r\nand affection. Cherry blossom petals rest on its black-and-white fur. Eye-level medium shot,\r\ndelicate facial expressions, warm golden sunlight, shallow depth of field, Japanese watercolor\r\nbackground, a deeply emotional sense of lifelong companionship. No text, no subtitles.Copy\r\nEnglish\r\n 動畫方案建議"}, {"turn": 4, "user": "Beside it is the white paw of an elderly black-and-white Border Collie. A few soft pink cherry\r\nblossom petals lie nearby. In the blurred background, the girl's pink dress and warm sunset light\r\nare faintly visible. Shallow depth of field, delicate textures, golden natural lighting, nostalgic and\r\nsentimental atmosphere. No text, no subtitles.Copy English\r\nVertical 9:16, emotional Japanese animated film aesthetic. Intimate close-up of an elderly black￾and-white Border Collie with a slightly graying muzzle gently placing an old red tennis ball into\r\nthe open palm of a 10-year-old girl. The girl has long black hair, a small red hair clip and a soft\r\npink dress. Her fingers tremble slightly, and tears glisten in her eyes. Focus on the dog's muzzle,\r\nthe red ball and the girl's hand. Blurred cherry blossom trees and golden sunset in the\r\nbackground. Delicate emotional storytelling, cinematic close-up, warm backlighting. No text, no\r\nsubtitles.Copy English\r\nVertical 9:16, Japanese healing hand-painted animated film aesthetic. A 10-year-old girl in a soft\r\npink dress, with long black hair and a small red hair clip, kneels beneath a blooming cherry tree\r\nand gently embraces her elderly black-and-white Border Collie. She rests her cheek against its\r\nsoft white chest fur, tears glistening in her eyes as she smiles tenderly. The dog leans peacefully\r\ninto her embrace, its warm brown eyes full of affection. Pink cherry blossom petals drift around\r\nthem. Emotional close-up, delicate facial expressions, soft golden backlighting, dreamy blurred\r\nbackground, cinematic beauty. No text, no subtitles.Copy English\r\n 動畫方案建議", "assistant": "Vertical 9:16, Japanese animated film aesthetic. A 10-year-old girl wearing a soft pink dress, white\r\nankle socks and brown shoes walks side by side with her elderly black-and-white Border Collie\r\nalong a quiet country path beside a golden meadow. She deliberately slows her pace to\r\naccompany her dog instead of running ahead. The dog walks slowly with a peaceful expression.\r\nSide medium shot, golden sunset backlighting, her dress moves gently in the breeze, cherry\r\nblossom petals drift across the frame. Warm golden tones, poetic atmosphere, delicate\r\nwatercolor background, cinematic composition. No text, no subtitles.Copy English\r\nVertical 9:16, poetic Japanese hand-painted animated film aesthetic. Rear view of a 10-year-old\r\ngirl in a soft pink dress sitting on a grassy hillside beside her elderly black-and-white Border\r\nCollie. She gently leans against her dog as they watch a magnificent golden-orange sunset\r\ntogether. A small Japanese countryside village and traditional wooden houses are visible in the\r\ndistance, their windows glowing with warm lights. Soft pink-orange clouds fill the sky as cherry\r\nblossom petals drift through the air. Rear wide shot, expansive sky, poetic composition, cinematic\r\nsunset lighting, profound feeling of companionship. No text, no subtitles.Copy English\r\n 動畫方案建議"}, {"turn": 5, "user": "", "assistant": "Vertical 9:16, heartwarming Japanese animated film ending. Rear long shot of a 10-year-old girl\r\nwith long black hair, a small red hair clip and a soft pink dress, walking slowly hand in hand with\r\nher elderly black-and-white Border Collie along a quiet Japanese countryside path toward the\r\nsunset. Their silhouettes stretch across the golden light. The sky glows with soft golden-orange\r\nhues, cherry blossom petals drift in the breeze, and distant wooden houses and fields are\r\nilluminated by the setting sun. Poetic cinematic ending, peaceful, tender, nostalgic and deeply\r\nmoving. Leave clean negative space near the top for adding the film title in post-production. No\r\ngenerated text, no watermark.Copy English\r\n針對這個主題，幫我寫 20 個創意標題名\r\n生成故事”封面劇照”圖片標題:明天，也要一起散步\r\n右下角顯示:作者:姚述勤\" 圖形比例 9:16\r\n\r\n\r\n 動畫方案建議\n生成故事”封底劇照”圖片標題:請你想一個創意標題 右下角顯示:作者:姚述勤\" 圖形比例 9:16\r\n 動畫方案建議"}]}, "gemini_shepherd": {"title": "Google Gemini 實戰對話：邊境牧羊犬企劃《雨中的牧羊人》", "model": "Google Gemini", "badge": "Gemini 2.0 / Advanced", "color": "#818cf8", "turns": [{"turn": 1, "user": "我正在構思一段60秒左右的【日式溫馨感人動畫片】，\r\n請以下面的框架為我建議三個動畫影片方案內容，不需有腳本，謝謝。\r\n1.角色：10歲女主角；邊際牧羊犬\r\n2.劇情大綱：請您建議。\r\n3.劇情要點：請您建議。\r\n4.場景：請您建議。\r\n5.風格：請您建議", "assistant": "第一步：專家優化（提示詞邏輯轉化）\r\n[角色任務]：擔任資深動畫導演與視覺敘事顧問，專精於短秒數（60秒）日式治癒系動畫的\r\n節奏掌控與情感鋪陳。\r\n[背景資訊]：使用者正在籌備一段 60 秒的日式溫馨感人短篇動畫，主角固定為「10 歲小女\r\n孩」與高智商、重感情的「邊境牧羊犬」，需要在極短篇幅內完成起承轉合與情感共鳴，且\r\n目前僅需高概念企劃方案，無須分鏡腳本。\r\n[具體指令]：依據使用者指定的 5 大框架（角色設定微調、劇情大綱、劇情要點、場景、風\r\n格），設計 3 個截然不同切角（成長別離、奇幻治癒、日常守護）的企劃方案，並於文末透\r\n過表格進行方案優劣評估與生成風險提示。\r\n[約束條件]：使用繁體中文，語氣理性務實，條列清晰，60 秒內的劇情設計需控制在 3 個\r\n轉折點以內，確保畫面可執行性高。\r\n第二步：動畫影片企劃方案建議\r\n60 秒的短片要做到「溫馨感人」，核心關鍵在於「場景精簡」與「單一信物（視覺符號）的前後\r\n呼應」，避免複雜的對話，全靠動作與光影傳遞情緒。以下為您規劃三個不同情感切角的方案：\r\n方案一：【最後的接球練習】（主題：搬家別離與跨時空羈絆）\r\n1. 角色：\r\n10 歲女主角（小葵）：背著紅色書包、綁著雙馬尾，性格內向但面對狗狗時笑容燦\r\n爛。\r\n邊境牧羊犬（雷歐）：年邁、嘴角毛髮微白、右耳有一道小缺口，眼神溫柔堅定，總叼\r\n著一顆磨損的紅網球。\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n2. 劇情大綱： 小葵一家即將搬往都市，年邁無法同行的雷歐由鄉下外婆繼續照顧。在搬家貨\r\n車駛離的最後 60 秒，體力大不如前的雷歐用盡全力奔跑追趕，只為完成他們每天放學後的\r\n「最後一次傳接球」約定。\r\n3. 劇情要點：\r\n起（0-15秒）：貼滿封箱膠帶的紙箱旁，小葵蹲在玄關抱著老邁的雷歐哭泣，將紅網\r\n球塞進牠懷裡後被迫上車。\r\n承（15-35秒）：貨車啟動駛離鄉間小路，原本趴著的雷歐突然咬起紅網球，撞開虛掩\r\n的木門，邁開略顯蹣跚卻拼命加速的步伐追趕。\r\n轉（35-50秒）：雷歐抄近路衝上高處的鐵道旁土坡，在貨車經過瞬間，將紅網球從坡\r\n頂精準拋進微開的後車廂窗戶。\r\n合（50-60秒）：小葵接住沾滿狗口水的網球，淚水奪眶而出並朝窗外揮手；夕陽下，\r\n雷歐站在土坡頂端搖著尾巴，目送車子遠去。\r\n4. 場景：堆滿紙箱的日式老宅玄關、開滿芒草的鄉間斜坡道路、黃昏下的高處土坡。\r\n5. 風格：新海誠式光影風格。強調傍晚魔幻時刻（Magic Hour）的逆光、空氣中的微塵粒\r\n子、高飽和度的晚霞天空與細膩的眼神高光。\r\n方案二：【雨天的隱形牧羊人】（主題：挫折療癒與無聲守護）\r\n1. 角色：\r\n10 歲女主角（小凜）：穿著黃色雨衣、手裡握著揉皺的零分或落選通知單，神情落\r\n寞。\r\n邊境牧羊犬（庫洛）：毛色黑白分明、精力充沛、聰明機警，發揮牧羊犬「引導與守\r\n護」的天性。\r\n2. 劇情大綱： 小凜在學校遭遇挫折，下著大雨的放學路上獨自哭泣徘徊。在家門口感應到小\r\n主人情緒低落的庫洛，咬著一把小雨傘衝入雨中，用牧羊犬特有的「繞圈引導」方式，將迷\r\n茫的小女孩一步步「牧」回溫暖的家。\r\n3. 劇情要點：\r\n起（0-15秒）：傾盆大雨的公園長椅下，小凜盯著濕透的考卷低頭啜泣，周圍色調冰\r\n冷灰暗。\r\n承（15-30秒）：一陣急促的踏水聲傳來，渾身濕透的庫洛出現在雨幕中，沒有撲上\r\n去，而是輕輕把嘴裡的兒童傘放在她腳邊。\r\n轉（30-45秒）：小凜撐起傘，庫洛開始發揮牧羊犬本能，在她身邊輕快地繞圈、用鼻\r\n子輕頂她的雨靴，引導她避開水窪往前走，小凜破涕為笑。\r\n合（45-60秒）：一人一狗回到亮著暖黃燈光的家門口，庫洛甩乾身上的水珠，小凜緊\r\n緊抱住牠，畫面從冷色調徹底轉為暖色調。\r\n4. 場景：雨中的日式街角公園、積水倒映街燈的柏油路、散發暖光的木造家門口。\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n5. 風格：吉卜力／京都動畫（京阿尼）手繪水彩風。背景採用柔和的水彩渲染，重點刻畫雨滴\r\n打在雨衣上的動態、水窪倒影，以及冷暖色溫的強烈情緒對比。\r\n方案三：【星空下的秘密基地】（主題：童真幻想與成長陪伴）\r\n1. 角色：\r\n10 歲女主角（芽衣）：戴著飛行員護目鏡道具、喜歡畫畫與觀星，充滿好奇心。\r\n邊境牧羊犬（星塵）：脖子上繫著一條發光領巾（或反光項圈），動作敏捷如風。\r\n2. 劇情大綱： 芽衣一直想在生日這天看到流星卻等到睡著。聰明的邊境牧羊犬星塵為了幫小\r\n主人實現願望，半夜咬著手電筒與她畫的星星紙板，帶她衝上後山草原，用自己奔跑的軌跡\r\n為她創造了一場專屬的「地面流星雨」。\r\n3. 劇情要點：\r\n起（0-15秒）：夜晚的房間裡，芽衣趴在窗邊畫滿星星的筆記本上睡著了，窗外烏雲\r\n密布看不見星星。\r\n承（15-30秒）：星塵用鼻子輕輕拱醒芽衣，叼走她的手電筒往門外跑，吸引芽衣披上\r\n外套跟隨牠來到後山的小山丘。\r\n轉（30-50秒）：星塵咬著發光手電筒（或身上綁著露營燈串），在漆黑的廣闊草地上\r\n高速奔跑、跳躍、折返，在芽衣眼中化作一道道金色流光。\r\n合（50-60秒）：此時雲層散開，天空中真正的流星劃過，與奔跑完回到芽衣身邊的星\r\n塵相互輝映，一人一狗額頭貼著額頭相視而笑。\r\n4. 場景：貼滿星空畫作的兒童房、夜晚微風吹拂的後山大草原、星空下的山丘頂端。\r\n5. 風格：細田守《未來的未來》／繪本奇幻風。線條簡潔流暢，強調夜晚深邃的藍紫色調與溫\r\n暖金光的視覺反差，奔跑時帶有流暢的動態光軌特效。\r\n第三步：軍師方案評估與 AI 製作盲點提醒\r\n若您接下來打算使用 AI 工具（如 Sora、Kling、Runway 或 Midjourney + Luma）來生成這支 60\r\n秒動畫，以下是三個方案的實戰評估表：\r\n評估維\r\n度\r\n方案一：最後的接球練習 方案二：雨天的隱形牧羊人 方案三：星空下的秘密基地\r\n情感催\r\n淚度\r\n⭐⭐⭐⭐⭐（離別主題最\r\n易共鳴）\r\n⭐⭐⭐⭐（治癒感強，\r\n情緒轉折明顯）\r\n⭐⭐⭐（偏溫馨奇幻，\r\n感動較內斂）\r\nAI 動作\r\n生成難\r\n度\r\n高（拋接網球、追車的物理互\r\n動較難精準控制）\r\n中（繞圈行走、撐傘與擁抱\r\n相對穩定）\r\n低（狗狗奔跑、發光特效與\r\n對視最容易出好效果）\r\n角色一\r\n致性要\r\n求\r\n高（需維持老狗特徵與紅網\r\n球）\r\n中（黃色雨衣極佳地鎖定了\r\n女孩外觀特徵）\r\n中（夜景光影能掩蓋部分\r\nAI 細節瑕疵）\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n評估維\r\n度\r\n方案一：最後的接球練習 方案二：雨天的隱形牧羊人 方案三：星空下的秘密基地\r\n軍師推\r\n薦指數\r\n適合追求高催淚劇情\r\n最推薦！（黃雨衣+黑白邊\r\n牧視覺識別度最高）\r\n適合追求華麗視覺光影\r\n💡 給豎琴的傾向性建議： 若要進入 AI 圖像與影片生成階段，我強烈建議優先選擇【方案二】或\r\n將【方案二的黃色雨衣設定】融入其他方案中。原因在於 10 歲小女孩的臉部與服裝在 60 秒（約\r\n12~15 個鏡頭）中極易發生 AI 角色跳戲（Consistency 跑掉），而「鮮黃色雨衣」搭配「黑白分明\r\n的邊境牧羊犬」，在提示詞權重上極為穩定，能大幅降低抽卡重算的時間成本。\r\n您比較傾向哪一個故事走向？確認後我們可以立刻針對該方案展開 12 個鏡頭的分鏡提示詞\r\n（Prompts）！\r\n 日式溫馨動畫企劃方案 - Gemini"}, {"turn": 2, "user": "根據您上面建議的劇情內容與風格,為我分段為N段鏡頭。我需要您提供以下內容:\r\n1.中、英文標題\r\n2.場景設計與分段描述文案:分鏡編號與類型(例如:01遠景)、畫面內容描述(中、英文)、影片字幕\r\n(中、英文)、時長。\r\n3.所有N段分鏡的AI圖像9:16生成中、英文的提示詞。\r\n4.所有N段鏡頭的AI影片9:16生成中、英文的提示詞。\r\n請根據您上面建議的【方案二：雨天的隱形牧羊人】的劇情內容\r\n與風格,為我分段為10段鏡頭。\r\n我需要您提供以下內容:\r\n1.中文與英文大標題(精簡);中文與英文副標題(金句)\r\n2.場景設計與分段描述文案:鏡頭編號與類型(例如:01遠景)、畫面內容描述(4-5個字的小標題與描\r\n述,中文與英文)、影片字幕(Video Caption,中文與英文)、時長。\r\n3.上面的中文與英文的大標題、副標題、字幕等內容再進行語法結構的核實,並進行文字的優化,要\r\n更具感人與詩意,並符合您提到的風格。字幕需要精簡為「極簡詩意」風格,每段控制在6-10 個中\r\n文字以內,英文則採短句結構,確保觀眾能在一瞬之間捕捉到深刻的情緒。\r\n4.所有10個鏡頭的AI圖像9:16生成“中文與英文對照的提示詞”。\r\n5.所有10個鏡頭的AI影片9:16生成“中文與英文對照的提示詞”。", "assistant": "第一步：專家優化（提示詞邏輯轉化）\r\n[角色任務]：擔任資深動畫分鏡導演、雙語文學編劇與 AI 影視生成提示詞工程師（Prompt\r\nEngineer）。\r\n[背景資訊]：使用者選定了【方案二：雨天的隱形牧羊人】，目標是製作一支總長 60 秒、直\r\n式（9:16）的吉卜力／京都動畫手繪水彩風溫馨短片。需要將故事拆解為 10 個連貫鏡頭\r\n（每鏡平均 6 秒），並針對角色一致性（10歲黃雨衣小女孩小凜、黑白邊境牧羊犬庫洛）設\r\n計可直接投入 Midjourney/Flux 與 Kling/Runway/Sora 的中英雙語提示詞。\r\n[具體指令]：\r\n1. 產出精簡且具詩意的中英文正副標題。\r\n2. 建立 10 段鏡頭的完整分鏡表（含景別、4-5字小標與中英畫面描述、極簡詩意中英字\r\n幕、時長）。\r\n3. 針對標題與字幕進行雙語語法檢核與文學潤飾，確保中文字幕嚴格落在 6-10 字內，英\r\n文為凝練短句。\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n4. 提供 10 個鏡頭的 9:16 AI 圖像生成中英對照提示詞（鎖定角色特徵與水彩光影）。\r\n5. 提供 10 個鏡頭的 9:16 AI 影片生成中英對照提示詞（強調運鏡、物理動態與情緒節\r\n奏）。\r\n[約束條件]：使用繁體中文與地道英文，語氣專業務實；所有比較與分鏡結構一律表格化或\r\n清晰編號；嚴格執行字數與比例（ --ar 9:16 ）規範，不作無根據的推測。\r\n第二步：動畫專案全案企劃與 AI 生成指令包\r\n1. 標題設計（中英雙語）\r\n中文大標題：雨中的牧羊人\r\n英文大標題：Shepherd in the Rain\r\n中文副標題（金句）：有些溫柔不發一語，卻總能領我們回家。\r\n英文副標題（金句）：Some kindness speaks no words, yet guides us home.\r\n2. 雙語語法核實與「極簡詩意」字幕優化表\r\n在進入分鏡前，我已將原本偏敘事的台詞全面重構為「京都動畫／新海誠式」的極簡詩意留白風\r\n格，中文嚴格控制在 6～9 字，英文採用意象式短句（2～5 words），避免字幕干擾 9:16 畫面的\r\n視覺張力：\r\n鏡\r\n頭\r\n初稿概念（直白敘事）\r\n語法核實與詩意優化定稿\r\n（中文 6-10 字）\r\n語法核實與詩意優化定稿（英\r\n文極簡短句）\r\n字數檢\r\n核\r\n01\r\n今天考砸了，連天空都\r\n在下雨。\r\n世界，突然下起大雨。 The world began to pour.\r\n8字 / 5\r\n詞\r\n02\r\n看著皺巴巴的考卷，覺\r\n得好難過。\r\n有些失落，無處可躲。 Some sorrows have no shelter.\r\n8字 / 5\r\n詞\r\n03\r\n遠方突然傳來熟悉的踏\r\n水聲。\r\n直到熟悉的腳步聲響起。\r\nUntil familiar steps splashed\r\nnear.\r\n9字 / 5\r\n詞\r\n04\r\n庫洛咬著我的小雨傘跑\r\n過來了。\r\n你銜著晴天，奔向我。 You brought the clearing sky.\r\n8字 / 5\r\n詞\r\n05\r\n牠把傘放在我腳邊，看\r\n著我。\r\n不發一語的溫柔守候。 A silent, gentle guard.\r\n9字 / 4\r\n詞\r\n06\r\n我撐起傘，心裡沒有那\r\n麼冷了。\r\n小小的傘，撐開了微光。 A tiny umbrella, a soft light.\r\n9字 / 6\r\n詞\r\n07\r\n牠像牧羊犬一樣繞著我\r\n帶路。\r\n你繞著我，圈住所有不安。\r\nCircling me, herding away my\r\nfears.\r\n10字 /\r\n6詞\r\n08\r\n牠用鼻子推推我，叫我\r\n避開水窪。\r\n一步一步，領我走出泥濘。 Guiding me past every puddle.\r\n10字 /\r\n5詞\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n鏡\r\n頭\r\n初稿概念（直白敘事）\r\n語法核實與詩意優化定稿\r\n（中文 6-10 字）\r\n語法核實與詩意優化定稿（英\r\n文極簡短句）\r\n字數檢\r\n核\r\n09\r\n我們終於走回亮著燈的\r\n家門口。\r\n原來家的光，一直都在。 The warmth of home awaited.\r\n9字 / 5\r\n詞\r\n10\r\n謝謝你，我最棒的隱形\r\n牧羊人。\r\n謝謝你，領我回家的牧羊\r\n人。\r\nThank you, my gentle\r\nshepherd.\r\n10字 /\r\n5詞\r\n3. 場景設計與 10 段分鏡描述文案（總長 60 秒）\r\n鏡頭編號與類型 畫面內容描述（4-5字小標 + 中英描述）\r\n影片字幕（Video\r\nCaption）\r\n時\r\n長\r\n01 大遠景\r\n(Extreme Long\r\nShot)\r\n【雨幕孤影】\r\n中：傾盆大雨的日式街角公園，冷藍色調。10歲小\r\n凜穿鮮黃色雨衣，獨自坐在長椅上低頭縮成一團。\r\n英：Rainy Japanese park, cold blue tones. 10yo\r\nRin in a bright yellow raincoat sits alone on a\r\nbench, hunched over.\r\n中：世界，突然下\r\n起大雨。\r\n英：The world\r\nbegan to pour.\r\n6\r\n秒\r\n02 特寫 (Close￾Up)\r\n【揉皺考卷】\r\n中：小凜顫抖的雙手握著被雨水打濕、揉皺的紅字\r\n考卷，一滴眼淚落在紙上暈開。\r\n英：Rin's trembling hands hold a wet, crumpled\r\ntest paper. A teardrop falls and smudges the ink.\r\n中：有些失落，無\r\n處可躲。\r\n英：Some sorrows\r\nhave no shelter.\r\n6\r\n秒\r\n03 中遠景\r\n(Medium Long\r\nShot)\r\n【踏水奔來】\r\n中：積水的柏油路盡頭，水花四濺，黑白毛色的邊\r\n境牧羊犬庫洛嘴裡咬著一把透明小兒童傘，冒雨狂\r\n奔而來。\r\n英：At the end of the wet asphalt road, splashing\r\nwater, black-and-white Border Collie Kuro runs\r\n中：直到熟悉的腳\r\n步聲響起。\r\n英：Until familiar\r\nsteps splashed\r\nnear.\r\n6\r\n秒\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n鏡頭編號與類型 畫面內容描述（4-5字小標 + 中英描述）\r\n影片字幕（Video\r\nCaption）\r\n時\r\n長\r\nthrough the rain holding a small umbrella in its\r\nmouth.\r\n04 中景 (Medium\r\nShot)\r\n【銜傘而至】\r\n中：庫洛停在小凜面前，渾身濕透喘著氣，眼神清\r\n澈溫柔，小心翼翼地叼著那把貼有小狗貼紙的兒童\r\n傘。\r\n英：Kuro stops in front of Rin, soaking wet and\r\npanting, eyes gentle, carefully holding the child's\r\numbrella in its jaws.\r\n中：你銜著晴天，\r\n奔向我。\r\n英：You brought\r\nthe clearing sky.\r\n6\r\n秒\r\n05 低角度特寫\r\n(Low-Angle CU)\r\n【無聲遞傘】\r\n中：庫洛輕輕將雨傘放在小凜的紅色雨靴旁，抬起\r\n頭用濕潤的鼻子輕碰小凜冰冷的手背。\r\n英：Kuro gently places the umbrella by Rin's red\r\nrain boots and nudges her cold hand with its wet\r\nnose.\r\n中：不發一語的溫\r\n柔守候。\r\n英：A silent, gentle\r\nguard.\r\n6\r\n秒\r\n06 中近景\r\n(Medium Close￾Up)\r\n【撐開微光】\r\n中：小凜擦乾眼淚撐開透明雨傘，街燈穿過傘面灑\r\n落一圈微暖黃光，照亮她破涕為笑的臉龐。\r\n英：Rin wipes her tears and opens the clear\r\numbrella. Streetlight filters through, casting a\r\nwarm glow on her smiling face.\r\n中：小小的傘，撐\r\n開了微光。\r\n英：A tiny\r\numbrella, a soft\r\nlight.\r\n6\r\n秒\r\n07 俯視中遠景\r\n(High-Angle\r\nMLS)\r\n【繞圈守護】\r\n中：走在雨中街道上，庫洛發揮牧羊犬本能，輕快\r\n地繞著小凜畫圈小跑，像隱形的防護罩將她圈在中\r\n中：你繞著我，圈\r\n住所有不安。\r\n6\r\n秒\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n鏡頭編號與類型 畫面內容描述（4-5字小標 + 中英描述）\r\n影片字幕（Video\r\nCaption）\r\n時\r\n長\r\n央。\r\n英：Walking down the rainy street, Kuro instincts\r\nkick in, trotting in protective circles around Rin\r\nlike an invisible shield.\r\n英：Circling me,\r\nherding away my\r\nfears.\r\n08 側面跟拍\r\n(Tracking\r\nMedium Shot)\r\n【輕頂引路】\r\n中：前方有深水窪，庫洛用頭輕輕頂了頂小凜的雨\r\n靴外側，引導她往安全乾燥的內側人行道走。\r\n英：Approaching a deep puddle, Kuro gently\r\nnudges Rin's rain boot with its head, herding her\r\ntoward the safe sidewalk.\r\n中：一步一步，領\r\n我走出泥濘。\r\n英：Guiding me\r\npast every puddle.\r\n6\r\n秒\r\n09 遠景轉中景\r\n(Wide to\r\nMedium Shot)\r\n【家門暖光】\r\n中：日式木造家門口的玄關燈亮起溫暖橘光，雨勢\r\n漸停，庫洛在台階前開心地甩乾身上的水珠，水花\r\n在暖光中閃耀。\r\n英：Warm orange light glows from the wooden\r\nhouse porch as rain stops. Kuro shakes off water\r\ndroplets that sparkle in the warm light.\r\n中：原來家的光，\r\n一直都在。\r\n英：The warmth of\r\nhome awaited.\r\n6\r\n秒\r\n10 特寫轉中景\r\n(Close-Up to\r\nMedium)\r\n【溫暖相擁】\r\n中：小凜放下傘，蹲在玄關暖光中緊緊抱住庫洛的\r\n脖子，庫洛溫順地把頭靠在她肩上，畫面無比治\r\n癒。\r\n英：Rin drops the umbrella and kneels in the\r\nwarm porch light, hugging Kuro tightly. Kuro rests\r\nits head on her shoulder.\r\n中：謝謝你，領我\r\n回家的牧羊人。\r\n英：Thank you, my\r\ngentle shepherd.\r\n6\r\n秒\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n4. 所有 10 個鏡頭的 AI 圖像（9:16）生成中英對照提示詞\r\n💡 軍師實戰鎖定技巧：為了確保 10 張圖的角色不跳戲，我在每段英文 Prompt 都植\r\n入了固定的角色錨點（Character Anchor）： a 10-year-old Japanese girl with\r\nshort bob hair wearing a bright yellow raincoat and red rain boots 與 a\r\nblack and white Border Collie dog 。\r\n鏡頭 01【雨幕孤影】\r\n中文提示詞：9:16直式構圖，吉卜力與京都動畫手繪水彩風格，大遠景。傾盆大雨的\r\n日式街角小公園，憂鬱的冷藍灰調。一位留著短鮑伯頭、穿鮮黃色雨衣與紅色雨靴的\r\n10歲日本小女孩，獨自坐在木長椅上低頭縮成一團，地面積水倒映著微弱街燈，細膩\r\n的雨絲與水花，電影級光影。\r\n英文提示詞： Vertical 9:16 aspect ratio, Studio Ghibli and Kyoto Animation\r\nhand-drawn watercolor style, extreme long shot. A pouring rainy Japanese\r\nneighborhood park, melancholic cold blue and grey color palette. A 10-year￾old Japanese girl with short bob hair wearing a bright yellow raincoat and\r\nred rain boots sits alone hunched over on a wooden bench. Puddles on the\r\nground reflecting dim streetlights, delicate rain streaks and splashes,\r\nemotional atmospheric lighting --ar 9:16\r\n鏡頭 02【揉皺考卷】\r\n中文提示詞：9:16直式構圖，京都動畫手繪水彩風格，特寫鏡頭。穿鮮黃色雨衣袖子\r\n的10歲小女孩顫抖的雙手，握著一張被雨水打濕、揉皺的考卷，一滴晶瑩的眼淚正落\r\n在紙面上暈開墨跡，背景是模糊的冷調雨景，細膩的情感刻畫。\r\n英文提示詞： Vertical 9:16 aspect ratio, Kyoto Animation hand-drawn\r\nwatercolor style, close-up shot. The trembling hands of a 10-year-old girl\r\nin bright yellow raincoat sleeves holding a wet, crumpled exam paper. A\r\nsingle clear teardrop falls onto the paper, smudging the ink. Blurred cold\r\nrainy background, shallow depth of field, delicate emotional detail --ar\r\n9:16\r\n鏡頭 03【踏水奔來】\r\n中文提示詞：9:16直式構圖，吉卜力與京都動畫水彩風格，中遠景低角度。濕漉漉的\r\n日式柏油路積水倒映街燈，一隻黑白相間的邊境牧羊犬正冒著大雨朝鏡頭全力奔跑，\r\n腳下踩起晶瑩的水花，嘴裡緊緊咬著一把合起的透明兒童小雨傘，眼神堅定。\r\n英文提示詞： Vertical 9:16 aspect ratio, Studio Ghibli and Kyoto Animation\r\nwatercolor style, medium long low-angle shot. On a wet Japanese asphalt road\r\nwith puddles reflecting streetlights, a black and white Border Collie dog is\r\nrunning dynamically toward the camera through heavy rain, splashing water\r\ndroplets, firmly holding a closed small clear child's umbrella in its mouth,\r\ndetermined and loyal expression --ar 9:16\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n鏡頭 04【銜傘而至】\r\n中文提示詞：9:16直式構圖，京都動畫手繪水彩風格，中景。黑白邊境牧羊犬停在穿\r\n黃雨衣的小女孩面前，狗狗毛髮濕透、微微喘氣，琥珀色眼睛溫柔地望著女孩，嘴裡\r\n小心翼翼地叼著一把透明小雨傘，雨滴從狗毛尖端滑落。\r\n英文提示詞： Vertical 9:16 aspect ratio, Kyoto Animation hand-drawn\r\nwatercolor style, medium shot. A soaking wet black and white Border Collie\r\ndog stands in front of a 10-year-old girl in a bright yellow raincoat. The\r\ndog has gentle amber eyes, carefully holding a small clear umbrella in its\r\nmouth, raindrops dripping from its fur, emotional connection --ar 9:16\r\n鏡頭 05【無聲遞傘】\r\n中文提示詞：9:16直式構圖，吉卜力水彩風格，低角度特寫。地面上放著一把透明兒\r\n童雨傘，在女孩的紅色雨靴旁邊。黑白邊境牧羊犬正抬起頭，用濕潤的黑鼻子溫柔地\r\n輕觸穿黃雨衣小女孩下垂的手背，雨水順著袖口滴落，畫面溫暖細膩。\r\n英文提示詞： Vertical 9:16 aspect ratio, Studio Ghibli watercolor style,\r\nlow-angle close-up shot. A small clear umbrella rests on the wet ground next\r\nto red rain boots. A black and white Border Collie dog gently nudges the\r\nhanging hand of a girl in a bright yellow raincoat with its wet nose,\r\ncomforting gesture, soft rain --ar 9:16\r\n鏡頭 06【撐開微光】\r\n中文提示詞：9:16直式構圖，京都動畫光影水彩風格，中近景。留著短鮑伯頭、穿鮮\r\n黃色雨衣的10歲日本小女孩撐開透明雨傘，上方溫暖的街燈光芒穿透雨傘上的水珠，\r\n在她帶著淚痕卻綻放微笑的臉龐上灑落柔和的暖黃光暈，冷暖色溫開始交融。\r\n英文提示詞： Vertical 9:16 aspect ratio, Kyoto Animation watercolor style,\r\nmedium close-up. A 10-year-old Japanese girl with short bob hair in a bright\r\nyellow raincoat holds an open clear umbrella. Warm golden streetlight\r\nfilters through the raindrops on the transparent canopy, illuminating her\r\ntearful yet smiling face with a soft warm glow against the cool rainy\r\nbackground --ar 9:16\r\n鏡頭 07【繞圈守護】\r\n中文提示詞：9:16直式構圖，吉卜力手繪水彩風格，微俯視中遠景。雨中的日式街\r\n道，穿黃雨衣撐透明傘的小女孩走在中間，黑白邊境牧羊犬像牧羊一般，快樂輕快地\r\n繞著女孩畫圈小跑，地面水窪泛起圓形漣漪，展現守護感。\r\n英文提示詞： Vertical 9:16 aspect ratio, Studio Ghibli hand-drawn watercolor\r\nstyle, high-angle medium long shot. On a rainy Japanese street, a 10-year￾old girl in a bright yellow raincoat holding a clear umbrella walks in the\r\ncenter, while a black and white Border Collie dog joyfully trots in a\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \nprotective circle around her like herding sheep, circular ripples in the\r\npuddles --ar 9:16\r\n鏡頭 08【輕頂引路】\r\n中文提示詞：9:16直式構圖，京都動畫水彩風格，側面中景。小女孩穿著黃雨衣與紅\r\n雨靴走在濕滑街道上，前方有一個大水窪，黑白邊境牧羊犬貼在她身側，用頭溫柔地\r\n輕頂她的紅雨靴外側，引導她走向乾燥的人行道，街燈倒影柔美。\r\n英文提示詞： Vertical 9:16 aspect ratio, Kyoto Animation watercolor style,\r\nside-view medium shot. A 10-year-old girl in a bright yellow raincoat and\r\nred rain boots walks near a large puddle. Beside her, a black and white\r\nBorder Collie dog gently nudges her leg with its head to guide her onto the\r\ndry sidewalk, warm streetlight reflections on wet pavement --ar 9:16\r\n鏡頭 09【家門暖光】\r\n中文提示詞：9:16直式構圖，吉卜力與新海誠溫暖光影水彩風，中遠景。夜晚雨停的\r\n日式木造房屋玄關，門燈散發極致溫暖的橘黃色光芒。黑白邊境牧羊犬站在玄關台階\r\n前開心地甩動身體，甩出的無數水珠在暖黃燈光下如金色星塵般閃耀，穿黃雨衣的小\r\n女孩站在旁邊微笑看著。\r\n英文提示詞： Vertical 9:16 aspect ratio, Studio Ghibli and Makoto Shinkai\r\nwarm watercolor style, medium wide shot. Outside a traditional Japanese\r\nwooden house entrance at dusk after the rain stops, glowing with cozy warm\r\norange porch light. A black and white Border Collie dog happily shakes off\r\nwater from its fur, water droplets sparkling like golden stardust in the\r\nwarm light, while the 10-year-old girl in a yellow raincoat watches with a\r\nbright smile --ar 9:16\r\n鏡頭 10【溫暖相擁】\r\n中文提示詞：9:16直式構圖，京都動畫極致治癒手繪水彩風，中近景。在充滿暖橘色\r\n燈光的日式家門玄關下，穿鮮黃色雨衣的10歲短髮小女孩蹲下身，雙臂緊緊抱住黑白\r\n邊境牧羊犬的脖子，臉頰貼著狗狗蓬鬆的毛髮；狗狗溫順地閉上眼將頭靠在她肩上，\r\n透明雨傘擱在一旁，溫馨感人至極。\r\n英文提示詞： Vertical 9:16 aspect ratio, Kyoto Animation heartwarming hand￾drawn watercolor style, medium close-up. Bathed in cozy golden-orange porch\r\nlight at the house entrance, the 10-year-old Japanese girl with short bob\r\nhair in a bright yellow raincoat kneels down and hugs the black and white\r\nBorder Collie dog tightly around its neck. The dog closes its eyes\r\npeacefully, resting its head on her shoulder, open clear umbrella resting\r\nbeside them, pure warmth and healing atmosphere --ar 9:16\r\n5. 所有 10 個鏡頭的 AI 影片（9:16）生成中英對照提示詞\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n💡 軍師實戰動態建議：建議先用上方第 4 點的提示詞生成高品質的 9:16 靜態首幀圖\r\n（First Frame），再將圖片餵給 Kling（可靈）、Runway Gen-3 或 Luma Dream\r\nMachine，並搭配以下「圖生影片（Image-to-Video）」動態提示詞，能達到 95%\r\n以上的角色穩定度。\r\n鏡頭 01【雨幕孤影】（6秒）\r\n中文影片提示詞：鏡頭緩慢由上往下平移推進（Slow tilt down and push in）。傾盆大\r\n雨持續落下，地面水窪泛起陣陣漣漪，穿黃雨衣的小女孩坐在長椅上雙肩微微顫抖啜\r\n泣，冷色調手繪動畫質感。\r\n英文影片提示詞： Slow camera tilt down and gentle push in. Heavy rain\r\nfalling continuously, ripples spreading across puddles on the ground. The\r\ngirl in the yellow raincoat sits on the bench, her shoulders trembling\r\nslightly as she sobs softly. 2D hand-drawn anime watercolor aesthetic,\r\nsmooth motion.\r\n鏡頭 02【揉皺考卷】（6秒）\r\n中文影片提示詞：固定特寫鏡頭（Static close-up）。小女孩的雙手微微發抖，握緊揉\r\n皺的考卷，一滴眼淚從上方落下，精準滴在考卷上並緩慢暈開水漬，雨滴偶爾打在黃\r\n色雨衣袖口上。\r\n英文影片詞提示： Static close-up shot, subtle handheld movement. The girl's\r\nhands tremble slightly while gripping the crumpled paper. A single teardrop\r\nfalls from above, hitting the paper and slowly spreading into a wet stain.\r\nRaindrops patter against her yellow raincoat sleeves.\r\n鏡頭 03【踏水奔來】（6秒）\r\n中文影片提示詞：低角度跟隨鏡頭向後移動（Low-angle backward tracking shot）。\r\n黑白邊境牧羊犬咬著小雨傘，在積水的馬路上朝鏡頭奮力奔跑，四肢踏起慢動作般飛\r\n濺的水花，耳朵隨奔跑節奏擺動。\r\n英文影片提示詞： Low-angle backward tracking shot. The black and white\r\nBorder Collie dog runs energetically toward the camera through heavy rain,\r\nholding a small umbrella in its mouth. Paws splashing water dynamically from\r\nthe puddles, ears bouncing naturally with each stride, cinematic slow-motion\r\nfeel.\r\n鏡頭 04【銜傘而至】（6秒）\r\n中文影片提示詞：緩慢推進中景（Slow push-in medium shot）。邊境牧羊犬停下腳\r\n步，胸口因喘氣而自然起伏，嘴裡穩穩叼著雨傘，牠歪了歪頭，用溫柔清澈的眼神望\r\n向鏡頭外的小女孩，雨水順著毛髮滴落。\r\n英文影片提示詞： Slow push-in medium shot. The Border Collie stops in front\r\nof the girl, chest heaving gently as it pants, holding the umbrella steadily\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \nin its mouth. The dog tilts its head affectionately with warm, expressive\r\neyes, raindrops dripping from its wet fur.\r\n鏡頭 05【無聲遞傘】（6秒）\r\n中文影片提示詞：固定低角度特寫（Static low-angle close-up）。邊境牧羊犬鬆開嘴將\r\n透明雨傘輕放在紅雨靴旁，接著抬起頭，用濕潤的鼻子溫柔地往上頂了頂小女孩冰冷\r\n的手掌，小女孩的手指微微動了一下。\r\n英文影片提示詞： Static low-angle close-up. The Border Collie gently\r\nreleases the clear umbrella onto the ground next to the red boots, then\r\nlifts its head and softly nudges the girl's hanging hand with its wet nose.\r\nThe girl's fingers twitch slightly in response.\r\n鏡頭 06【撐開微光】（6秒）\r\n中文影片提示詞：鏡頭微微上移（Subtle camera pan up）。小女孩撐開透明雨傘，傘\r\n面彈開的瞬間甩落水珠，溫暖的街燈光芒透過透明傘面照亮她的臉龐，她眨了眨掛著\r\n淚珠的眼睛，綻放出溫暖的微笑。\r\n英文影片提示詞： Subtle camera pan up. The girl pops open the clear\r\numbrella, shaking off water droplets. Warm golden streetlight shines through\r\nthe transparent canopy onto her face. She blinks away tears and breaks into\r\na gentle, relieved smile.\r\n鏡頭 07【繞圈守護】（6秒）\r\n中文影片提示詞：俯視緩慢跟拍鏡頭（High-angle tracking shot）。小女孩撐著傘往前\r\n走，黑白邊境牧羊犬發揮牧羊本能，輕快活潑地圍繞著小女孩轉圈小跑，踩起一圈圈\r\n水花，畫面充滿韻律感。\r\n英文影片提示詞： High-angle forward tracking shot. As the girl in the yellow\r\nraincoat walks forward holding the umbrella, the black and white Border\r\nCollie trots playfully in a complete protective circle around her like\r\nherding sheep, creating rhythmic ripples in the puddles.\r\n鏡頭 08【輕頂引路】（6秒）\r\n中文影片提示詞：側面平行跟拍（Side-profile tracking shot）。小女孩快要踩到深水\r\n窪時，身旁的邊境牧羊犬用頭輕輕靠向她的紅雨靴外側推了一下，小女孩順勢往內側\r\n走並低頭對狗狗微笑，一人一狗步伐一致。\r\n英文影片提示詞： Side-profile parallel tracking shot. As the girl approaches\r\na deep puddle, the Border Collie walks closely beside her and gently nudges\r\nher red rain boot with its head, guiding her safely onto the dry sidewalk.\r\nThey walk in warm harmony.\r\n鏡頭 09【家門暖光】（6秒）\r\n中文影片提示詞：緩慢拉遠中景（Slow pull-back shot）。在溫暖橘光的家門口，邊境\r\n牧羊犬開心地左右用力甩乾身體，無數晶瑩水珠以慢動作在暖黃燈光中飛散閃耀，一\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n旁的小女孩開心地笑出聲。\r\n英文影片提示詞： Slow pull-back medium shot. In the warm orange glow of the\r\nhouse porch, the Border Collie vigorously shakes its body to dry off.\r\nHundreds of water droplets fly off in slow motion, sparkling like golden\r\ndust in the warm light, while the girl laughs happily beside it.\r\n鏡頭 10【溫暖相擁】（6秒）\r\n中文影片提示詞：緩慢環繞推進鏡頭（Slow arc and push-in shot）。小女孩蹲在溫暖\r\n的玄關燈光下，雙手緊緊抱住邊境牧羊犬，把臉埋進狗狗頸間；狗狗溫順地閉上眼\r\n睛，尾巴在身後輕輕搖擺，畫面漸漸淡出至溫暖光暈。\r\n英文影片提示詞： Slow cinematic arc and push-in shot. Bathed in warm golden\r\nporch light, the girl kneels and wraps her arms tightly around the Border\r\nCollie's neck. The dog closes its eyes contentedly, resting its head on her\r\nshoulder while its tail wags softly, fading into a warm, healing glow.\r\n💡 軍師後製落地提醒（配樂與節奏）\r\n1. 00:00 - 00:18（鏡頭 01~03）：僅使用環境白噪音（大雨聲、踏水聲）搭配單音稀疏的鋼\r\n琴低音，營造孤獨感。\r\n2. 00:18 - 00:36（鏡頭 04~06）：在鏡頭 05 狗狗鼻子碰觸手背的瞬間，加入一聲清脆的木\r\n吉他或高音鋼琴單音，鏡頭 06 撐傘時引入溫暖的大提琴弦樂鋪底。\r\n3. 00:36 - 00:60（鏡頭 07~10）：加入輕快的木吉他刷弦與手風琴（吉卜力經典配器），並\r\n在鏡頭 09 甩水珠時達到音樂高潮，鏡頭 10 相擁時收回輕柔的鋼琴尾奏。\r\n若您需要將這份分鏡表直接轉換為 CapCut 剪輯時間軸清單，或是需要針對特定 AI 平台（如\r\nMidjourney 的 --cref 角色參考設定）調整參數，請隨時告訴我！\r\n 日式溫馨動畫企劃方案 - Gemini"}, {"turn": 3, "user": "1.請根據您建議的內容和上傳的照片,生成符合日本新海誠動畫風格的\"女孩\"的動畫角色設定表\r\n(Character Sheet)。\r\n2.包含上述角色的四個全身視角:正面、45度側面、側面,以及背面。\r\n3.保持原角色面部特徵,五官不變。\r\n4.白色背景,均勻光線,16:9。", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 4, "user": "1.請根據您建議的內容,生成符合日本新海誠動畫風格的\"邊際牧羊犬 \"的動畫設定表(Character\r\nSheet)。\r\n2.包含上述角色的四個全身視角:正面、45度側面、側面,以及背面。\r\n3.保持原角色面部特徵,五官不變。\r\n4.白色背景,均勻光線,16:9。", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 5, "user": "1.請根據您建議的內容和上傳的照片,生成符合日本新海誠動畫風格的\"女孩\"的動畫角色設定表\r\n(Character Sheet)。\r\n2.包含上述角色的四個全身視角:正面、45度側面、側面,以及背面。\r\n3.保持原角色面部特徵,五官不變。\r\n4.白色背景,均勻光線,16:9。", "assistant": "日式溫馨動畫企劃方案 - Gemini\r\n \n 日式溫馨動畫企劃方案 - Gemini"}, {"turn": 6, "user": "Vertical 9:16 aspect ratio, Studio Ghibli and Kyoto Animation hand-drawn watercolor style,\r\nextreme long shot. A pouring rainy Japanese neighborhood park, melancholic cold blue and grey\r\ncolor palette. A 10-year-old Japanese girl with short bob hair wearing a bright yellow raincoat\r\nand red rain boots sits alone hunched over on a wooden bench. Puddles on the ground reflecting\r\ndim streetlights, delicate rain streaks and splashes, emotional atmospheric lighting --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 7, "user": "Vertical 9:16 aspect ratio, Kyoto Animation hand-drawn watercolor style, close-up shot. The\r\ntrembling hands of a 10-year-old girl in bright yellow raincoat sleeves holding a wet, crumpled\r\nexam paper. A single clear teardrop falls onto the paper, smudging the ink. Blurred cold rainy\r\nbackground, shallow depth of field, delicate emotional detail --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 8, "user": "Vertical 9:16 aspect ratio, Studio Ghibli and Kyoto Animation watercolor style, medium long\r\nlow-angle shot. On a wet Japanese asphalt road with puddles reflecting streetlights, a black and\r\nwhite Border Collie dog is running dynamically toward the camera through heavy rain, splashing\r\nwater droplets, firmly holding a closed small clear child's umbrella in its mouth, determined and\r\nloyal expression --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 9, "user": "Vertical 9:16 aspect ratio, Kyoto Animation hand-drawn watercolor style, medium shot. A\r\nsoaking wet black and white Border Collie dog stands in front of a 10-year-old girl in a bright\r\nyellow raincoat. The dog has gentle amber eyes, carefully holding a small clear umbrella in its\r\nmouth, raindrops dripping from its fur, emotional connection --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 10, "user": "Vertical 9:16 aspect ratio, Studio Ghibli watercolor style, low-angle close-up shot. A small clear\r\numbrella rests on the wet ground next to red rain boots. A black and white Border Collie dog\r\ngently nudges the hanging hand of a girl in a bright yellow raincoat with its wet nose, comforting\r\ngesture, soft rain --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 11, "user": "Vertical 9:16 aspect ratio, Kyoto Animation watercolor style, medium close-up. A 10-year-old\r\nJapanese girl with short bob hair in a bright yellow raincoat holds an open clear umbrella. Warm\r\ngolden streetlight filters through the raindrops on the transparent canopy, illuminating her\r\ntearful yet smiling face with a soft warm glow against the cool rainy background --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 12, "user": "Vertical 9:16 aspect ratio, Studio Ghibli hand-drawn watercolor style, high-angle medium long\r\nshot. On a rainy Japanese street, a 10-year-old girl in a bright yellow raincoat holding a clear\r\numbrella walks in the center, while a black and white Border Collie dog joyfully trots in a\r\nprotective circle around her like herding sheep, circular ripples in the puddles --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 13, "user": "Vertical 9:16 aspect ratio, Kyoto Animation watercolor style, side-view medium shot. A 10-year￾old girl in a bright yellow raincoat and red rain boots walks near a large puddle. Beside her, a\r\nblack and white Border Collie dog gently nudges her leg with its head to guide her onto the dry\r\nsidewalk, warm streetlight reflections on wet pavement --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 14, "user": "Vertical 9:16 aspect ratio, Studio Ghibli and Makoto Shinkai warm watercolor style, medium\r\nwide shot. Outside a traditional Japanese wooden house entrance at dusk after the rain stops,\r\nglowing with cozy warm orange porch light. A black and white Border Collie dog happily shakes\r\noff water from its fur, water droplets sparkling like golden stardust in the warm light, while the\r\n10-year-old girl in a yellow raincoat watches with a bright smile --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 15, "user": "Vertical 9:16 aspect ratio, Kyoto Animation heartwarming hand-drawn watercolor style, medium\r\nclose-up. Bathed in cozy golden-orange porch light at the house entrance, the 10-year-old\r\nJapanese girl with short bob hair in a bright yellow raincoat kneels down and hugs the black and\r\nwhite Border Collie dog tightly around its neck. The dog closes its eyes peacefully, resting its\r\nhead on her shoulder, open clear umbrella resting beside them, pure warmth and healing\r\natmosphere --ar 9:16", "assistant": "No content\r\n 日式溫馨動畫企劃方案 - Gemini"}, {"turn": 16, "user": "Vertical 9:16 aspect ratio, Kyoto Animation heartwarming hand-drawn watercolor style, medium\r\nclose-up. Bathed in cozy golden-orange porch light at the house entrance, the 10-year-old\r\nJapanese girl with short bob hair in a bright yellow raincoat kneels down and hugs the black and\r\nwhite Border Collie dog tightly around its neck. The dog closes its eyes peacefully, resting its\r\nhead on her shoulder, open clear umbrella resting beside them, pure warmth and healing\r\natmosphere --ar 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 17, "user": "針對這個主題，幫我寫 20 個創意標題名", "assistant": "這裡為您發想 20 個針對這部「日式溫馨感人動畫片」《雨中的牧羊人》的創意標題，分為「日系\r\n治癒感（偏詩意、情懷）」、「情感羈絆（偏感性、催淚）」以及「短片高概念（精簡、具象）」三種\r\n類型，您可以根據預告或宣傳平台的需求來選擇：\r\n一、 日系治癒與詩意風格（溫柔、帶有畫面感，適合日式動畫電影氛圍）\r\n1. 雨後，有你帶路 (The Path You Kept, After the Rain)\r\n2. 撐一把名叫「你」的傘 (An Umbrella Named \"You\")\r\n3. 無聲的雨，無言的守護者 (Quiet Rain, Silent Guardian)\r\n4. 當雨水打濕世界，而你奔我而來 (When the World Rains, You Run to Me)\r\n5. 落雨之時，遇見溫暖的你 (Meeting Your Warmth in the Pouring Rain)\r\n6. 雨幕下的隱形溫度 (Invisible Warmth Beneath the Rain)\r\n7. 那把透明傘與黑白色的你 (The Clear Umbrella and Your Black-and-White Shade)\r\n8. 總有一場雨，是為了讓我們相擁 (Every Downpour Leads to Your Hug)\r\n二、 情感羈絆與催淚風格（深刻、直擊心靈，適合預告片、宣傳金句）\r\n9. 謝謝你，我最特別的牧羊人 (My Most Special Shepherd)\r\n10. 那條雨路，我們一起回家 (That Rainy Road, We Walk Home Together)\r\n11. 你銜著傘，溫柔了我的雨天 (With an Umbrella in Your Mouth, You Softened My Rain)\r\n12. 雨天裡，最暖的足跡 (The Warmest Pawprints in the Rain)\r\n13. 不曾說話的你，卻最懂我的眼淚 (You Never Spoke, Yet You Understood My Tears)\r\n14. 就算世界再冷，你也會找到我 (Even in the Coldest World, You'll Find Me)\r\n15. 雨水落盡前，擁抱你 (Hold You Tight Before the Rain Stops)\r\n三、 現代高概念與精簡風格（適合社群短片、短視頻平台、概念宣傳）\r\n16. 雨中，那隻為我送傘的狗 (The Dog Who Brought My Umbrella)\r\n17. 雨天裡的四足守護者 (The Four-Legged Guardian in the Rain)\r\n18. 回家吧！我的隱形牧羊人 (Let's Go Home, My Invisible Shepherd)\r\n19. 一隻邊境，和她的雨天故事 (A Border Collie and Her Rainy Day)\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \n20. 溫柔的牽絆，10歲與牠 (A Gentle Bond: Her and the Shepherd)\r\n💡 導演/編劇推薦選用：\r\n如果是當作動畫大標題：推薦 《雨後，有你帶路》 或 《撐一把名叫「你」的傘》，既有新\r\n海誠式的文藝，又飽含故事中「雨傘」與「指引」的核心意象。\r\n如果是作為影片宣傳、短視頻（抖音/ Reels）發布：推薦 《當雨水打濕世界，而你奔我而\r\n來》 或 《不曾說話的你，卻最懂我的眼淚》，能用最快的情感共鳴吸引觀眾觀看！\r\n 日式溫馨動畫企劃方案 - Gemini"}, {"turn": 18, "user": "生成故事”封面劇照”圖片標題:雨天的隱形牧羊人\r\n右下角顯示:作者:姚述勤\" 圖形比例 9:16", "assistant": "日式溫馨動畫企劃方案 - Gemini"}, {"turn": 19, "user": "生成故事”封底劇照”圖片標題:請你想一個創意標題 右下角顯示:作者:姚述勤\" 圖形比例 9:16", "assistant": "為您設計的封底劇照《撐一把名叫「你」的傘》已生成。這張劇照選擇了方案中最具治癒力的溫\r\n情相擁畫面作為結尾。\r\n您覺得這個充滿暖意、首尾呼應的設計合您的心意嗎？如果需要調整標題文字或是畫面細節，請\r\n隨時告訴我！\r\n 日式溫馨動畫企劃方案 - Gemini\r\n \nExported from Voyager (https://github.com/voyager-crew/voyager) • 19 conversation turns\r\nGenerated on November 1, 2026 at 05:23 PM\r\n 日式溫馨動畫企劃方案 - Gemini"}]}};
 
-  // Copy Prompt
-  function copyPrompt(elementId) {
-    const text = document.getElementById(elementId).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-      showToast('提示詞已成功複製到剪貼簿！');
-    }).catch(() => {
-      showToast('複製失敗，請手動複製文字。');
+  function switchChat(chatKey) {
+    const chat = DIALOGUES[chatKey];
+    if (!chat) return;
+
+    document.querySelectorAll('.btn-chat-tab').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('onclick').includes(chatKey));
+    });
+
+    document.getElementById('chatTitleDisplay').textContent = chat.title;
+    document.getElementById('chatModelBadge').textContent = chat.badge;
+
+    const stream = document.getElementById('chatStream');
+    stream.innerHTML = '';
+
+    chat.turns.forEach(t => {
+      const group = document.createElement('div');
+      group.className = 'chat-turn-group';
+
+      let html = `<span class="chat-turn-badge">Turn ${t.turn}</span>`;
+
+      if (t.user) {
+        html += `
+          <div class="chat-bubble">
+            <div class="chat-avatar avatar-user">👤</div>
+            <div class="bubble-content user-bubble">
+              <div class="bubble-author">
+                <span>使用者 (Prompt)</span>
+                <button class="btn-copy" onclick="copyText(this)">📋 複製</button>
+              </div>
+              <div class="bubble-text">${escapeHtml(t.user)}</div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (t.assistant) {
+        const isGemini = chatKey.includes('gemini');
+        const avClass = isGemini ? 'avatar-gemini' : 'avatar-chatgpt';
+        const avIcon = isGemini ? '✨' : '🤖';
+        const modelName = isGemini ? 'Google Gemini' : 'ChatGPT';
+
+        html += `
+          <div class="chat-bubble">
+            <div class="chat-avatar ${avClass}">${avIcon}</div>
+            <div class="bubble-content ai-bubble">
+              <div class="bubble-author">
+                <span style="color:#38bdf8;">${modelName} (Response)</span>
+                <button class="btn-copy" onclick="copyText(this)">📋 複製</button>
+              </div>
+              <div class="bubble-text">${escapeHtml(t.assistant)}</div>
+            </div>
+          </div>
+        `;
+      }
+
+      group.innerHTML = html;
+      stream.appendChild(group);
     });
   }
 
-  // Checklist with localStorage
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function copyText(btn) {
+    const textElem = btn.closest('.bubble-content').querySelector('.bubble-text');
+    navigator.clipboard.writeText(textElem.innerText).then(() => {
+      showToast('對話內容已成功複製！');
+    });
+  }
+
+  // 4. LECTURES TAB SWITCHER (#1)
+  function switchLectureTab(tabKey) {
+    document.querySelectorAll('.btn-lec-tab').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('onclick').includes(tabKey));
+    });
+    document.querySelectorAll('.lecture-pane').forEach(p => p.classList.remove('active'));
+    document.getElementById(`pane-${tabKey}`).classList.add('active');
+  }
+
+  // 5. CHECKLIST WITH LOCALSTORAGE
   function updateChecklistProgress() {
     const checkboxes = document.querySelectorAll('#checklistItems input[type="checkbox"]');
     let checkedCount = 0;
     const states = [];
-    checkboxes.forEach((cb, idx) => {
+    checkboxes.forEach((cb) => {
       if (cb.checked) {
         checkedCount++;
         cb.closest('.check-item').classList.add('done');
@@ -1689,10 +1721,28 @@
     updateChecklistProgress();
   }
 
-  // Initialize
+  // 6. LIGHTBOX MODAL
+  function openLightbox(src) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightbox').classList.add('active');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+
+  // 7. TOAST NOTIFICATION
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    document.getElementById('toastMsg').textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  }
+
+  // INITIALIZE
   window.addEventListener('DOMContentLoaded', () => {
     renderFilmstrip();
     updateSlideDisplay();
+    switchChat('gemini_husky');
     loadChecklist();
   });
 </script>
