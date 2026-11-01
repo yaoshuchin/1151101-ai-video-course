@@ -1,0 +1,275 @@
+場景設計與 10 段分鏡規劃 (Storyboard Breakdown)
+鏡號與景別	畫面內容描述 (4-5字小標 + 描述)	極簡詩意字幕 (Video Caption)	時長
+01 遠景 (Wide Shot)	
+【春光初綻】
+
+
+春日清晨，陽光透進日式單身公寓，散落畫紙的木地板上，女孩正在沉睡。
+
+
+Morning sunlight pours into a cozy Japanese studio where a girl sleeps amidst scattered sketches.
+
+中文：晨光初醒的春日
+
+
+English: Morning light stirs spring.
+
+5秒
+02 特寫 (Close-up)	
+【幼爪踏印】
+
+
+幼犬哈士奇打翻天藍色水彩，在空白畫稿上印下一記稚嫩的爪印。
+
+
+A tiny husky puppy knocks over sky-blue paint, leaving a soft paw print on blank paper.
+
+中文：落下一記稚嫩足跡
+
+
+English: A tiny print lands.
+
+5秒
+03 中景 (Medium Shot)	
+【相視破涕】
+
+
+被驚醒的女孩看著沾滿顏料的幼犬，先是一愣，隨後露出釋懷的溫柔微笑。
+
+
+The surprised girl looks at the puppy covered in paint and breaks into a gentle smile.
+
+中文：抹去眼角的迷茫
+
+
+English: Tears turn into smiles.
+
+6秒
+04 全景 (Full Shot)	
+【櫻道奔跑】
+
+
+初夏河堤步道上，櫻花雨飄落，女孩牽著半大的哈士奇迎著微風向前奔跑。
+
+
+Cherry blossoms drift as the girl runs with her growing husky along a breezy riverbank.
+
+中文：乘著微風並肩奔跑
+
+
+English: Running in the breeze.
+
+6秒
+05 特寫 (Close-up)	
+【筆尖停滯】
+
+
+入秋黃昏，桌上揉成團的廢稿散落，女孩手握畫筆懸在半空，神情迷茫低落。
+
+
+At autumn dusk, crumpled sketches scatter as the girl holds her pen in hesitant silence.
+
+中文：畫筆停在迷惘暮色
+
+
+English: Brushes pause in dusk.
+
+6秒
+06 中景 (Medium Shot)	
+【無聲依偎】
+
+
+夜色漸深，長大成熟的哈士奇輕步走近，將下巴溫柔沉靜地靠在女孩膝蓋上。
+
+
+In the quiet night, the grown husky gently rests its chin upon the girl's lap.
+
+中文：溫熱了孤獨的長夜
+
+
+English: Warming lonely nights.
+
+7秒
+07 特寫 (Close-up)	
+【澄澈凝望】
+
+
+女孩含淚低頭，哈士奇那雙冰藍色又無比純粹的眼眸中，倒映著女孩的臉龐。
+
+
+Tears welling, the girl looks down into the husky’s crystal-blue eyes, reflecting her face.
+
+中文：你看見我所有的夢
+
+
+English: You see my dreams.
+
+6秒
+08 特寫 (Close-up)	
+【重拾光芒】
+
+
+晨光破曉，女孩指尖再次流暢運筆，筆尖劃出斑斕溫暖的光暈線條。
+
+
+Dawn breaks as the girl's hand moves smoothly across the canvas, sketching vibrant light.
+
+中文：為你繪下漫天晨光
+
+
+English: Painting morning light.
+
+6秒
+09 特寫 (Close-up)	
+【歲月成冊】
+
+
+冬日初雪窗邊，翻開的繪本封面上畫著一人一狗看夕陽，右下角印著當年爪印。
+
+
+By a snowy window, an open picture book displays their sunset silhouette and that tiny paw print.
+
+中文：時光凝成一紙溫柔
+
+
+English: Time turns to warmth.
+
+6秒
+10 遠景 (Wide Shot)	
+【落日餘暉】
+
+
+冬日橘紅黃昏的天橋上，女孩與挺拔的哈士奇並肩站立，逆光中留下一雙背影。
+
+
+On a winter sunset overpass, the girl and her majestic husky stand side by side against the golden glow.
+
+中文：未來的路，有你同在
+
+
+English: Always by my side.
+
+7秒
+AI 圖像生成提示詞 (9:16 Aspect Ratio)
+全組基礎風格設定：Makoto Shinkai anime style, ethereal lighting, cinematic lens flare, detailed background, emotional atmosphere, 8k resolution, vertical 9:16.
+
+Shot 01
+
+中文：9:16 豎版，新海誠風格日式動畫，春日清晨，溫暖陽光透過白色窗簾灑入房間，木質地板上散落著插畫手稿，年輕黑髮日本女孩趴在矮桌上熟睡，極致的光影層次，唯美空氣感。
+
+English: 9:16 vertical, Makoto Shinkai anime style, a cozy Japanese room in spring morning, warm golden sunlight streaming through sheer white curtains, sketches scattered on wooden floor, young Japanese girl with dark hair softly sleeping at low table, ethereal lighting, cinematic atmospheric perspective, 8k resolution --ar 9:16
+
+Shot 02
+
+中文：9:16 豎版，新海誠風格日式動畫，特寫鏡頭，毛茸茸的哈士奇幼犬爪子踩翻了天藍色水彩顏料盒，在白色畫紙上留下一枚清晰可愛的淡藍色小爪印，陽光粒子，細膩水彩質感。
+
+English: 9:16 vertical, Makoto Shinkai anime style, extreme close-up, a fluffy baby husky puppy playfully stepping into spilled sky-blue watercolor paint, leaving a soft pastel paw print on white paper, floating light particles, delicate textures, vibrant colors, 8k resolution --ar 9:16
+
+Shot 03
+
+中文：9:16 豎版，新海誠風格日式動畫，中景，女孩坐在地板上，看著鼻尖沾著藍色顏料的哈士奇幼犬，女孩臉上帶著溫柔釋懷的微笑，暖陽微塵，溫馨治癒氛圍。
+
+English: 9:16 vertical, Makoto Shinkai anime style, medium shot, young Japanese girl sitting on wooden floor smiling warmly at a cute husky puppy with blue paint on its nose, soft morning light, emotional bonding, heartwarming atmosphere, studio interior, 8k resolution --ar 9:16
+
+Shot 04
+
+中文：9:16 豎版，新海誠風格日式動畫，全景，初夏藍天與粉色櫻花飄落的河堤步道，微風吹拂，年輕女孩與半大的哈士奇開心地奔跑，遠處波光粼粼的河流與日本市景。
+
+English: 9:16 vertical, Makoto Shinkai anime style, full shot, a riverbank pathway in early summer, pink cherry blossom petals fluttering in wind, young girl running happily beside a medium-sized husky dog, sparkling river in background, vivid blue sky, dynamic composition --ar 9:16
+
+Shot 05
+
+中文：9:16 豎版，新海誠風格日式動畫，特寫鏡頭，深秋橘紅色黃昏，書桌上堆滿揉皺的廢畫紙，女孩握著數位繪圖筆的手懸在半空，光影昏暗交錯，帶著迷茫與挫折感。
+
+English: 9:16 vertical, Makoto Shinkai anime style, close-up shot, autumn twilight dusk, messy desk with crumpled concept sketches, girl's hand holding a drawing stylus frozen in hesitation, dramatic sunset shadows, melancholic mood, deep emotional storytelling --ar 9:16
+
+Shot 06
+
+中文：9:16 豎版，新海誠風格日式動畫，中景，深夜昏暗房間僅有一盞檯燈微光，挺拔成年的哈士奇將溫暖的下巴輕輕枕在低頭落淚的女孩膝蓋上，寂靜且深情的陪伴。
+
+English: 9:16 vertical, Makoto Shinkai anime style, medium shot, dark quiet room illuminated by a single warm desk lamp, majestic adult husky gently resting its chin on the girl's lap, comforting her sadness, poignant and touching moment, soft shadows --ar 9:16
+
+Shot 07
+
+中文：9:16 豎版，新海誠風格日式動畫，特寫，哈士奇那雙晶瑩剔透的冰藍色眼眸，眼中倒映著女孩微泛淚光的臉龐與室內燈光，極致細膩的情感眼神。
+
+English: 9:16 vertical, Makoto Shinkai anime style, extreme close-up of husky dog's crystal blue eyes, reflecting the tearful yet smiling face of the girl and warm light, incredibly detailed iris, deep emotional connection, masterpiece --ar 9:16
+
+Shot 08
+
+中文：9:16 豎版，新海誠風格日式動畫，特寫，清晨破曉淡紫金色天光灑在畫布上，女孩自信堅定地揮灑畫筆，筆尖劃出溫暖發光的色彩軌跡，充滿希望與生命力。
+
+English: 9:16 vertical, Makoto Shinkai anime style, close-up shot, dawn twilight with golden morning rays, girl's hand swiftly painting on a digital canvas, vibrant glowing brushstrokes, luminous particles of light, hopeful and inspiring atmosphere --ar 9:16
+
+Shot 09
+
+中文：9:16 豎版，新海誠風格日式動畫，特寫俯拍，飄著初雪的窗邊，一本裝訂精緻的繪本翻開，封面上畫著一人一犬看日落的插圖，封面角落有著一枚淡藍色的小爪印。
+
+English: 9:16 vertical, Makoto Shinkai anime style, top-down close-up, open finished picture book on a wooden windowsill beside falling snow, cover art depicting girl and husky watching sunset with a tiny blue paw print in the corner, warm and nostalgic --ar 9:16
+
+Shot 10
+
+中文：9:16 豎版，新海誠風格日式動畫，遠景仰拍，冬日漫天橘紅晚霞的天橋上，成熟的女孩與高大威風的哈士奇並肩站立遠眺城市天際線，強烈的金色逆光剪影與長長影子。
+
+English: 9:16 vertical, Makoto Shinkai anime style, wide angle shot, girl and majestic adult husky standing side by side on a pedestrian overpass during breathtaking golden hour sunset, dramatic backlighting, silhouette against glowing orange sky, footprints extending forward --ar 9:16
+
+AI 影片生成提示詞 (9:16 Aspect Ratio)
+Shot 01
+
+中文：9:16 豎版，新海誠風格日式動畫。鏡頭緩慢向前平移推進。晨光穿透白色薄紗窗簾，光斑在散落畫稿的地板上微微晃動，沉睡女孩的髮絲隨微風輕撫。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow cinematic camera push-in. Morning sunlight filtering through sheer curtains, soft light rays shifting across scattered sketches on wooden floor, gentle breeze moving the sleeping girl's hair.
+
+Shot 02
+
+中文：9:16 豎版，新海誠風格日式動畫。微距平視鏡頭。毛茸茸的哈士奇幼犬笨拙地踏上一盒天藍色水彩，隨後小爪子輕輕踩在白色畫紙上，印下一道淡藍色爪印，顏料微微濺起光點。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Macro focus shot. A fluffy husky puppy clumsily steps into blue watercolor, stamping a cute blue paw print onto blank paper, shimmering paint droplets.
+
+Shot 03
+
+中文：9:16 豎版，新海誠風格日式動畫。鏡頭由下往上緩慢搖鏡。女孩從驚訝睜眼轉為眼眶微紅、展顏微笑，伸手溫柔撫摸幼犬頭頂，幼犬吐舌搖尾。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow tilt-up camera movement. Girl transitions from surprise to a heartwarming smile, gently petting the puppy's head as it wags its tail, warm sunlight blooming.
+
+Shot 04
+
+中文：9:16 豎版，新海誠風格日式動畫。跟隨橫移鏡頭。櫻花花瓣在空中漫天飛舞，女孩牽著充滿活力的半大哈士奇在河堤步道向前奔跑，陽光在鏡頭前形成美麗的光暈。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Smooth tracking side-shot. Pink cherry blossom petals swirling in the air, girl and running husky moving dynamically along riverbank pathway, vibrant lens flare.
+
+Shot 05
+
+中文：9:16 豎版，新海誠風格日式動畫。微焦特寫固定鏡頭。窗外天色迅速由黃昏轉為暗沉，握著畫筆的手微微顫抖後停滯，筆尖的一滴墨水滴落在草稿上散開。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Static macro shot. Dusk sky darkening outside the window, hand holding a pen trembling slightly in hesitation, a single ink droplet spreading on the sketch.
+
+Shot 06
+
+中文：9:16 豎版，新海誠風格日式動畫。緩慢環繞低角度鏡頭。成熟沉穩的哈士奇安靜走入畫面，緩緩將下巴靠在女孩膝上，女孩的手輕輕顫抖著撫上狗狗厚實的背毛。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow low-angle panning shot. Majestic adult husky steps quietly into the lamp light, resting its head on the girl’s knees, she softly caresses its thick fur.
+
+Shot 07
+
+中文：9:16 豎版，新海誠風格日式動畫。極致特寫推進。哈士奇晶瑩的冰藍色瞳孔中倒映著女孩的面龐，狗狗緩慢眨眼，眼神溫柔無比，光點在瞳孔中流轉。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Extreme zoom-in shot into the husky's brilliant blue eyes, reflecting the tearful smiling face of the girl, subtle eye blink, soft light reflection glowing inside the iris.
+
+Shot 08
+
+中文：9:16 豎版，新海誠風格日式動畫。快節奏特寫滑軌鏡頭。晨曦破曉金光灑入，畫筆在畫面上流暢自如地揮灑，繪出充滿朝氣的色彩與線條，光芒四射。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Fast-paced tracking close-up. Radiant dawn light breaking through, hand drawing smooth confident colorful lines across the canvas, vibrant dynamic art creation.
+
+Shot 09
+
+中文：9:16 豎版，新海誠風格日式動畫。緩慢向下俯仰推進。窗外緩緩飄落初雪，微風輕輕翻動繪本頁面，停留在封面兩人看夕陽的插畫與爪印上。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow top-down tilt and push. Snowflakes falling outside the glass window, gentle breeze turning the illustrated book pages to reveal the sunset cover and blue paw print.
+
+Shot 10
+
+中文：9:16 豎版，新海誠風格日式動畫。緩慢拉遠廣角鏡頭。天橋上女孩與哈士奇並肩迎著壯麗的橘紅落日與晚霞，風吹動衣角與毛髮，鏡頭緩緩升空拉遠，留下一雙背影與無盡天空。
+
+English: Vertical 9:16, Makoto Shinkai anime aesthetic. Slow crane shot pulling back into a wide view. Girl and husky standing together against an epic glowing orange sunset on an overpass, wind blowing their clothes and fur, fading into golden horizon.

@@ -1,0 +1,494 @@
+{
+  "part1": [
+    {
+      "slide_num": 1,
+      "category": "研習專題",
+      "title": "AI影片創作與動畫生成實戰",
+      "subtitle": "掌握Flow動畫製作流",
+      "sticker_id": 0,
+      "points": []
+    },
+    {
+      "slide_num": 2,
+      "category": "課程全貌",
+      "title": "AI影音創作全流程心智圖",
+      "subtitle": "四大核心與實戰流程",
+      "sticker_id": 7,
+      "points": []
+    },
+    {
+      "slide_num": 3,
+      "topic_idx": 1,
+      "category": "課程學習",
+      "title": "課程資源與學習方式",
+      "sticker_id": 15,
+      "points": [
+        "提供全程與分段錄影",
+        "雲端講義可免費下載",
+        "課堂專心跟做免抄題"
+      ]
+    },
+    {
+      "slide_num": 4,
+      "topic_idx": 2,
+      "category": "核心概念",
+      "title": "生成式影音核心概念",
+      "sticker_id": 1,
+      "points": [
+        "AI涵蓋腳本圖文音樂",
+        "短片段生成再行剪輯",
+        "充分描述需求定細節"
+      ]
+    },
+    {
+      "slide_num": 5,
+      "topic_idx": 3,
+      "category": "視覺控制",
+      "title": "視覺一致性關鍵策略",
+      "sticker_id": 4,
+      "points": [
+        "單段生成易產生差異",
+        "需先建立主角定裝照",
+        "同對話維持角色風格"
+      ]
+    },
+    {
+      "slide_num": 6,
+      "topic_idx": 4,
+      "category": "工具分工",
+      "title": "AI三大工具專業分工",
+      "sticker_id": 6,
+      "points": [
+        "AI寫腳本分鏡提示詞",
+        "Flow將圖片轉成影片",
+        "剪映整合影音與字幕"
+      ]
+    },
+    {
+      "slide_num": 7,
+      "topic_idx": 5,
+      "category": "平臺特性",
+      "title": "Google Flow平臺特性",
+      "sticker_id": 2,
+      "points": [
+        "單段時長上限為十秒",
+        "免費帳號每日五十點",
+        "每日點數隔日不累積"
+      ]
+    },
+    {
+      "slide_num": 8,
+      "topic_idx": 6,
+      "category": "算力規劃",
+      "title": "算力消耗與點數規劃",
+      "sticker_id": 9,
+      "points": [
+        "八秒影片約需十二點",
+        "每日點數可產四片段",
+        "時長畫質影響點數用"
+      ]
+    },
+    {
+      "slide_num": 9,
+      "topic_idx": 7,
+      "category": "語音策略",
+      "title": "語音限制與旁白解方",
+      "sticker_id": 10,
+      "points": [
+        "中文發音易有外國腔",
+        "嘴型中文同步有限制",
+        "建議採用純中文旁白"
+      ]
+    },
+    {
+      "slide_num": 10,
+      "topic_idx": 8,
+      "category": "實戰流程 01",
+      "title": "流程一：構思故事腳本",
+      "sticker_id": 7,
+      "points": [
+        "同對話框保留上下文",
+        "指定風格提三個方案",
+        "完整作品建議至少六幕"
+      ]
+    },
+    {
+      "slide_num": 11,
+      "topic_idx": 9,
+      "category": "實戰流程 02",
+      "title": "流程二：建立角色定裝",
+      "sticker_id": 11,
+      "points": [
+        "產主角寵物白底定裝",
+        "含正側面與表情參考",
+        "確立畫風作分鏡基準"
+      ]
+    },
+    {
+      "slide_num": 12,
+      "topic_idx": 10,
+      "category": "實戰流程 03",
+      "title": "流程三：撰寫分鏡提示詞",
+      "sticker_id": 1,
+      "points": [
+        "依故事逐幕產提示詞",
+        "中文檢視英文給AI用",
+        "確認選圖片生成功能"
+      ]
+    },
+    {
+      "slide_num": 13,
+      "topic_idx": 11,
+      "category": "規格設定",
+      "title": "畫面比例與規格設定",
+      "sticker_id": 8,
+      "points": [
+        "電腦橫16比9手機直9比16",
+        "製作前決定統一比例",
+        "平臺設定優先提示詞"
+      ]
+    },
+    {
+      "slide_num": 14,
+      "topic_idx": 12,
+      "category": "實戰流程 04",
+      "title": "流程四：素材依序命名",
+      "sticker_id": 2,
+      "points": [
+        "分鏡依序命名P1至P4",
+        "檔名清楚避免上傳錯",
+        "同專案切勿更換帳號"
+      ]
+    },
+    {
+      "slide_num": 15,
+      "topic_idx": 13,
+      "category": "實戰流程 05",
+      "title": "流程五：封面與標題設計",
+      "sticker_id": 11,
+      "points": [
+        "AI生成吸引人主題封面",
+        "封面融合多場景同比例",
+        "請AI推薦高點閱標題"
+      ]
+    },
+    {
+      "slide_num": 16,
+      "topic_idx": 14,
+      "category": "實戰流程 06",
+      "title": "流程六：生成AI背景音樂",
+      "sticker_id": 14,
+      "points": [
+        "AI產氛圍契合背景樂",
+        "三十秒音樂可重播循環",
+        "留意外部工具下載限制"
+      ]
+    },
+    {
+      "slide_num": 17,
+      "topic_idx": 15,
+      "category": "實戰流程 07",
+      "title": "流程七：精準撰寫旁白文案",
+      "sticker_id": 5,
+      "points": [
+        "旁白長度短於影片秒數",
+        "純中文文案利後製配音",
+        "內容隨機不滿意可重寫"
+      ]
+    },
+    {
+      "slide_num": 18,
+      "topic_idx": 16,
+      "category": "實戰流程 08",
+      "title": "流程八：Flow生成影片",
+      "sticker_id": 6,
+      "points": [
+        "獨立專案上傳分鏡圖片",
+        "加入參考圖與提示詞",
+        "可連續提交不必等前段"
+      ]
+    },
+    {
+      "slide_num": 19,
+      "topic_idx": 17,
+      "category": "後製整合",
+      "title": "後製剪輯與音畫整合",
+      "sticker_id": 2,
+      "points": [
+        "剪輯工具整合所有片段",
+        "加入旁白配音與字幕",
+        "調整轉場節奏完成作品"
+      ]
+    },
+    {
+      "slide_num": 20,
+      "topic_idx": 18,
+      "category": "操作心法",
+      "title": "對話管理與操作要訣",
+      "sticker_id": 7,
+      "points": [
+        "重要對話重新命名置頂",
+        "Shift加Enter換行修改",
+        "可分享對話保留歷程"
+      ]
+    },
+    {
+      "slide_num": 21,
+      "topic_idx": 19,
+      "category": "成本認知",
+      "title": "模型成本與版權認知",
+      "sticker_id": 14,
+      "points": [
+        "大模型訓練成本極高",
+        "課程免費工具降成本",
+        "商用需評估版權與條款"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "slide_num": 1,
+      "category": "研習專題二",
+      "title": "Google Flow與剪映後製實作",
+      "subtitle": "Flow影片生成與剪映全實作",
+      "sticker_id": 0,
+      "points": []
+    },
+    {
+      "slide_num": 2,
+      "category": "課程全貌",
+      "title": "影音生成與後製全流程心智圖",
+      "subtitle": "四大核心階段與十九項重點",
+      "sticker_id": 7,
+      "points": []
+    },
+    {
+      "slide_num": 3,
+      "topic_idx": 1,
+      "category": "影片生成",
+      "title": "Flow專案與平行生成",
+      "sticker_id": 6,
+      "points": [
+        "建立專案並明確命名",
+        "可並行提交多段任務",
+        "完成依序下載重新命名"
+      ]
+    },
+    {
+      "slide_num": 4,
+      "topic_idx": 2,
+      "category": "算力規格",
+      "title": "算力額度與解析度",
+      "sticker_id": 9,
+      "points": [
+        "免費點數每日重置不累",
+        "免費下載720p已堪用",
+        "紅色提示代表點數耗盡"
+      ]
+    },
+    {
+      "slide_num": 5,
+      "topic_idx": 3,
+      "category": "畫面控制",
+      "title": "角色一致性關鍵控制",
+      "sticker_id": 4,
+      "points": [
+        "切換深入推論模型重試",
+        "每張分鏡提示重申風格",
+        "善用同帳號延續角色特徵"
+      ]
+    },
+    {
+      "slide_num": 6,
+      "topic_idx": 4,
+      "category": "角色設定",
+      "title": "建立專屬角色與聲音",
+      "sticker_id": 1,
+      "points": [
+        "內建功能指定服飾語音",
+        "跨場景可重複呼叫角色",
+        "單場景最多參考三角色"
+      ]
+    },
+    {
+      "slide_num": 7,
+      "topic_idx": 5,
+      "category": "操作環境",
+      "title": "網頁操作與設備建議",
+      "sticker_id": 2,
+      "points": [
+        "免安裝網頁服務隨處開",
+        "電腦鍵鼠操作效率勝手機",
+        "Ctrl加滾輪縮放便於比對"
+      ]
+    },
+    {
+      "slide_num": 8,
+      "topic_idx": 6,
+      "category": "環境限制",
+      "title": "帳號與校園環境限制",
+      "sticker_id": 8,
+      "points": [
+        "教育版與未成年功能受限",
+        "建議使用個人Google帳號",
+        "網路延遲可換聲音重試"
+      ]
+    },
+    {
+      "slide_num": 9,
+      "topic_idx": 7,
+      "category": "剪輯準備",
+      "title": "剪映準備與版本選擇",
+      "sticker_id": 11,
+      "points": [
+        "使用講師提供6.01版",
+        "切勿升級避免輸出付費",
+        "桌面解壓縮後直接啟動"
+      ]
+    },
+    {
+      "slide_num": 10,
+      "topic_idx": 8,
+      "category": "時間軸剪輯",
+      "title": "時間軸串接與素材整理",
+      "sticker_id": 2,
+      "points": [
+        "匯入封面影片與音樂素材",
+        "依序拖入V1至V4片段",
+        "剪映自動存檔安全便利"
+      ]
+    },
+    {
+      "slide_num": 11,
+      "topic_idx": 9,
+      "category": "節奏掌握",
+      "title": "封面時長精準控制",
+      "sticker_id": 9,
+      "points": [
+        "封面片段縮短至兩三秒",
+        "開門見山吸引觀眾目光",
+        "避免過長篇幅拖慢節奏"
+      ]
+    },
+    {
+      "slide_num": 12,
+      "topic_idx": 10,
+      "category": "旁白規劃",
+      "title": "旁白長度與節奏匹配",
+      "sticker_id": 5,
+      "points": [
+        "旁白秒數必須短於畫面",
+        "保留適當留白節奏自然",
+        "全片統一單一旁白聲線"
+      ]
+    },
+    {
+      "slide_num": 13,
+      "topic_idx": 11,
+      "category": "語音生成",
+      "title": "逐段文字轉語音TTS",
+      "sticker_id": 7,
+      "points": [
+        "按畫面片段分段貼文案",
+        "剪映多種中文聲線可選",
+        "逐段轉換精準對齊畫面"
+      ]
+    },
+    {
+      "slide_num": 14,
+      "topic_idx": 12,
+      "category": "字幕校對",
+      "title": "文稿匹配自動對齊字幕",
+      "sticker_id": 1,
+      "points": [
+        "語音轉字幕易有錯別字",
+        "用已校文稿匹配自動對齊",
+        "文字轉語音字幕分步完成"
+      ]
+    },
+    {
+      "slide_num": 15,
+      "topic_idx": 13,
+      "category": "視覺美化",
+      "title": "字幕排版與描邊美化",
+      "sticker_id": 2,
+      "points": [
+        "預先分段換行避免超長",
+        "加上描邊提升文字可讀性",
+        "可暫加底框輔助精準定位"
+      ]
+    },
+    {
+      "slide_num": 16,
+      "topic_idx": 14,
+      "category": "動態特效",
+      "title": "標題設計與文字動畫",
+      "sticker_id": 14,
+      "points": [
+        "加入作品名稱與作者姓名",
+        "設定入場及循環文字動畫",
+        "調整動畫時長避免過急促"
+      ]
+    },
+    {
+      "slide_num": 17,
+      "topic_idx": 15,
+      "category": "配樂處理",
+      "title": "多軌音訊與背景音樂",
+      "sticker_id": 15,
+      "points": [
+        "背景音樂置於獨立音軌",
+        "依成片長度裁切結尾",
+        "音畫段落互相烘托契合"
+      ]
+    },
+    {
+      "slide_num": 18,
+      "topic_idx": 16,
+      "category": "聲音平衡",
+      "title": "混音音量與自然淡出",
+      "sticker_id": 5,
+      "points": [
+        "大幅調低配樂避免蓋旁白",
+        "結尾設定秒數自然淡出",
+        "檢查原音與旁白音量平衡"
+      ]
+    },
+    {
+      "slide_num": 19,
+      "topic_idx": 17,
+      "category": "多語發布",
+      "title": "字幕匯出與多語翻譯",
+      "sticker_id": 6,
+      "points": [
+        "輸出含時間碼之SRT檔",
+        "AI翻譯字幕匯回多語言",
+        "YouTube支援多語切換"
+      ]
+    },
+    {
+      "slide_num": 20,
+      "topic_idx": 18,
+      "category": "社群傳播",
+      "title": "作品輸出與社群分享",
+      "sticker_id": 14,
+      "points": [
+        "專案命名輸出高畫質MP4",
+        "發布FB與YouTube分享",
+        "建立個人AI影音作品集"
+      ]
+    },
+    {
+      "slide_num": 21,
+      "topic_idx": 19,
+      "category": "實踐心法",
+      "title": "研習學習法與實作複習",
+      "sticker_id": 15,
+      "points": [
+        "親自動手做勝過只聽講解",
+        "先走通流程再雕琢細節",
+        "雲端錄影講義反覆複習"
+      ]
+    }
+  ]
+}
